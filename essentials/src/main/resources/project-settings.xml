@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+  <projectNamespace>heeweb</projectNamespace>
+  <confirmParams>false</confirmParams>
+  <selectedProjectPackage>uk.nhs.hee.web</selectedProjectPackage>
+  <selectedBeansPackage>uk.nhs.hee.web.beans</selectedBeansPackage>
+  <selectedComponentsPackage>uk.nhs.hee.web.components</selectedComponentsPackage>
+  <selectedRestPackage>uk.nhs.hee.web.rest</selectedRestPackage>
+  <hstRoot>/hst:heeweb</hstRoot>
+  <webfileBundleName>site</webfileBundleName>
+  <setupDone>false</setupDone>
+  <useSamples>true</useSamples>
+  <extraTemplates>true</extraTemplates>
+</project>

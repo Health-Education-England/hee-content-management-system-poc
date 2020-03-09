@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    heeweb:
+      uri: http://www.heeweb.com/heeweb/nt/1.0
+      cnd: namespaces/hee-web.cnd

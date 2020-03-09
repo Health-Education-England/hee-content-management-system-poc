@@ -1,0 +1,7 @@
+group: 
+  name: hee-web
+  after: hippo-cms
+project: hee-web
+module: 
+  name: hee-web-repository-data-development
+  after: hee-web-repository-data-application

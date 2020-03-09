@@ -1,0 +1,6 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/heeweb/hst:catalog:
+      jcr:primaryType: hst:catalog
+      /heeweb-catalog:
+        jcr:primaryType: hst:containeritempackage
