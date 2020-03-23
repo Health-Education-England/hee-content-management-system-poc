@@ -18,5 +18,9 @@ jobs:
           repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
           plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
+      - name: Compile
+        run: mvn -B clean compile -Pdefault --file pom.xml
+      - name: Test
+        run: mvn -B clean test -Pdefault --file pom.xml
+      - name: Package
+        run: mvn -B verify && mvn -P dist --file pom.xml
