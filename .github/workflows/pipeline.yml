@@ -1,7 +1,5 @@
 name: HEE Web Pipeline
-
 on: [push]
-
 jobs:
   build:
     steps:
