@@ -9,7 +9,7 @@ let accessToken;
 async function getAccessToken() {
     if (accessToken) {
         if (!await isAccessTokenValid(accessToken)) {
-            accessToken = await refreshToken(authRefreshToken);
+            await refreshToken(authRefreshToken);
         }
     } else {
         await login();
@@ -19,38 +19,48 @@ async function getAccessToken() {
 }
 
 async function login() {
-    const authPath = `${BASE_URL}/v3/authn/access_token`;
+    console.log("Retrieve BRC access token.");
+    const authURL = `${BASE_URL}/v3/authn/access_token`;
 
     const response = await axios.post(
-        authPath,
+        authURL,
         {
-            "username": "",
-            "password": ""
+            "username": process.env.BRC_USERNAME,
+            "password": process.env.BRC_PASSWORD
         }
     );
-    console.log(response.data);
+    console.log(`Access token response ${JSON.stringify(response)}`);
 
     let authResponse = response.data;
+    console.log(`Set access token and refresh token`);
     accessToken = `${authResponse.token_type} ${authResponse.access_token}`;
     authRefreshToken = authResponse.refresh_token;
 }
 
 async function isAccessTokenValid(accessToken) {
+    console.log("Validate access token");
     let validateAccessTokenURL = `${BASE_URL}/v3/authn/verify_token`;
-    let config = createAuthorizationRequestHeader(accessToken);
+    let config = {
+        headers: {
+            Authorization: accessToken
+        }
+    };
 
     try {
         await axios.post(
             validateAccessTokenURL,
             config
         );
+        console.log("Access token is valid");
         return true;
     } catch (e) {
+        console.log("Access token is not valid.");
         return false;
     }
 }
 
 async function refreshToken(refreshToken) {
+    console.log("Refresh token");
     let refreshTokenURL = `${BASE_URL}`;
     let refreshTokenBody = {
         "grant_type": "refresh_token",
@@ -61,15 +71,8 @@ async function refreshToken(refreshToken) {
         refreshTokenURL,
         refreshTokenBody
     );
-    return `${response.data.grant_type} ${response.data.access_token}`
-}
-
-async function createAuthorizationRequestHeader(accessToken) {
-    return {
-        headers: {
-            Authorization: accessToken
-        }
-    }
+    console.log("Received new access token.");
+    accessToken = `${response.data.grant_type} ${response.data.access_token}`
 }
 
 module.exports = {
