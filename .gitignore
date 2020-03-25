@@ -60,3 +60,9 @@ local.properties
 ## BloomReach Local Dev
 ##############################
 storage
+
+##############################
+## Node
+##############################
+
+node_modules

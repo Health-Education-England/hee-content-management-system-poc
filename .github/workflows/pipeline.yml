@@ -30,3 +30,5 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
       - name: Package
         run: mvn -B verify && mvn -P dist --file pom.xml
+      - name: Login to brCloud
+        run: |
