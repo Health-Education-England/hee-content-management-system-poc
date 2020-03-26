@@ -30,5 +30,9 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
       - name: Package
         run: mvn -B verify && mvn -P dist --file pom.xml
-      - name: Login to brCloud
-        run: |
+      - name: Upload distribution to BRC
+        uses: ./.github/workflows/ # Uses an action in the root directory
+        id: upload
+      # Use the output from the `hello` step
+      - name: Get the distribution id
+        run: echo "Distribution id ${{ steps.upload.outputs.distributionId }}"

@@ -1,4 +1,4 @@
-name: 'Bloomreach Cloud Deployment'
+name: 'bloomreach-upload'
 description: 'This action is responsible with uploading the project distribution to Bloomreach Cloud.'
 inputs:
   workspace:
@@ -9,4 +9,5 @@ outputs:
     description: 'Id of the distribution'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: './scripts/bloomreach-deployment/dist/index.js'
+
