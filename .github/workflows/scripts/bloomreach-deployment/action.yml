@@ -1,0 +1,12 @@
+name: 'Bloomreach Cloud Deployment'
+description: 'This action is responsible with uploading the project distribution to Bloomreach Cloud.'
+inputs:
+  workspace:
+    description: 'Path to root of the project where the main pom.xml file is store.'
+    required: false
+outputs:
+  distributionId:
+    description: 'Id of the distribution'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

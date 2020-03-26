@@ -2,7 +2,9 @@ const axios = require('axios');
 const parser = require('fast-xml-parser');
 const fs = require('fs');
 const FormData = require('form-data');
-
+const core = require('@actions/core');
+const github = require('@actions/github');
+const path = require('path');
 const brcAuth = require('./brcAuth');
 
 const BRC_STACK = process.env.STACK_NAME;
@@ -32,12 +34,17 @@ async function uploadDistribution(workspace) {
     const distId = await uploadDistributionToBRC(distribution);
 
     console.log(`distId: ${distId}`);
+    core.setOutput("distributionId", distId);
     return distId;
 }
 
-function getDistribution(workspace) {
-    const pomXml = fs.readFileSync(`${workspace}/pom.xml`, 'utf8');
+function getDistribution() {
+    const workspace = path.join(__dirname, '/../../../..');
+
+    const pomXmlPath = path.join(workspace, 'pom.xml');
+    const pomXml = fs.readFileSync(pomXmlPath, 'utf8');
     const pomJson = parser.parse(pomXml);
+
     const projectName = pomJson.project.artifactId;
     const projectVersion = pomJson.project.version;
 
