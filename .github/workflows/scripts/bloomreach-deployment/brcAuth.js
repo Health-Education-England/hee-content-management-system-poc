@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const BRC_STACK = process.env.stack;
+const BRC_STACK = process.env.STACK_NAME;
 const BASE_URL = `https://api-${BRC_STACK}.onehippo.io`;
 
 let authRefreshToken;
@@ -29,7 +29,7 @@ async function login() {
             "password": process.env.BRC_PASSWORD
         }
     );
-    console.log(`Access token response ${JSON.stringify(response)}`);
+    console.log(`Access token status ${JSON.stringify(response.status)} response ${JSON.stringify(response.data)}`);
 
     let authResponse = response.data;
     console.log(`Set access token and refresh token`);
