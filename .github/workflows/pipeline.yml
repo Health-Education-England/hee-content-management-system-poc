@@ -6,8 +6,8 @@ jobs:
   build:
     env:
       STACK_NAME: hee
-      BRC_USERNAME: ${{ secrets.BLOOMREACH_CLOUD_USERNAME }}
-      BRC_PASSWORD: ${{ secrets.BLOOMREACH_CLOUD_PASSWORD }}
+      BRC_USERNAME: ${{ secrets.BRC_USERNAME }}
+      BRC_PASSWORD: ${{ secrets.BRC_PASSWORD }}
 
     runs-on: ubuntu-latest
 
