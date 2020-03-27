@@ -66,12 +66,8 @@ async function login(username, password) {
 async function getTokenOrRefresh(accessToken = null, refreshToken = null) {
   let newAccessToken = accessToken;
 
-  if (accessToken && refreshToken) {
-    if (!await isAccessTokenValid(accessToken)) {
-      newAccessToken = await getRefreshedToken(refreshToken);
-    }
-  } else {
-    newAccessToken = (await login()).accessToken;
+  if (!await isAccessTokenValid(accessToken)) {
+    newAccessToken = await getRefreshedToken(refreshToken);
   }
 
   return newAccessToken;

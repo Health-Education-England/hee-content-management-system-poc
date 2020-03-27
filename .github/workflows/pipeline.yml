@@ -35,9 +35,9 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
       - name: Package
         run: mvn -B verify && mvn -P dist --file pom.xml
-      - name: Install deployment script dependencies
+      - name: Install Deployment Script dependencies
         run: cd $GITHUB_WORKSPACE/.github/workflows/scripts/bloomreach-deployment; npm install
-      - name: Login to BRC
+      - name: Login to Bloomreach Cloud
         uses: ./.github/workflows/actions/login/
         id: login
       - name: Upload distribution
@@ -51,6 +51,6 @@ jobs:
         id: deploy
         with:
           accessToken: ${{ steps.upload.outputs.accessToken }}
-          refreshToken: ${{ steps.upload.outputs.refreshToken }}
+          refreshToken: ${{ steps.login.outputs.refreshToken }}
           distId: ${{ steps.upload.outputs.distributionId }}
           environmentName: development
