@@ -1,0 +1,18 @@
+name: 'Deploy distribution to Bloomreach Cloud'
+description: 'This action is responsible with deploying the project distribution to Bloomreach Cloud.'
+inputs:
+  accessToken:
+    description: 'Access Token'
+    required: false
+  refreshToken:
+    description: 'Refresh token'
+    required: false
+  distId:
+    description: 'BRC distribution id'
+    required: true
+  environmentName:
+    description: 'BRC environment name where the distribution needs to be deployed'
+    required: true
+runs:
+  using: 'node12'
+  main: './../../scripts/bloomreach-deployment/deploy.js'

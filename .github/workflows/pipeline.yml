@@ -4,6 +4,11 @@ on: [push]
 
 jobs:
   build:
+    env:
+      STACK_NAME: hee
+      BRC_USERNAME: ${{ secrets.BLOOMREACH_CLOUD_USERNAME }}
+      BRC_PASSWORD: ${{ secrets.BLOOMREACH_CLOUD_PASSWORD }}
+
     runs-on: ubuntu-latest
 
     steps:
@@ -30,9 +35,22 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
       - name: Package
         run: mvn -B verify && mvn -P dist --file pom.xml
-      - name: Upload distribution to BRC
-        uses: ./.github/workflows/ # Uses an action in the root directory
+      - name: Install deployment script dependencies
+        run: cd $GITHUB_WORKSPACE/.github/workflows/scripts/bloomreach-deployment; npm install
+      - name: Login to BRC
+        uses: ./.github/workflows/actions/login/
+        id: login
+      - name: Upload distribution
+        uses: ./.github/workflows/actions/upload/
         id: upload
-      # Use the output from the `hello` step
-      - name: Get the distribution id
-        run: echo "Distribution id ${{ steps.upload.outputs.distributionId }}"
+        with:
+          accessToken: ${{ steps.login.outputs.accessToken }}
+          refreshToken: ${{ steps.login.outputs.refreshToken }}
+      - name: Deploy distribution
+        uses: ./.github/workflows/actions/deploy/
+        id: deploy
+        with:
+          accessToken: ${{ steps.upload.outputs.accessToken }}
+          refreshToken: ${{ steps.upload.outputs.refreshToken }}
+          distId: ${{ steps.upload.outputs.distributionId }}
+          environmentName: development

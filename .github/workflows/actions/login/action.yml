@@ -1,0 +1,11 @@
+name: 'Login to Bloomreach Cloud'
+description: 'This action logs in to Bloomreach Cloud and outputs the accesskey and refresh token.'
+outputs:
+  accessToken:
+    description: 'Access Token'
+  refreshToken:
+    description: 'Refresh Token'
+runs:
+  using: 'node12'
+  main: './../../scripts/bloomreach-deployment/login.js'
+
