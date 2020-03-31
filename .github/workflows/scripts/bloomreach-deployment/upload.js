@@ -11,6 +11,7 @@ const axiosInstance = axios.create();
 
 function getDistribution() {
   const workspace = process.env.GITHUB_WORKSPACE;
+  const commitSHAabbrev = process.env.GITHUB_SHA.substring(0, 7);
   const pomXmlPath = path.join(workspace, 'pom.xml');
 
   const pomXml = fs.readFileSync(pomXmlPath, 'utf8');
@@ -19,7 +20,7 @@ function getDistribution() {
   const projectName = pomJson.project.artifactId;
   const projectVersion = pomJson.project.version;
 
-  return `${workspace}/target/${projectName}-${projectVersion}-distribution.tar.gz`;
+  return `${workspace}/target/${projectName}-${projectVersion}-${commitSHAabbrev}-distribution.tar.gz`;
 }
 
 async function uploadDistributionToBRC(distribution, accessToken) {

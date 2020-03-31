@@ -15,11 +15,11 @@
   <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <!-- 
+  <!--
     The below project elements are emptied/overridden as otherwise their metadata would be
     inherited or merged from the parent hippo-cms7-release pom (or its hippo-cms7-project pom).
 
-    DO NOT remove these tags but instead fill them in appropriately as needed, 
+    DO NOT remove these tags but instead fill them in appropriately as needed,
     UNLESS the inherited values are valid for your project.
   -->
   <organization />
@@ -384,6 +384,28 @@
         <defaultGoal>validate</defaultGoal>
         <plugins>
           <plugin>
+            <groupId>pl.project13.maven</groupId>
+            <artifactId>git-commit-id-plugin</artifactId>
+            <version>4.0.0</version>
+            <executions>
+                <execution>
+                    <id>get-the-git-infos</id>
+                    <goals>
+                        <goal>revision</goal>
+                    </goals>
+                    <phase>validate</phase>
+                </execution>
+            </executions>
+            <configuration>
+              <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+              <verbose>true</verbose>
+              <skipPoms>false</skipPoms>
+                <includeOnlyProperties>
+                    <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
+                </includeOnlyProperties>
+            </configuration>
+          </plugin>
+          <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <executions>
               <execution>
@@ -393,6 +415,8 @@
                   <goal>single</goal>
                 </goals>
                 <configuration>
+                  <!-- `git.commit.id.describe` could be replaced with `git.commit.id.abbrev` if we are interested in only the CommitId -->
+                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution.xml</descriptor>
                   </descriptors>

@@ -40,13 +40,13 @@ jobs:
       - name: Login to Bloomreach Cloud
         uses: ./.github/workflows/actions/login/
         id: login
-      - name: Upload distribution
+      - name: Upload distribution to Bloomreach Cloud
         uses: ./.github/workflows/actions/upload/
         id: upload
         with:
           accessToken: ${{ steps.login.outputs.accessToken }}
           refreshToken: ${{ steps.login.outputs.refreshToken }}
-      - name: Deploy distribution
+      - name: Deploy distribution to 'development' env
         uses: ./.github/workflows/actions/deploy/
         id: deploy
         with:

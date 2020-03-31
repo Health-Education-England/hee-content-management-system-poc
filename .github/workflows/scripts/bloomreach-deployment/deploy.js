@@ -25,34 +25,17 @@ async function deployToBRC(distId, environmentId, accessToken) {
   console.log('Deploy request completed.');
 }
 
-async function getEnvironments(accessToken) {
-  console.log('Get BRC environments.');
-
-  const envResponse = await axiosInstance.get(
-    '/v3/environments',
+async function getEnvironmentId(accessToken, environmentName) {
+  const response = await axiosInstance.get(
+    '/v3/environments?name=' + environmentName,
     {
       headers: {
         Authorization: accessToken,
-      },
-    },
+      }
+    }
   );
 
-  console.log(`Received ${envResponse.data.length} environments.`);
-  return envResponse.data.items;
-}
-
-function getEnvironmentId(environmentList, environmentName) {
-  let envId;
-
-  const filteredEnvs = environmentList.filter(
-    ({ name }) => name === environmentName,
-  );
-
-  if (filteredEnvs.length > 0) {
-    envId = filteredEnvs[0].id;
-  }
-
-  return envId;
+  return response.data.id;
 }
 
 /**
@@ -69,13 +52,12 @@ async function deploy() {
   const distId = core.getInput('distId');
   const environmentName = core.getInput('environmentName');
 
-  const environments = await getEnvironments(accessToken);
-  const environmentId = getEnvironmentId(environments, environmentName);
+  const environmentId = await getEnvironmentId(accessToken, environmentName);
   console.log(`Environment ID: ${environmentId}`);
 
-  if (!environmentId) {
+  /* if (!environmentId) {
     throw new Error(`Deploy suspended! No environment with name ${environmentName} has been found.`);
-  }
+  } */
 
   return deployToBRC(distId, environmentId, accessToken);
 }
