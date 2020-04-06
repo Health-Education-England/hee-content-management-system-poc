@@ -4,9 +4,9 @@ The HEE content management and delivery system used to manage and deliver the we
 
 ## Continuous Integration/Continuous Deployment Status (CI/CD)
 
-![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/Continuous%20Integration%20%5BCI%5D/badge.svg)
-![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/Continuous%20Deployment%20to%20Dev%20Env.%20%5BCD%5D/badge.svg)
-![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/Continuous%20Deployment%20to%20Test%20Env.%20%5BCD%5D/badge.svg)
+![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/CI/badge.svg)
+![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/CI%20%26%20CD%20%5BDEV%5D/badge.svg)
+![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/CI%20%26%20CD%20%5BTEST%5D/badge.svg)
 
 ## Built With
 

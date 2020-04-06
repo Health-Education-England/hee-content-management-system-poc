@@ -7,6 +7,9 @@ inputs:
   refreshToken:
     description: 'Refresh token'
     required: false
+  distPath:
+    description: 'Distribution path'
+    required: true
 outputs:
   accessToken:
     description: 'Access token as it might have been refreshed'

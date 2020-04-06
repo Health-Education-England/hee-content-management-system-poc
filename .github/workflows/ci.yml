@@ -1,4 +1,4 @@
-name: Continuous Integration [CI]
+name: CI
 
 # Continuous Integration on develop & release/** branches will be done part of Continuous Deployment workflow
 on:
@@ -42,3 +42,8 @@ jobs:
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
+
+      # - name: Package
+      #   run: mvn -B verify && mvn deploy -Pdist --file pom.xml
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
