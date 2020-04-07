@@ -12,7 +12,7 @@
   <description>HEE Web</description>
   <groupId>uk.nhs.hee.web</groupId>
   <artifactId>hee-web</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>${revision}</version>
   <packaging>pom</packaging>
 
   <!--
@@ -59,6 +59,8 @@
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
 
   <properties>
+    <!-- Maven CI Friendly Version -->
+    <revision>0.1.1-SNAPSHOT</revision>
 
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
@@ -171,6 +173,53 @@
             </manifestEntries>
           </archive>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>pl.project13.maven</groupId>
+        <artifactId>git-commit-id-plugin</artifactId>
+        <version>4.0.0</version>
+        <executions>
+            <execution>
+                <id>get-the-git-infos</id>
+                <goals>
+                    <goal>revision</goal>
+                </goals>
+                <phase>validate</phase>
+            </execution>
+        </executions>
+        <configuration>
+          <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+          <verbose>true</verbose>
+          <skipPoms>false</skipPoms>
+            <includeOnlyProperties>
+                <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
+            </includeOnlyProperties>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>1.1.0</version>
+        <configuration>
+            <updatePomFile>true</updatePomFile>
+            <flattenMode>resolveCiFriendliesOnly</flattenMode>
+        </configuration>
+        <executions>
+            <execution>
+                <id>flatten</id>
+                <phase>process-resources</phase>
+                <goals>
+                    <goal>flatten</goal>
+                </goals>
+            </execution>
+            <execution>
+                <id>flatten.clean</id>
+                <phase>clean</phase>
+                <goals>
+                    <goal>clean</goal>
+                </goals>
+            </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
@@ -385,28 +434,6 @@
       <build>
         <defaultGoal>validate</defaultGoal>
         <plugins>
-          <plugin>
-            <groupId>pl.project13.maven</groupId>
-            <artifactId>git-commit-id-plugin</artifactId>
-            <version>4.0.0</version>
-            <executions>
-                <execution>
-                    <id>get-the-git-infos</id>
-                    <goals>
-                        <goal>revision</goal>
-                    </goals>
-                    <phase>validate</phase>
-                </execution>
-            </executions>
-            <configuration>
-              <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-              <verbose>true</verbose>
-              <skipPoms>false</skipPoms>
-                <includeOnlyProperties>
-                    <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
-                </includeOnlyProperties>
-            </configuration>
-          </plugin>
           <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <executions>

@@ -35,7 +35,7 @@ jobs:
         with:
           repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
           plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
-          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }, { "id": "github", "username": "${env.GITHUB_ACTOR}", "password": "${env.GITHUB_TOKEN}" }]'
 
       - name: Compile
         run: mvn -B clean compile -Pdefault --file pom.xml

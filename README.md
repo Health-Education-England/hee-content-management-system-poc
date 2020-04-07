@@ -24,7 +24,7 @@ In order to develop on this platform you will need to have the following tools i
 - IntelliJ IDEA
 - Docker
 - Java 1.8
-- Maven
+- Maven >= 3.5.0 (For `Maven CI Friendly Versions` Support)
 
 
 ### Installing
