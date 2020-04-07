@@ -18,19 +18,19 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Configure maven settings
-        uses: whelk-io/maven-settings-xml-action@v4
-        with:
-          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
-          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
-          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
-
       - name: Cache maven packages
         uses: actions/cache@v1
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+
+      - name: Configure maven settings
+        uses: whelk-io/maven-settings-xml-action@v4
+        with:
+          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Compile
         run: mvn -B clean compile -Pdefault --file pom.xml
@@ -59,19 +59,19 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Configure maven settings
-        uses: whelk-io/maven-settings-xml-action@v4
-        with:
-          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
-          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
-          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }, { "id": "github", "username": "${env.GITHUB_ACTOR}", "password": "${env.GITHUB_TOKEN}" }]'
-
       - name: Cache maven packages
         uses: actions/cache@v1
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+
+      - name: Configure maven settings
+        uses: whelk-io/maven-settings-xml-action@v4
+        with:
+          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }, { "id": "github", "username": "${env.GITHUB_ACTOR}", "password": "${env.GITHUB_TOKEN}" }]'
 
       - name: Package
         run: mvn -B verify && mvn deploy -Pdist --file pom.xml
