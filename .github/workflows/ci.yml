@@ -1,13 +1,14 @@
 name: CI
 
-# Continuous Integration on develop & release/** branches will be done part of Continuous Deployment workflow
+# Continuous Integration on develop, release/** & master branches will be done part of Continuous Deployment workflow
 on:
   push:
     branches-ignore:
       - 'develop'
       - 'release/**'
-  pull_request:
-    branches: ['**']
+      - 'master'
+  # pull_request:
+  #   branches: ['**']
 
 jobs:
   buildAndTest:

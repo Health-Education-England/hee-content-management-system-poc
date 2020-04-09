@@ -2,7 +2,8 @@ name: CI & CD [DEV]
 
 on:
   push:
-    branches: [develop]
+    branches: [master]
+    # branches: [develop] # can be enabled when ready
 
 jobs:
   buildAndTest:

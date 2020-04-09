@@ -133,11 +133,11 @@ Development workflows are implemented using [Github Actions](https://github.com/
 
 When a commit had been made to any branch except `develop`/`release/**` or a PR has been made, then Continuous Integration workflow (`.github/workflows/ci.yml`) would be triggered which would essentially compile & test the project.
 
-### Continuous Deployment (CD) Workflow
-#### develop branch
-When a commit (essentially merge commits) had been made to `develop`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-dev.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `development` environment.
+### Continuous Deployment (CD) Workflows
+#### Development Environment [`master` should be replaced with `develop` when ready]
+When a commit (essentially merge commits) had been made to `master`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-dev.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `development` environment.
 
-#### release/** branch [TODO: yet to be tested & verified]
+#### Test Environment (disabled temporarily) [TODO: yet to be tested & verified]
 When a commit (essentially merge commits) had been made to `release/**`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-tst.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `test` environment. This would also deploy the release package onto Github Packages artefact repo.
 
 TODO:

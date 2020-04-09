@@ -1,8 +1,13 @@
 name: CI & CD [TEST]
 
+# Temporarily disabling this workflow, can be enabled again when ready
 on:
   push:
-    branches: ['releases/**']
+    branches-ignore:
+      - '**'
+# on:
+#   push:
+#     branches: ['releases/**']
 
 jobs:
   buildAndTest:
