@@ -1,0 +1,113 @@
+name: CI & CD [TEST]
+
+# Temporarily disabling this workflow, can be enabled again when ready
+on:
+  push:
+    branches-ignore:
+      - '**'
+# on:
+#   push:
+#     branches: ['releases/**']
+
+jobs:
+  buildAndTest:
+    name: Build & Test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Cache maven packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Configure maven settings
+        uses: whelk-io/maven-settings-xml-action@v4
+        with:
+          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
+
+      - name: Compile
+        run: mvn -B clean compile -Pdefault --file pom.xml
+
+      - name: Test
+        run: mvn -B clean test -Pdefault --file pom.xml
+
+  deploy:
+    name: Deploy to Test Env. [on brCloud]
+
+    needs: buildAndTest
+
+    env:
+      STACK_NAME: hee
+      BRC_USERNAME: ${{ secrets.BRC_USERNAME }}
+      BRC_PASSWORD: ${{ secrets.BRC_PASSWORD }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo.
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Cache maven packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Configure maven settings
+        uses: whelk-io/maven-settings-xml-action@v4
+        with:
+          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }, { "id": "github", "username": "${env.GITHUB_ACTOR}", "password": "${env.GITHUB_TOKEN}" }]'
+
+      - name: Package & Deploy
+        # This also deploys the release package onto Github Package
+        run: mvn -B verify && mvn deploy -Pdist --file pom.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setting distribution path (distPath) as an output parameter
+        id: dist
+        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-*.tar.gz)"
+
+      - name: Install Deployment Script dependencies
+        run: cd $GITHUB_WORKSPACE/.github/workflows/scripts/bloomreach-deployment; npm install
+
+      - name: Login to Bloomreach Cloud
+        uses: ./.github/workflows/actions/login/
+        id: login
+
+      - name: Upload distribution to Bloomreach Cloud
+        uses: ./.github/workflows/actions/upload/
+        id: upload
+        with:
+          accessToken: ${{ steps.login.outputs.accessToken }}
+          refreshToken: ${{ steps.login.outputs.refreshToken }}
+          distPath: ${{ steps.dist.outputs.distPath }}
+
+      - name: Deploy distribution to 'development' env
+        uses: ./.github/workflows/actions/deploy/
+        id: deploy
+        with:
+          accessToken: ${{ steps.upload.outputs.accessToken }}
+          refreshToken: ${{ steps.login.outputs.refreshToken }}
+          distId: ${{ steps.upload.outputs.distributionId }}
+          environmentName: test

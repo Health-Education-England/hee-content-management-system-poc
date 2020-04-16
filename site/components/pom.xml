@@ -4,7 +4,7 @@
   <parent>
     <groupId>uk.nhs.hee.web</groupId>
     <artifactId>hee-web-site</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>${revision}</version>
   </parent>
   <artifactId>hee-web-components</artifactId>
   <packaging>jar</packaging>

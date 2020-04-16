@@ -11,14 +11,14 @@
   <description>HEE Web</description>
   <groupId>uk.nhs.hee.web</groupId>
   <artifactId>hee-web</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>${revision}</version>
   <packaging>pom</packaging>
 
-  <!-- 
+  <!--
     The below project elements are emptied/overridden as otherwise their metadata would be
     inherited or merged from the parent hippo-cms7-release pom (or its hippo-cms7-project pom).
 
-    DO NOT remove these tags but instead fill them in appropriately as needed, 
+    DO NOT remove these tags but instead fill them in appropriately as needed,
     UNLESS the inherited values are valid for your project.
   -->
   <organization />
@@ -45,17 +45,21 @@
   <ciManagement />
   <distributionManagement>
     <repository>
-      <id>-</id>
-      <url>-</url>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/Manifesto-Digital/hee-content-management-system</url>
     </repository>
     <snapshotRepository>
-      <id>-</id>
-      <url>-</url>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/Manifesto-Digital/hee-content-management-system</url>
     </snapshotRepository>
   </distributionManagement>
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
 
   <properties>
+    <!-- Maven CI Friendly Version -->
+    <revision>0.1.1-SNAPSHOT</revision>
 
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
@@ -170,6 +174,53 @@
         </configuration>
       </plugin>
       <plugin>
+        <groupId>pl.project13.maven</groupId>
+        <artifactId>git-commit-id-plugin</artifactId>
+        <version>4.0.0</version>
+        <executions>
+            <execution>
+                <id>get-the-git-infos</id>
+                <goals>
+                    <goal>revision</goal>
+                </goals>
+                <phase>validate</phase>
+            </execution>
+        </executions>
+        <configuration>
+          <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+          <verbose>true</verbose>
+          <skipPoms>false</skipPoms>
+            <includeOnlyProperties>
+                <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
+            </includeOnlyProperties>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>1.1.0</version>
+        <configuration>
+            <updatePomFile>true</updatePomFile>
+            <flattenMode>resolveCiFriendliesOnly</flattenMode>
+        </configuration>
+        <executions>
+            <execution>
+                <id>flatten</id>
+                <phase>process-resources</phase>
+                <goals>
+                    <goal>flatten</goal>
+                </goals>
+            </execution>
+            <execution>
+                <id>flatten.clean</id>
+                <phase>clean</phase>
+                <goals>
+                    <goal>clean</goal>
+                </goals>
+            </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>3.1.1</version>
@@ -190,7 +241,6 @@
           </execution>
         </executions>
       </plugin>
-
     </plugins>
   </build>
 
@@ -414,9 +464,12 @@
                   <goal>single</goal>
                 </goals>
                 <configuration>
+                  <!-- `git.commit.id.describe` could be replaced with `git.commit.id.abbrev` if we are interested in only the CommitId -->
+                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution.xml</descriptor>
                   </descriptors>
+                  <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
               </execution>
             </executions>

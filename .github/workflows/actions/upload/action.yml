@@ -1,0 +1,21 @@
+name: 'Upload distribution to Bloomreach Cloud'
+description: 'This action is responsible with uploading the project distribution to Bloomreach Cloud.'
+inputs:
+  accessToken:
+    description: 'Access Token'
+    required: false
+  refreshToken:
+    description: 'Refresh token'
+    required: false
+  distPath:
+    description: 'Distribution path'
+    required: true
+outputs:
+  accessToken:
+    description: 'Access token as it might have been refreshed'
+  distributionId:
+    description: 'Id of the uploaded distribution'
+runs:
+  using: 'node12'
+  main: './../../scripts/bloomreach-deployment/upload.js'
+

@@ -5,7 +5,7 @@
   <parent>
     <groupId>uk.nhs.hee.web</groupId>
     <artifactId>hee-web-site</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>${revision}</version>
   </parent>
   <artifactId>hee-web-webapp</artifactId>
   <packaging>war</packaging>
@@ -26,7 +26,7 @@
     <dependency>
       <groupId>uk.nhs.hee.web</groupId>
       <artifactId>hee-web-components</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.onehippo.cms7.hst.toolkit-resources.addon</groupId>
