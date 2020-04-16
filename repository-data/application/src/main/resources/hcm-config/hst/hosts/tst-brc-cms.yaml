@@ -1,0 +1,5 @@
+definitions:
+  config:
+    /hst:platform/hst:hosts/tst-brc-cms:
+      jcr:primaryType: hst:virtualhostgroup
+      hst:defaultport: 80
