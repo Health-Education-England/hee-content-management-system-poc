@@ -1,0 +1,17 @@
+definitions:
+  config:
+    /hst:platform/hst:hosts/prd-brc-cms/uk:
+      jcr:primaryType: hst:virtualhost
+      hst:scheme: https
+      hst:showcontextpath: false
+      hst:showport: false
+      /nhs:
+        jcr:primaryType: hst:virtualhost
+        /hee:
+          jcr:primaryType: hst:virtualhost
+          /cms:
+            jcr:primaryType: hst:virtualhost
+            /hst:root:
+              jcr:primaryType: hst:mount
+              hst:ismapped: false
+              hst:namedpipeline: WebApplicationInvokingPipeline

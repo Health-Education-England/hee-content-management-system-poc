@@ -1,0 +1,63 @@
+definitions:
+  config:
+    /hippo:namespaces/heeweb/pageMetaData:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 50f2b9dd-55d6-4a99-9d0c-3934fb3abd93
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 29d52f90-c120-4a0d-bda6-07bbeb880fd9
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 0aa2a6a7-4de2-4ccc-94aa-b457040e39b7
+          hipposysedit:node: true
+          hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:description
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+            hipposysedit:validators: [optional]
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: heeweb:pageMetaData
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 1d8fe06b-7728-47ae-9777-3cb4b4bdaefa
+          hippostdpubwf:lastModificationDate: 2020-04-03T12:00:46.629+05:30
+          hippostdpubwf:creationDate: 2020-04-03T12:00:46.629+05:30
+          heeweb:description: ''
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /description:
+            jcr:primaryType: frontend:plugin
+            caption: Description
+            field: description
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            wicket.css: []
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              rows: '1'
