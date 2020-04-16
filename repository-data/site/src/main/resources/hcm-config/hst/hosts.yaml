@@ -12,3 +12,5 @@ definitions:
           jcr:primaryType: hst:mount
           hst:homepage: root
           hst:mountpoint: /hst:heeweb/hst:sites/heeweb
+          hst:roles: [everybody]
+          hst:authenticated: true

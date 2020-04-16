@@ -1,0 +1,4 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/hst:default/hst:sitemap/login:
+      hst:scheme: http
