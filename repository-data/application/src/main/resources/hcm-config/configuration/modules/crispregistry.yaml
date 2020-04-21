@@ -1,0 +1,33 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:modules/crispregistry/hippo:moduleconfig/crisp:resourceresolvercontainer/openGraphResources:
+      jcr:primaryType: crisp:resourceresolver
+      crisp:beandefinition: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<beans\
+        \ xmlns=\"http://www.springframework.org/schema/beans\"\r\n       xmlns:xsi=\"\
+        http://www.w3.org/2001/XMLSchema-instance\"\r\n       xsi:schemaLocation=\"\
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd\"\
+        >\r\n \r\n  <bean parent=\"abstractCrispSimpleJacksonRestTemplateResourceResolver\"\
+        \r\n        class=\"org.onehippo.cms7.crisp.core.resource.jackson.SimpleJacksonRestTemplateResourceResolver\"\
+        >\r\n    <property name=\"cacheEnabled\" value=\"${cache.enabled}\" />\r\n\
+        \    <property name=\"baseUri\" value=\"${ms.opengraph.api.baseUrl}/${ms.opengraph.api.version}\"\
+        \ />\r\n    <property name=\"restTemplate\">\r\n      <bean class=\"org.springframework.security.oauth2.client.OAuth2RestTemplate\"\
+        >\r\n        <constructor-arg>\r\n          <bean class=\"org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsResourceDetails\"\
+        >\r\n            <property name=\"accessTokenUri\" value=\"${ms.azure.oauth.baseUrl}/${ms.azure.oauth.tenantId}/oauth2/${ms.azure.oauth.version}/token\"\
+        \ />\r\n            <property name=\"clientId\" value=\"${ms.azure.oauth.clientId}\"\
+        \ />\r\n            <property name=\"clientSecret\" value=\"${ms.azure.oauth.clientSecret}\"\
+        \ />\r\n            <property name=\"grantType\" value=\"client_credentials\"\
+        \ />\r\n            <property name=\"scope\">\r\n                <list>\r\n\
+        \                   <value>https://graph.microsoft.com/.default</value>\r\n\
+        \                </list>\r\n             </property>\r\n          </bean>\r\
+        \n        </constructor-arg>\r\n        <constructor-arg>\r\n          <bean\
+        \ class=\"org.springframework.security.oauth2.client.DefaultOAuth2ClientContext\"\
+        >\r\n            <constructor-arg>\r\n              <bean class=\"org.springframework.security.oauth2.client.token.DefaultAccessTokenRequest\"\
+        >\r\n              </bean>\r\n            </constructor-arg>\r\n         \
+        \ </bean>\r\n        </constructor-arg>\r\n        <property name=\"requestFactory\"\
+        \ ref=\"org.springframework.http.client.ClientHttpRequestFactory\" />\r\n\
+        \      </bean>\r\n    </property>\r\n  </bean>\r\n \r\n</beans>"
+      crisp:propnames: [cache.enabled, ms.opengraph.api.baseUrl, ms.opengraph.api.version,
+        ms.azure.oauth.baseUrl, ms.azure.oauth.tenantId, ms.azure.oauth.version, ms.azure.oauth.clientId,
+        ms.azure.oauth.clientSecret]
+      crisp:propvalues: ['true', 'https://graph.microsoft.com', v1.0, 'https://login.microsoftonline.com',
+        <tenant_id>, v2.0, <client_id>, <client_secret>]

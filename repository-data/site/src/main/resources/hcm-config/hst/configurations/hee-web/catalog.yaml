@@ -4,3 +4,9 @@ definitions:
       jcr:primaryType: hst:catalog
       /heeweb-catalog:
         jcr:primaryType: hst:containeritempackage
+        /sharepoint-files:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.HEEWebSharepointFilesComponent
+          hst:iconpath: images/essentials/catalog-component-icons/simple-content.svg
+          hst:label: Sharepoint Files
+          hst:template: sharepoint-files-main
