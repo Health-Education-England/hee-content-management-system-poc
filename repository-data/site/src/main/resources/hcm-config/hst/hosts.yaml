@@ -12,3 +12,7 @@ definitions:
           jcr:primaryType: hst:mount
           hst:homepage: root
           hst:mountpoint: /hst:heeweb/hst:sites/heeweb
+          hst:pagemodelapi: resourceapi
+          hst:namedpipeline: SpaSitePipeline
+          hst:responseheaders: ['Access-Control-Allow-Credentials: true', 'Access-Control-Allow-Origin:
+              http://localhost:3000']
