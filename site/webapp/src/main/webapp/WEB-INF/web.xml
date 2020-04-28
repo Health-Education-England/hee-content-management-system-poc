@@ -33,18 +33,6 @@
   </jsp-config>
 
   <!--
-    Configure Spring Web Application Context configuration files.
-    You should include your spring security configuration in any file(s) in the following.
-  -->
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>
-      /WEB-INF/applicationContext.xml
-      /WEB-INF/applicationContext-security.xml
-    </param-value>
-  </context-param>
-
-  <!--
     HST-2 Content Beans Annotation Configuration. You can configure it
     with either xml or classes location filter. For example, if the
     parameter value is set to '/WEB-INF/beans-annotated-classes.xml',
@@ -69,15 +57,6 @@
       ,classpath*:org/onehippo/forge/**/*.class
     </param-value>
   </context-param>
-
-  <!--
-    Configure Spring Security Filter.
-    Usually you may just copy and paste the following into your web application descriptor.
-  -->
-  <filter>
-    <filter-name>springSecurityFilterChain</filter-name>
-    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-  </filter>
 
   <filter>
     <filter-name>CharacterEncodingFilter</filter-name>
@@ -107,16 +86,6 @@
     <filter-class>org.hippoecm.hst.container.HstFilter</filter-class>
   </filter>
 
-  <!--
-    Configure Spring Security Filter Mapping.
-    Usually you may just copy and paste the following into your web application descriptor.
-  -->
-  <filter-mapping>
-    <filter-name>springSecurityFilterChain</filter-name>
-    <url-pattern>/*</url-pattern>
-    <dispatcher>REQUEST</dispatcher>
-  </filter-mapping>
-
   <filter-mapping>
     <filter-name>CharacterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
@@ -137,11 +106,6 @@
     <filter-name>HstFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-
-  <!--Configure Spring Web Application Context Loader Listener.-->
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
 
   <!-- HstContextLoaderListener configuring/initializing/destroying HST Container -->
   <listener>

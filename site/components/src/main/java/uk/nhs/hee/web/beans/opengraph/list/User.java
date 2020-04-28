@@ -3,6 +3,9 @@ package uk.nhs.hee.web.beans.opengraph.list;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
 public class User {
     private String username;
     private String displayName;
@@ -72,6 +75,17 @@ public class User {
      */
     public void setSiteFiles(Map<String, List<FileItem>> siteFiles) {
         this.siteFiles = siteFiles;
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
+                .append("username", username)
+                .append("displayName", displayName)
+                .append("jobTitle", jobTitle)
+                .append("groups", groups)
+                .append("siteFiles", siteFiles)
+                .toString();
     }
 
 }

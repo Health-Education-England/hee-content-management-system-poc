@@ -2,15 +2,23 @@ package uk.nhs.hee.web.beans.opengraph.list;
 
 import java.util.Date;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
 public class FileItem {
-    private String title;
-    private String url;
-    private String fileType;
-    private String modifiedBy;
-    private Date modifiedDate;
+    private final String title;
+    private final String url;
+    private final String fileType;
+    private final String modifiedBy;
+    private final Date modifiedDate;
 
 
-    public FileItem(String title, String url, String fileType, String modifiedBy, Date modifiedDate) {
+    public FileItem(
+            final String title,
+            final String url,
+            final String fileType,
+            final String modifiedBy,
+            final Date modifiedDate) {
         super();
         this.title = title;
         this.url = url;
@@ -52,6 +60,17 @@ public class FileItem {
      */
     public Date getModifiedDate() {
         return modifiedDate;
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
+                .append("title", title)
+                .append("url", url)
+                .append("fileType", fileType)
+                .append("modifiedBy", modifiedBy)
+                .append("modifiedDate", modifiedDate)
+                .toString();
     }
 
 }
