@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:lang="http://www.springframework.org/schema/lang"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:util="http://www.springframework.org/schema/util"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/beans/spring-lang.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!-- Static Resources -->
+    <http pattern="/css/**" security="none"/>
+    <http pattern="/images/**" security="none"/>
+    <http pattern="/script/**" security="none"/>
+    <http pattern="/binaries/**" security="none"/>
+    <http pattern="/webfiles/**" security="none" />
+
+    <!-- Login Page (/login/form) Static Resources -->
+    <http pattern="/login/hst/security/skin/images/**" security="none" />
+    <http pattern="/login/hst/security/skin/**" security="none" />
+
+    <!-- Channel Manager requests may bypass authentication -->
+    <http pattern="/_rp/**" security="none"/>
+    <http pattern="/_cmsrest/**" security="none"/>
+    <http pattern="/_cmsinternal/**" security="none"/>
+    <http pattern="/_cmssessioncontext/**" security="none"/>
+
+    <http auto-config="true" use-expressions="true" disable-url-rewriting="false">
+
+        <!-- As of Spring Security 4.0, CSRF protection is enabled by default with XML configuration.
+          If you would like to disable CSRF protection, uncomment the corresponding XML configuration below. -->
+        <!-- <csrf disabled="true"/> -->
+
+        <!--
+          SAMEORIGIN should be set for X-Frame-Options header to allow channel manager to load preview pages in iframe.
+          See https://docs.spring.io/spring-security/site/docs/current/reference/html/headers.html#headers-frame-options for detail.
+        -->
+        <headers>
+            <frame-options policy="SAMEORIGIN" />
+        </headers>
+
+        <!-- Example configuration to allow anonymous access as well as authenticated access. -->
+        <intercept-url pattern="/login.jsp*" access="isAnonymous()" />
+        <intercept-url pattern="/logout*" access="isAnonymous() or isAuthenticated()" />
+
+        <!-- Example configuration to allow only authenticated users and roles could also be included if required -->
+        <intercept-url pattern="/**" access="isAuthenticated()" />
+
+        <!-- Note: Enable http-basic element instead of form-login if you want to use Basic Authentication. -->
+        <!-- <http-basic /> -->
+        <form-login login-page="/login.jsp"
+                    default-target-url="/"
+                    always-use-default-target="true" />
+
+        <logout invalidate-session="true" logout-success-url="/" logout-url="/logout" />
+
+    </http>
+
+    <!-- Authentication Manager configuration with Azure AD based Authentication Provider configuration ('azureADAuthenticationProvider') -->
+    <authentication-manager>
+        <authentication-provider ref="azureADAuthenticationProvider" />
+    </authentication-manager>
+
+    <!-- Azure AD based Authentication Provider -->
+    <beans:bean id="azureADAuthenticationProvider"
+                class="uk.nhs.hee.web.security.support.springsecurity.authentication.dao.AzureADAuthenticationProvider">
+    </beans:bean>
+
+</beans:beans>
