@@ -4,7 +4,7 @@
 <#assign isChannelManagerPreviewRequest=hstRequest.requestContext.channelManagerPreviewRequest/>
 
 <#if hstRequest.requestContext.channelManagerPreviewRequest>
-    <p>This component cannot be previewed in Channel Manager as it needs to list files from Sharepoint which in turn requires an Office 365 user to be logged in.</p>
+    <p style="color: blue;">This component cannot be previewed in Channel Manager as it needs to list files from Sharepoint which in turn requires an Office 365 user to be logged in.</p>
 <#else>
     <#--  Some of the details being rendered in this component could be separated out in it's own component  -->
     <h2>Azure AD User Profile</h2>

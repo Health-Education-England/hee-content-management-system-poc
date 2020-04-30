@@ -1,26 +1,18 @@
 package uk.nhs.hee.web.ms.graph.service;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import org.onehippo.cms7.crisp.api.resource.Resource;
 import org.onehippo.cms7.crisp.api.resource.ResourceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import uk.nhs.hee.web.beans.opengraph.list.FileItem;
 import uk.nhs.hee.web.ms.graph.service.util.ResourceServiceBrokerUtil;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ListItemService extends AbstractGraphService {
 
@@ -35,10 +27,10 @@ public class ListItemService extends AbstractGraphService {
 
     public Map<String, List<FileItem>> getSharedFileItemsBySites(Map<String, String> sites)
             throws ResourceException {
-        final Map<String, List<FileItem>> sitesFiles = new HashMap<>();
+        Map<String, List<FileItem>> sitesFiles = new HashMap<>();
 
         sites.forEach((siteId, siteDisplayName) -> {
-            final String documentListId = getDocumentsListId(siteId);
+            String documentListId = getDocumentsListId(siteId);
 
             if (documentListId != null) {
                 sitesFiles.put(siteDisplayName, getFileItems(siteId, documentListId));
@@ -48,7 +40,7 @@ public class ListItemService extends AbstractGraphService {
         return sitesFiles;
     }
 
-    private String getDocumentsListId(final String siteId) {
+    private String getDocumentsListId(String siteId) {
         // TODO: Ideally, the 'Documents' ListId should be filtered in the call
         /* final Resource listResource = getResourceServiceBrokerUtil().getResources(
                 "/sites/{siteId}/lists",
@@ -56,12 +48,12 @@ public class ListItemService extends AbstractGraphService {
                 Collections.singletonList("id"),
                 "displayName eq 'Documents'"); */
 
-        final Resource listResource = getResourceServiceBrokerUtil().getResources(
+        Resource listResource = getResourceServiceBrokerUtil().getResources(
                 "/sites/{siteId}/lists",
                 Collections.<String, Object>singletonMap("siteId", siteId),
                 Arrays.asList("id", "displayName"));
 
-        final Resource listValueResource = ((Resource) listResource.getValueMap().get("value"))
+        Resource listValueResource = ((Resource) listResource.getValueMap().get("value"))
                 .getChildren()
                 .getCollection()
                 .stream()
@@ -76,13 +68,13 @@ public class ListItemService extends AbstractGraphService {
         return listValueResource.getValue("id").toString();
     }
 
-    private List<FileItem> getFileItems(final String siteId, final String documentListId) {
+    private List<FileItem> getFileItems(String siteId, String documentListId) {
         Map<String, Object> pathVariables = Stream.of(
                 new AbstractMap.SimpleImmutableEntry<>("siteId", siteId),
                 new AbstractMap.SimpleImmutableEntry<>("listId", documentListId))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-        final Resource listItemResource = getResourceServiceBrokerUtil().getResources(
+        Resource listItemResource = getResourceServiceBrokerUtil().getResources(
                 "/sites/{siteId}/lists/{listId}/items?expand=fields",
                 pathVariables);
 
@@ -101,26 +93,26 @@ public class ListItemService extends AbstractGraphService {
             }
         } */
 
-        final List<FileItem> fileItems = new ArrayList<>();
+        List<FileItem> fileItems = new ArrayList<>();
 
         ((Resource) listItemResource.getValueMap().get("value")).getChildren().forEach(listItemValue -> {
             if (!"Folder".equals(((String) listItemValue.getValue("fields/ContentType")))) {
                 fileItems.add(
                         new FileItem(
-                            (String) listItemValue.getValue("fields/LinkFilename"),
-                            (String) listItemValue.getValue("webUrl"),
-                            (String) listItemValue.getValue("fields/DocIcon"),
-                            (String) listItemValue.getValue("lastModifiedBy/user/displayName"),
-                            getFormattedDate(listItemValue.getValue("lastModifiedDateTime").toString())
+                                (String) listItemValue.getValue("fields/LinkFilename"),
+                                (String) listItemValue.getValue("webUrl"),
+                                (String) listItemValue.getValue("fields/DocIcon"),
+                                (String) listItemValue.getValue("lastModifiedBy/user/displayName"),
+                                getFormattedDate(listItemValue.getValue("lastModifiedDateTime").toString())
                         )
-                    );
+                );
             }
         });
 
         return fileItems;
     }
 
-    private Date getFormattedDate(final String dateString) {
+    private Date getFormattedDate(String dateString) {
         try {
             return DATE_FORMAT.parse(dateString);
         } catch (ParseException e) {

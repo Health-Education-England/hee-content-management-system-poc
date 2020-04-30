@@ -26,12 +26,10 @@ import org.springframework.security.oauth2.client.token.grant.code.Authorization
 import org.springframework.security.oauth2.common.AuthenticationScheme;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 import org.springframework.security.oauth2.config.annotation.web.configuration.OAuth2ClientConfiguration;
-import org.springframework.security.oauth2.provider.error.OAuth2AuthenticationEntryPoint;
 import org.springframework.security.web.AuthenticationEntryPoint;
-import org.springframework.security.web.access.ExceptionTranslationFilter;
-import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
+import org.springframework.security.web.savedrequest.RequestCacheAwareFilter;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -55,167 +53,182 @@ import java.util.List;
 @PropertySource("classpath:azure-oauth2.properties")
 public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	// This is made possible because of @EnableOAuth2Client
-	// and RequestContextListener.
-	@Autowired
-	private OAuth2ClientContext oauth2ClientContext;
+    // This is made possible because of @EnableOAuth2Client
+    // and RequestContextListener.
+    @Autowired
+    private OAuth2ClientContext oauth2ClientContext;
 
-	/**
-	 * <p>
-	 * Handles a {@link UserRedirectRequiredException} that is thrown from
-	 * {@link OAuth2ClientAuthenticationProcessingFilter}.
-	 * </p>
-	 * <p>
-	 * This bean is configured because of <code>@EnableOAuth2Client</code>.
-	 * </p>
-	 */
-	@Autowired
-	private OAuth2ClientContextFilter oauth2ClientContextFilter;
-
-
-	@Value("${clientId}")
-	private String clientId;
-
-	@Value("${clientSecret}")
-	private String clientSecret;
-
-	@Value("${userAuthorizationUri}")
-	private String userAuthorizationUri;
-
-	@Value("${accessTokenUri}")
-	private String accessTokenUri;
-
-	@Value("${tokenName:authorization_code}")
-	private String tokenName;
-
-	@Value("${scope}")
-	private String scope;
-
-	@Value("${userInfoUri}")
-	private String userInfoUri;
-
-	@Value("${filterCallbackPath}")
-	private String oauth2FilterCallbackPath;
+    /**
+     * <p>
+     * Handles a {@link UserRedirectRequiredException} that is thrown from
+     * {@link OAuth2ClientAuthenticationProcessingFilter}.
+     * </p>
+     * <p>
+     * This bean is configured because of <code>@EnableOAuth2Client</code>.
+     * </p>
+     */
+    @Autowired
+    private OAuth2ClientContextFilter oauth2ClientContextFilter;
 
 
-	private OAuth2ProtectedResourceDetails authorizationCodeResource() {
-		AuthorizationCodeResourceDetails authCodeResourceDetails = new AuthorizationCodeResourceDetails();
-		authCodeResourceDetails.setId("azure-oauth2-client");
-		authCodeResourceDetails.setClientId(clientId);
-		authCodeResourceDetails.setClientSecret(clientSecret);
-		authCodeResourceDetails.setUserAuthorizationUri(userAuthorizationUri);
-		authCodeResourceDetails.setAccessTokenUri(accessTokenUri);
-		authCodeResourceDetails.setTokenName(tokenName);
-		String commaSeparatedScopes = scope;
-		authCodeResourceDetails.setScope(parseScopes(commaSeparatedScopes));
+    @Value("${clientId}")
+    private String clientId;
 
-		// Defaults to use current URI
-		/*
-		 * If a pre-established redirect URI is used, it will need to be an
-		 * absolute URI. To do so, it'll need to compute the URI from a
-		 * request. The HTTP request object is available when you override
-		 * OAuth2ClientAuthenticationProcessingFilter#attemptAuthentication().
-		 *
-		 * details.setPreEstablishedRedirectUri(
-		 * 		env.getProperty("redirectUrl"));
-		 * details.setUseCurrentUri(false);
-		 */
-		authCodeResourceDetails.setAuthenticationScheme(AuthenticationScheme.query);
-		authCodeResourceDetails.setClientAuthenticationScheme(AuthenticationScheme.form);
-		return authCodeResourceDetails;
-	}
+    @Value("${clientSecret}")
+    private String clientSecret;
 
-	private List<String> parseScopes(String commaSeparatedScopes) {
-		List<String> scopes = new LinkedList<>();
-		Collections.addAll(scopes, commaSeparatedScopes.split(","));
-		return scopes;
-	}
+    @Value("${userAuthorizationUri}")
+    private String userAuthorizationUri;
 
-	/**
-	 * @return an OAuth2 client authentication processing filter
-	 */
-	@Bean
-	@Description("Filter that checks for authorization code, "
-			+ "and if there's none, acquires it from authorization server")
-	public OAuth2ClientAuthenticationProcessingFilter
-				oauth2ClientAuthenticationProcessingFilter() {
-		// Used to obtain access token from authorization server (AS)
-		OAuth2RestOperations restTemplate = new OAuth2RestTemplate(
-				authorizationCodeResource(),
-				oauth2ClientContext);
-		OAuth2ClientAuthenticationProcessingFilter filter =
-				new OAuth2ClientAuthenticationProcessingFilter(oauth2FilterCallbackPath);
-		filter.setRestTemplate(restTemplate);
+    @Value("${accessTokenUri}")
+    private String accessTokenUri;
 
-		// Set a service that validates an OAuth2 access token
-		// For this, we chose to use UserInfoTokenServices
-		filter.setTokenServices(new UserInfoTokenServices(userInfoUri, clientId));
-		filter.setAuthenticationSuccessHandler(new SavedRequestAwareAuthenticationSuccessHandler());
-		return filter;
-	}
+    @Value("${tokenName:authorization_code}")
+    private String tokenName;
 
-	@Bean
-	public AuthenticationEntryPoint authenticationEntryPoint() {
-		// May need an OAuth2AuthenticationEntryPoint for non-browser clients
-		return new LoginUrlAuthenticationEntryPoint(oauth2FilterCallbackPath);
-	}
+    @Value("${scope}")
+    private String scope;
 
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/webfiles/**");
-	}
+    @Value("${userInfoUri}")
+    private String userInfoUri;
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.exceptionHandling()
-				.authenticationEntryPoint(authenticationEntryPoint())
-			.and()
-				.authorizeRequests().anyRequest().authenticated()
-			.and()
-				.logout().logoutUrl("/logout").logoutSuccessUrl("/").invalidateHttpSession(true)
-			/* No need for form-based login or basic authentication
-			.and()
-				.formLogin()
-					.loginPage("...")
-					.loginProcessingUrl("...")
-			.and()
-				.httpBasic()
-			 */
-			.and()
-				.addFilterAfter(
-					oauth2ClientContextFilter,
-					ExceptionTranslationFilter.class)
-				.addFilterBefore(
-					oauth2ClientAuthenticationProcessingFilter(),
-					FilterSecurityInterceptor.class)
-				.anonymous()
-				// anonymous login must be disabled,
-				// otherwise an anonymous authentication will be created,
-				// and the UserRedirectRequiredException will not be thrown,
-				// and the user will not be redirected to the authorization server
-					.disable();
-	}
+    @Value("${filterCallbackPath}")
+    private String oauth2FilterCallbackPath;
 
-	@Override
-	protected AuthenticationManager authenticationManager() throws Exception {
-		return new NoopAuthenticationManager();
-	}
+    @Value("${logoutSuccessUrl}")
+    private String logoutSuccessUrl;
 
-	private static class NoopAuthenticationManager implements AuthenticationManager {
-		@Override
-		public Authentication authenticate(Authentication authentication)
-				throws AuthenticationException {
-			throw new UnsupportedOperationException(
-					"No authentication should be done with this AuthenticationManager");
-		}
-	}
+    @Bean
+    @Description("Enables ${...} expressions in the @Value annotations"
+            + " on fields of this configuration. Not needed if one is"
+            + " already available.")
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
 
-	@Bean
-	@Description("Enables ${...} expressions in the @Value annotations"
-			+ " on fields of this configuration. Not needed if one is"
-			+ " already available.")
-	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-		return new PropertySourcesPlaceholderConfigurer();
-	}
+    private OAuth2ProtectedResourceDetails authorizationCodeResource() {
+        AuthorizationCodeResourceDetails authCodeResourceDetails = new AuthorizationCodeResourceDetails();
+        authCodeResourceDetails.setId("azure-oauth2-client");
+        authCodeResourceDetails.setClientId(clientId);
+        authCodeResourceDetails.setClientSecret(clientSecret);
+        authCodeResourceDetails.setUserAuthorizationUri(userAuthorizationUri);
+        authCodeResourceDetails.setAccessTokenUri(accessTokenUri);
+        authCodeResourceDetails.setTokenName(tokenName);
+        String commaSeparatedScopes = scope;
+        authCodeResourceDetails.setScope(parseScopes(commaSeparatedScopes));
+
+        // Defaults to use current URI
+        /*
+         * If a pre-established redirect URI is used, it will need to be an
+         * absolute URI. To do so, it'll need to compute the URI from a
+         * request. The HTTP request object is available when you override
+         * OAuth2ClientAuthenticationProcessingFilter#attemptAuthentication().
+         *
+         * details.setPreEstablishedRedirectUri(
+         * 		env.getProperty("redirectUrl"));
+         * details.setUseCurrentUri(false);
+         */
+        authCodeResourceDetails.setAuthenticationScheme(AuthenticationScheme.query);
+        authCodeResourceDetails.setClientAuthenticationScheme(AuthenticationScheme.form);
+        return authCodeResourceDetails;
+    }
+
+    private List<String> parseScopes(String commaSeparatedScopes) {
+        List<String> scopes = new LinkedList<>();
+        Collections.addAll(scopes, commaSeparatedScopes.split(","));
+        return scopes;
+    }
+
+    /**
+     * @return an OAuth2 client authentication processing filter
+     */
+    @Bean
+    @Description("Filter that checks for authorization code, "
+            + "and if there's none, acquires it from authorization server")
+    public OAuth2ClientAuthenticationProcessingFilter
+    oauth2ClientAuthenticationProcessingFilter() {
+        // Used to obtain access token from authorization server (AS)
+        OAuth2RestOperations restTemplate = new OAuth2RestTemplate(
+                authorizationCodeResource(),
+                oauth2ClientContext);
+        OAuth2ClientAuthenticationProcessingFilter filter =
+                new OAuth2ClientAuthenticationProcessingFilter(oauth2FilterCallbackPath);
+        filter.setRestTemplate(restTemplate);
+
+        // Set a service that validates an OAuth2 access token
+        // For this, we chose to use UserInfoTokenServices
+        filter.setTokenServices(new UserInfoTokenServices(userInfoUri, clientId));
+        filter.setAuthenticationSuccessHandler(new SavedRequestAwareAuthenticationSuccessHandler());
+        return filter;
+    }
+
+    @Bean
+    public AuthenticationEntryPoint authenticationEntryPoint() {
+        // May need an OAuth2AuthenticationEntryPoint for non-browser clients
+        return new LoginUrlAuthenticationEntryPoint(oauth2FilterCallbackPath);
+    }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/webfiles/**");
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.exceptionHandling()
+                .authenticationEntryPoint(authenticationEntryPoint())
+                .and()
+                .authorizeRequests()
+                .antMatchers(
+                        "/css/**",
+                        "/images/**",
+                        "/site/images/**",
+                        "/script/**",
+                        "/binaries/**",
+                        "/webfiles/**",
+                        "/_rp/**",
+                        "/_cmsrest/**",
+                        "/_cmsinternal/**",
+                        "/_cmssessioncontext/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .logout().logoutUrl("/logout").logoutSuccessUrl(logoutSuccessUrl)
+                /* No need for form-based login or basic authentication
+                .and()
+                    .formLogin()
+                        .loginPage("...")
+                        .loginProcessingUrl("...")
+                .and()
+                    .httpBasic()
+                 */
+                .and()
+                .addFilterBefore(
+                        oauth2ClientContextFilter,
+                        RequestCacheAwareFilter.class)
+                .addFilterBefore(
+                        oauth2ClientAuthenticationProcessingFilter(),
+                        RequestCacheAwareFilter.class)
+                /*.anonymous()
+                // anonymous login must be disabled,
+                // otherwise an anonymous authentication will be created,
+                // and the UserRedirectRequiredException will not be thrown,
+                // and the user will not be redirected to the authorization server
+                .disable();*/
+                .headers().frameOptions().sameOrigin();
+    }
+
+    @Override
+    protected AuthenticationManager authenticationManager() throws Exception {
+        return new NoopAuthenticationManager();
+    }
+
+    private static class NoopAuthenticationManager implements AuthenticationManager {
+        @Override
+        public Authentication authenticate(Authentication authentication)
+                throws AuthenticationException {
+            throw new UnsupportedOperationException(
+                    "No authentication should be done with this AuthenticationManager");
+        }
+    }
 
 }
