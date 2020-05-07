@@ -1,25 +1,64 @@
 /content/documents/administration/labels/homepage:
   jcr:primaryType: hippo:handle
-  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 1bf529ee-7b6f-4f6b-9554-4d894b666049
   hippo:name: Homepage
-  /homepage:
+  hippo:versionHistory: 041f904a-0eca-490e-8bba-b4e978f1cd5b
+  /homepage[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 7e3850bc-1d92-4faf-8fec-e6fa14f90e48
-    hippo:availability: [live, preview]
+    hippo:availability: [live]
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T17:08:08.703+02:00
-    hippostdpubwf:lastModificationDate: 2014-08-21T17:11:53.242+02:00
+    hippostdpubwf:lastModificationDate: 2020-05-07T16:16:48.347+05:30
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2014-08-21T17:11:55.239+02:00
+    hippostdpubwf:publicationDate: 2020-05-07T16:16:51.028+05:30
     resourcebundle:descriptions: [Title displayed on homepage., Text displayed on
         homepage.]
     resourcebundle:id: essentials.homepage
     resourcebundle:keys: [homepage.title, homepage.text]
-    resourcebundle:messages: [Home Page, 'Every website comes with its own styling
-        requirements. The Bloomreach setup application can therefore not address site
-        styling. Instead, the generated pages use minimal styling to render the content.
-        It is the task of the project developer to adjust the front-end to the site''s
-        needs.']
+    resourcebundle:messages: [Home Page, 'Health Education England (HEE) exists for
+        one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.']
+  /homepage[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 32492139-0abb-40b7-b78d-46f57aafadd9
+    hippo:availability: [preview]
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2014-08-21T17:08:08.703+02:00
+    hippostdpubwf:lastModificationDate: 2020-05-07T16:16:48.347+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Title displayed on homepage., Text displayed on
+        homepage.]
+    resourcebundle:id: essentials.homepage
+    resourcebundle:keys: [homepage.title, homepage.text]
+    resourcebundle:messages: [Home Page, 'Health Education England (HEE) exists for
+        one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.']
+  /homepage[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 7351bb92-1835-47e0-8438-d6dec8743e95
+    hippo:availability: []
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2014-08-21T17:08:08.703+02:00
+    hippostdpubwf:lastModificationDate: 2020-05-07T16:16:38.702+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Title displayed on homepage., Text displayed on
+        homepage.]
+    resourcebundle:id: essentials.homepage
+    resourcebundle:keys: [homepage.title, homepage.text]
+    resourcebundle:messages: [Home Page, 'Health Education England (HEE) exists for
+        one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.']

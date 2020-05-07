@@ -170,7 +170,16 @@ public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapte
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/webfiles/**");
+        web.ignoring().antMatchers(
+                "/css/**",
+                "/images/**",
+                "/script/**",
+                "/binaries/**",
+                "/webfiles/**",
+                "/_rp/**",
+                "/_cmsrest/**",
+                "/_cmsinternal/**",
+                "/_cmssessioncontext/**");
     }
 
     @Override
@@ -179,18 +188,9 @@ public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapte
                 .authenticationEntryPoint(authenticationEntryPoint())
                 .and()
                 .authorizeRequests()
-                .antMatchers(
-                        "/css/**",
-                        "/images/**",
-                        "/site/images/**",
-                        "/script/**",
-                        "/binaries/**",
-                        "/webfiles/**",
-                        "/_rp/**",
-                        "/_cmsrest/**",
-                        "/_cmsinternal/**",
-                        "/_cmssessioncontext/**").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/").permitAll()
+                .antMatchers("/user-home-page").authenticated()
+                // .anyRequest().authenticated()
                 .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl(logoutSuccessUrl)
                 /* No need for form-based login or basic authentication

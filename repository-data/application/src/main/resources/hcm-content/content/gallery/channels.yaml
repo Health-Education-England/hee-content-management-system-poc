@@ -1,0 +1,6 @@
+/content/gallery/channels:
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['mix:versionable']
+  jcr:uuid: e30dcf8b-a6ff-488b-acbd-fcaa841f301f
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hippogallery:imageset']
