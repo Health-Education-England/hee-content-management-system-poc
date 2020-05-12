@@ -1,5 +1,10 @@
 package uk.nhs.hee.web.security.config.oauth2.azure;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoTokenServices;
@@ -30,10 +35,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.security.web.savedrequest.RequestCacheAwareFilter;
-
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import org.springframework.web.util.UriUtils;
 
 /**
  * <p>
@@ -50,7 +52,7 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 @EnableOAuth2Client
-@PropertySource("classpath:azure-oauth2.properties")
+@PropertySource("classpath:azure-ad-oauth2.properties")
 public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapter {
 
     // This is made possible because of @EnableOAuth2Client
@@ -70,33 +72,37 @@ public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapte
     @Autowired
     private OAuth2ClientContextFilter oauth2ClientContextFilter;
 
+    // All the following properties would come fed via System Properties
 
-    @Value("${clientId}")
+    @Value("${base.uri}/site")
+    private String siteBaseUri;
+
+    @Value("${ms.azure.ad.oauth2.clientId}")
     private String clientId;
 
-    @Value("${clientSecret}")
+    @Value("${ms.azure.ad.oauth2.clientSecret}")
     private String clientSecret;
 
-    @Value("${userAuthorizationUri}")
+    @Value("${ms.azure.ad.oauth2.auth.uri}")
     private String userAuthorizationUri;
 
-    @Value("${accessTokenUri}")
+    @Value("${ms.azure.ad.oauth2.token.uri}")
     private String accessTokenUri;
 
-    @Value("${tokenName:authorization_code}")
-    private String tokenName;
-
-    @Value("${scope}")
+    @Value("${ms.azure.ad.oauth2.scope}")
     private String scope;
 
-    @Value("${userInfoUri}")
+    @Value("${ms.azure.ad.oauth2.user_info.uri}")
     private String userInfoUri;
 
-    @Value("${filterCallbackPath}")
+    @Value("${ms.azure.ad.oauth2.callback.path}")
     private String oauth2FilterCallbackPath;
 
-    @Value("${logoutSuccessUrl}")
+    @Value("${ms.azure.ad.oauth2.logout.url}")
     private String logoutSuccessUrl;
+
+    @Value("${path.logout}")
+    private String logoutPath;
 
     @Bean
     @Description("Enables ${...} expressions in the @Value annotations"
@@ -113,9 +119,14 @@ public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapte
         authCodeResourceDetails.setClientSecret(clientSecret);
         authCodeResourceDetails.setUserAuthorizationUri(userAuthorizationUri);
         authCodeResourceDetails.setAccessTokenUri(accessTokenUri);
-        authCodeResourceDetails.setTokenName(tokenName);
-        String commaSeparatedScopes = scope;
-        authCodeResourceDetails.setScope(parseScopes(commaSeparatedScopes));
+        authCodeResourceDetails.setScope(parseScopes(scope));
+
+        // Spring-security defaults current URI as the redirect_uri and uses http protocol/scheme.
+        // This may not work for environments which uses https protocol/scheme.
+        // This following configuration would enable spring-security to use pre-established redirect-uri
+        // (than current uri) which should contain the correct protocol/scheme, domain, etc
+        authCodeResourceDetails.setPreEstablishedRedirectUri(siteBaseUri + oauth2FilterCallbackPath);
+        authCodeResourceDetails.setUseCurrentUri(false);
 
         // Defaults to use current URI
         /*
@@ -179,28 +190,25 @@ public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapte
                 "/_rp/**",
                 "/_cmsrest/**",
                 "/_cmsinternal/**",
-                "/_cmssessioncontext/**");
+                "/_cmssessioncontext/**",
+                "/static/**",
+                "/**/resourceapi");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        final String formattedLogoutSuccessUrl = logoutSuccessUrl.replace(
+                "##url_encoded_site_base_uri##",
+                UriUtils.encode(siteBaseUri, StandardCharsets.UTF_8));
+
         http.exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint())
                 .and()
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/user-home-page").authenticated()
-                // .anyRequest().authenticated()
                 .and()
-                .logout().logoutUrl("/logout").logoutSuccessUrl(logoutSuccessUrl)
-                /* No need for form-based login or basic authentication
-                .and()
-                    .formLogin()
-                        .loginPage("...")
-                        .loginProcessingUrl("...")
-                .and()
-                    .httpBasic()
-                 */
+                .logout().logoutUrl(logoutPath).logoutSuccessUrl(formattedLogoutSuccessUrl)
                 .and()
                 .addFilterBefore(
                         oauth2ClientContextFilter,
@@ -208,13 +216,10 @@ public class AzureOAuth2ClientSecurityConfig extends WebSecurityConfigurerAdapte
                 .addFilterBefore(
                         oauth2ClientAuthenticationProcessingFilter(),
                         RequestCacheAwareFilter.class)
-                /*.anonymous()
-                // anonymous login must be disabled,
-                // otherwise an anonymous authentication will be created,
-                // and the UserRedirectRequiredException will not be thrown,
-                // and the user will not be redirected to the authorization server
-                .disable();*/
-                .headers().frameOptions().sameOrigin();
+                .headers().frameOptions().sameOrigin()
+                .and()
+                // Temporarily disabled CSRF until a way is found to pass the ${_csrf.token} to react spa
+                .csrf().disable();
     }
 
     @Override

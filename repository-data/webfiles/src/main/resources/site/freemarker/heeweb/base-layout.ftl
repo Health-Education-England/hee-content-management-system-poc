@@ -1,35 +1,36 @@
 <!doctype html>
 <#include "../include/imports.ftl">
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?html} | Health Education England</title>
-    <meta name="description" content="${hstRequestContext.contentBean.description}">
+<head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="<@hst.webfile  path="/css/bootstrap.css"/>" type="text/css"/>
-    <#if hstRequest.requestContext.channelManagerPreviewRequest>
-      <link rel="stylesheet" href="<@hst.webfile  path="/css/cms-request.css"/>" type="text/css"/>
-    </#if>
-    <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts" xhtml=true/>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <@hst.include ref="top"/>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <@hst.include ref="menu"/>
-        </div>
-      </div>
-      <div class="row">
-        <@hst.include ref="main"/>
-      </div>
-      <div class="row">
-        <@hst.include ref="footer"/>
-      </div>
-    </div>
-    <@hst.headContributions categoryIncludes="htmlBodyEnd, scripts" xhtml=true/>
-  </body>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="Example React SPA for Bloomreach Experience"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/site/static/css/nhsuk-3.1.0.min.css" media="screen"/>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/site/static/assets/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/site/static/assets/favicons/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="/site/static/assets/favicons/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="/site/static/assets/favicons/favicon-192x192.png">
+    <meta name="msapplication-TileImage" content="/site/static/assets/favicons/mediumtile-144x144.png">
+    <meta name="msapplication-TileColor" content="#005eb8">
+    <meta name="msapplication-square70x70logo" content="/site/static/assets/favicons/smalltile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/site/static/assets/favicons/mediumtile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/site/static/assets/favicons/widetile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/site/static/assets/favicons/largetile-310x310.png">
+
+    <#--  <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?html} | Health Education England</title>
+    <meta name="description" content="${hstRequestContext.contentBean.description}">  -->
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<script src="/site/static/js/runtime-main.fa5d0597.js"></script>
+<script src="/site/static/js/2.85cd1735.chunk.js"></script>
+<script src="/site/static/js/main.c02c2a06.chunk.js"></script>
+</body>
 </html>
+

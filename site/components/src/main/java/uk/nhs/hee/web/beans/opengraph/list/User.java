@@ -1,7 +1,6 @@
 package uk.nhs.hee.web.beans.opengraph.list;
 
 import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
@@ -11,7 +10,6 @@ public class User {
     private String displayName;
     private String jobTitle;
     private List<String> groups;
-    private Map<String, List<FileItem>> siteFiles;
 
     /**
      * @return the username
@@ -64,18 +62,6 @@ public class User {
     public void setGroups(List<String> groups) {
         this.groups = groups;
     }
-    /**
-     * @return the siteFiles
-     */
-    public Map<String, List<FileItem>> getSiteFiles() {
-        return siteFiles;
-    }
-    /**
-     * @param siteFiles the siteFiles to set
-     */
-    public void setSiteFiles(Map<String, List<FileItem>> siteFiles) {
-        this.siteFiles = siteFiles;
-    }
 
     @Override
     public String toString() {
@@ -84,7 +70,6 @@ public class User {
                 .append("displayName", displayName)
                 .append("jobTitle", jobTitle)
                 .append("groups", groups)
-                .append("siteFiles", siteFiles)
                 .toString();
     }
 

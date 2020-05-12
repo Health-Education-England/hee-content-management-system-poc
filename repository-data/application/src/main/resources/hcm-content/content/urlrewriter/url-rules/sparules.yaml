@@ -1,0 +1,59 @@
+/content/urlrewriter/url-rules/sparules:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: b0c8d5e5-fa31-465e-9111-4dd681fa8f08
+  hippo:name: SPARules
+  hippo:versionHistory: d2f9f9d1-f7a2-4ce7-b76e-2cbe3b846fc9
+  /sparules[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 4bf15a4e-4738-4019-b2a7-f5d21501fa42
+    hippo:availability: []
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-04-20T17:52:22.867+01:00
+    hippostdpubwf:lastModificationDate: 2020-04-22T11:47:04.664+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n    <!-- Rule 1: Exclude requests for Page Model\
+      \ API and binaries -->\r\n    <from>^(?:/[^\\/]+)?(?:/_cmsinternal)?/(?:binaries|resourceapi|images)([\\\
+      ?/].*)?$</from>\r\n    <to last=\"true\">-</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      \    <!-- Rule 2: Ensure bloomreach-preview query parameter for preview requests\
+      \ -->\r\n    <from>\r\n    ^((?:/[^\\/]+)?/_cmsinternal(?:/[^\\?]*)?)(?:\\?((?!(.*&amp;)?bloomreach-preview=.*).*))?$\r\
+      \n    </from>\r\n    <to type=\"redirect\" last=\"true\">$1?$2&amp;bloomreach-preview=true</to>\r\
+      \n</rule>"
+  /sparules[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: a401e672-dfc4-4aba-9c18-b15aae1dea4b
+    hippo:availability: [preview]
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-04-20T17:52:22.867+01:00
+    hippostdpubwf:lastModificationDate: 2020-04-22T11:47:04.620+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <!-- Rule 1: Exclude requests for Page Model\
+      \ API and binaries -->\r\n    <from>^(?:/[^\\/]+)?(?:/_cmsinternal)?/(?:binaries|resourceapi|images)([\\\
+      ?/].*)?$</from>\r\n    <to last=\"true\">-</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      \    <!-- Rule 2: Ensure bloomreach-preview query parameter for preview requests\
+      \ -->\r\n    <from>\r\n    ^((?:/[^\\/]+)?/_cmsinternal(?:/[^\\?]*)?)(?:\\?((?!(.*&amp;)?bloomreach-preview=.*).*))?$\r\
+      \n    </from>\r\n    <to type=\"redirect\" last=\"true\">$1?$2&amp;bloomreach-preview=true</to>\r\
+      \n</rule>"
+  /sparules[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: c9834e8d-b4ab-4ec4-9bc8-2137cb3dbc8d
+    hippo:availability: [live]
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-04-20T17:52:22.867+01:00
+    hippostdpubwf:lastModificationDate: 2020-04-22T11:47:04.620+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2020-04-22T11:47:07.870+01:00
+    urlrewriter:rule: "<rule>\r\n    <!-- Rule 1: Exclude requests for Page Model\
+      \ API and binaries -->\r\n    <from>^(?:/[^\\/]+)?(?:/_cmsinternal)?/(?:binaries|resourceapi|images)([\\\
+      ?/].*)?$</from>\r\n    <to last=\"true\">-</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      \    <!-- Rule 2: Ensure bloomreach-preview query parameter for preview requests\
+      \ -->\r\n    <from>\r\n    ^((?:/[^\\/]+)?/_cmsinternal(?:/[^\\?]*)?)(?:\\?((?!(.*&amp;)?bloomreach-preview=.*).*))?$\r\
+      \n    </from>\r\n    <to type=\"redirect\" last=\"true\">$1?$2&amp;bloomreach-preview=true</to>\r\
+      \n</rule>"

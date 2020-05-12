@@ -1,6 +1,6 @@
 package uk.nhs.hee.web.component;
 
-import java.util.List;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -12,12 +12,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.oauth2.client.http.AccessTokenRequiredException;
 
-import uk.nhs.hee.web.beans.opengraph.list.FileItem;
+import uk.nhs.hee.web.beans.opengraph.list.User;
 import uk.nhs.hee.web.ms.graph.service.GraphServiceFactory;
 
-public class HEEWebSharepointFilesComponent extends CommonComponent {
+public class HEEWebAzureADProfileComponent extends CommonComponent {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(HEEWebSharepointFilesComponent.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(HEEWebAzureADProfileComponent.class.getName());
 
     @Override
     public void doBeforeRender(HstRequest request, HstResponse response) {
@@ -26,6 +26,15 @@ public class HEEWebSharepointFilesComponent extends CommonComponent {
 
         try {
             GraphServiceFactory graphServiceFactory = new GraphServiceFactory(request);
+
+            // Profile
+            Map<String, String> userProperties = graphServiceFactory.getUserService().getUserProperties(
+                    Arrays.asList("userPrincipalName", "displayName", "jobTitle"));
+
+            User user = new User();
+            user.setUsername(userProperties.get("userPrincipalName"));
+            user.setDisplayName(userProperties.get("displayName"));
+            user.setJobTitle(userProperties.get("jobTitle"));
 
             // Member Of
             Map<String, String> groups = graphServiceFactory.getGroupService().getAllGroups();
@@ -39,17 +48,11 @@ public class HEEWebSharepointFilesComponent extends CommonComponent {
 
             LOGGER.info("groups = " + groups);
 
-            // Get root/group sites
-            Map<String, String> sites = graphServiceFactory.getSiteService()
-                    .getSitesByGroupIncludingRootSite(groups.keySet().stream().collect(Collectors.toList()));
+            user.setGroups(groups.values().stream().collect(Collectors.toList()));
 
-            // Get sites with files
-            Map<String, List<FileItem>> sharepointSiteFiles =
-                    graphServiceFactory.getListItemService().getSharedFileItemsBySites(sites);
+            LOGGER.debug("User AD Profile = {}", user);
 
-            LOGGER.debug("Sharepoint Site Files for the user '{}' => {}", request.getUserPrincipal().getName(), sites);
-
-            request.setModel("sharepointSiteFiles", sharepointSiteFiles);
+            request.setModel("user", user);
         } catch (AccessTokenRequiredException e) {
             LOGGER.error("Looks like 'accessToken' is not availabe in the session. "
                     + "Probably user didn't login yet. "

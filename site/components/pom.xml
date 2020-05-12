@@ -12,8 +12,8 @@
   <name>HEE Web Site Components</name>
   <description>HEE Web Site Components</description>
   <properties>
-    <spring.security.version>${spring.version}</spring.security.version>
-    <spring.boot.version>2.1.5.RELEASE</spring.boot.version>
+    <spring.security.version>5.2.2.RELEASE</spring.security.version>
+    <spring.boot.version>2.1.13.RELEASE</spring.boot.version>
   </properties>
 
   <dependencies>
@@ -205,6 +205,10 @@
           <artifactId>jaxb-api</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-urlrewriter-module-hst</artifactId>
     </dependency>
   </dependencies>
 

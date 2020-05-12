@@ -7,6 +7,12 @@ definitions:
         /sharepoint-files:
           jcr:primaryType: hst:containeritemcomponent
           hst:componentclassname: uk.nhs.hee.web.component.HEEWebSharepointFilesComponent
-          hst:iconpath: images/essentials/catalog-component-icons/simple-content.svg
+          hst:iconpath: images/essentials/catalog-component-icons/generic-list.svg
           hst:label: Sharepoint Files
           hst:template: sharepoint-files-main
+        /azure-ad-profile:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.HEEWebAzureADProfileComponent
+          hst:iconpath: images/essentials/catalog-component-icons/simple-content.svg
+          hst:label: AzureAD Profile
+          hst:template: azure-ad-profile-main
