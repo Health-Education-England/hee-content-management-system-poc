@@ -16,3 +16,8 @@ definitions:
           hst:iconpath: images/essentials/catalog-component-icons/simple-content.svg
           hst:label: AzureAD Profile
           hst:template: azure-ad-profile-main
+        /hero-banner:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+          hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+          hst:label: Hero Banner
