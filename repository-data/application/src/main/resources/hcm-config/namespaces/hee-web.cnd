@@ -7,6 +7,9 @@
 [heeweb:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
+[heeweb:BaseHippoDocument] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [heeweb:heroBanner] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 

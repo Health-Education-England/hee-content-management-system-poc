@@ -208,6 +208,17 @@
           </exclusion>
         </exclusions>
       </dependency>
+      <dependency>
+        <groupId>com.algolia</groupId>
+        <artifactId>algoliasearch-core</artifactId>
+        <version>3.6.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.algolia</groupId>
+        <artifactId>algoliasearch-apache</artifactId>
+        <version>3.6.1</version>
+      </dependency>
 <!--      <dependency>-->
 <!--        <groupId>org.apache.httpcomponents</groupId>-->
 <!--        <artifactId>httpcore</artifactId>-->
@@ -225,6 +236,11 @@
 <!--          </exclusion>-->
 <!--        </exclusions>-->
 <!--      </dependency>-->
+      <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>2.1.1</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
