@@ -37,49 +37,49 @@
 
         </route>
 
-<!--        <route id="Route-File-to-REST">-->
+        <route id="Route-File-to-REST">
 
-<!--            &lt;!&ndash; Subscribe file events from the 'inbox' folder. &ndash;&gt;-->
-<!--            <from uri="file:inbox?autoCreate=true&amp;charset=utf-8&amp;preMove=.processing&amp;delete=true&amp;moveFailed=.error" />-->
+            <!-- Subscribe file events from the 'inbox' folder. -->
+            <from uri="file:inbox?autoCreate=true&amp;charset=utf-8&amp;preMove=.processing&amp;delete=true&amp;moveFailed=.error" />
 
-<!--            &lt;!&ndash; Convert the file message to String. &ndash;&gt;-->
-<!--            <convertBodyTo type="java.lang.String" />-->
+            <!-- Convert the file message to String. -->
+            <convertBodyTo type="java.lang.String" />
 
-<!--            &lt;!&ndash; Convert the JSON string to JSON object. &ndash;&gt;-->
-<!--            <convertBodyTo type="net.sf.json.JSON" />-->
+            <!-- Convert the JSON string to JSON object. -->
+            <convertBodyTo type="net.sf.json.JSON" />
 
-<!--            &lt;!&ndash; Leave log. &ndash;&gt;-->
-<!--            <to uri="log:org.onehippo.forge.camel.demo?level=INFO"/>-->
+            <!-- Leave log. -->
+            <to uri="log:org.onehippo.forge.camel.demo?level=INFO"/>
 
-<!--            &lt;!&ndash; Set HTTP header to 'POST'. &ndash;&gt;-->
-<!--            <setHeader headerName="CamelHttpMethod">-->
-<!--                <constant>POST</constant>-->
-<!--            </setHeader>-->
+            <!-- Set HTTP header to 'POST'. -->
+            <setHeader headerName="CamelHttpMethod">
+                <constant>POST</constant>
+            </setHeader>
 
-<!--            &lt;!&ndash; Set HTTP query string based on the workflow event message. &ndash;&gt;-->
-<!--            <choice>-->
-<!--                <when>-->
-<!--                    <simple>${body[action]} == 'publish'</simple>-->
-<!--                    <setHeader headerName="CamelHttpQuery">-->
-<!--                        <simple>action=index&amp;id=${body[subjectId]}</simple>-->
-<!--                    </setHeader>-->
-<!--                </when>-->
-<!--                <when>-->
-<!--                    <simple>${body[action]} == 'depublish'</simple>-->
-<!--                    <setHeader headerName="CamelHttpQuery">-->
-<!--                        <simple>action=delete&amp;id=${body[subjectId]}</simple>-->
-<!--                    </setHeader>-->
-<!--                </when>-->
-<!--            </choice>-->
+            <!-- Set HTTP query string based on the workflow event message. -->
+            <choice>
+                <when>
+                    <simple>${body[action]} == 'publish'</simple>
+                    <setHeader headerName="CamelHttpQuery">
+                        <simple>action=index&amp;id=${body[subjectId]}</simple>
+                    </setHeader>
+                </when>
+                <when>
+                    <simple>${body[action]} == 'depublish'</simple>
+                    <setHeader headerName="CamelHttpQuery">
+                        <simple>action=delete&amp;id=${body[subjectId]}</simple>
+                    </setHeader>
+                </when>
+            </choice>
 
-<!--            &lt;!&ndash; Invoke the Search Index synchronization REST service. &ndash;&gt;-->
-<!--            <to uri="http4://localhost:8080/site/restapi/{{search.engine}}/update/" />-->
+            <!-- Invoke the Search Index synchronization REST service. -->
+            <to uri="http4://localhost:8080/site/restapi/algolia/update/" />
 
-<!--            &lt;!&ndash;-->
-<!--            <to uri="smtp://localhost?javaMailSender=#javaMailSender&amp;debugMode=true&amp;from=camel@example.com&amp;to=admin@example.com&amp;subject=Test+Message+(Publication/Depublication+Event+Data)" />-->
-<!--            &ndash;&gt;-->
+            <!--
+            <to uri="smtp://localhost?javaMailSender=#javaMailSender&amp;debugMode=true&amp;from=camel@example.com&amp;to=admin@example.com&amp;subject=Test+Message+(Publication/Depublication+Event+Data)" />
+            -->
 
-<!--        </route>-->
+        </route>
 
         <route id="Repository-Scheduler-Job-to-Direct">
             <from uri="direct:processCamelRepositoryJob" />

@@ -114,11 +114,11 @@
       <artifactId>spring-webmvc</artifactId>
     </dependency>
 
-<!--    <dependency>-->
-<!--      <groupId>org.apache.camel</groupId>-->
-<!--      <artifactId>camel-http4</artifactId>-->
-<!--      <scope>runtime</scope>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-http4</artifactId>
+      <scope>runtime</scope>
+    </dependency>
 <!--    <dependency>-->
 <!--      <groupId>org.apache.httpcomponents</groupId>-->
 <!--      <artifactId>httpcore</artifactId>-->
