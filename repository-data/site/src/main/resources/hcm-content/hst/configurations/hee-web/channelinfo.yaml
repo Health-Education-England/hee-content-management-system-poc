@@ -1,2 +1,5 @@
 /hst:hst/hst:configurations/heeweb/hst:workspace/hst:channel/hst:channelinfo:
   jcr:primaryType: hst:channelinfo
+  orgDescriptor: NHS Foundation Trust
+  orgName: Health Education England
+  orgSplit: Library and Knowledge Services

@@ -5,3 +5,8 @@ definitions:
       jcr:primaryType: hst:channel
       hst:name: HEE Web
       hst:type: website
+      hst:channelinfoclass: uk.nhs.hee.web.configuration.channel.WebsiteChannelInfo
+      hst:lastmodifiedby: admin
+      hst:defaultdevice: default
+      hst:devices: []
+      hst:lastmodified: 2020-05-28T16:04:52.545+05:30
