@@ -1,0 +1,9 @@
+/content/documents/heeweb-westmidlands:
+  .meta:order-before: heeweb-southeast
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 63f283fd-a9e3-48fc-ac9d-cc7b4ac6821c
+  hippo:name: HEE Web WestMidlands
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 82a20334-5180-4a73-b66e-b8ec317570e8
+  hippotranslation:locale: en

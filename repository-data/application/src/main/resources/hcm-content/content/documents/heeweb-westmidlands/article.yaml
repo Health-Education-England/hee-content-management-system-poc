@@ -1,0 +1,372 @@
+/content/documents/heeweb-westmidlands/article:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: fe6f4249-49e9-46cb-b1cd-2cf491ad2730
+  hippo:name: Article
+  hippostd:foldertype: [new-article-folder, new-article-document]
+  hippotranslation:id: 16175860-dc21-42f8-85c0-6e8ef8d6b5cb
+  hippotranslation:locale: en
+  /ltft-training-policy-midlands:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 229bf4fb-7684-442e-94fd-e26f5d0ec969
+    hippo:name: LTFT training policy (Midlands)
+    hippo:versionHistory: 7cbbc265-a32d-4c43-9c37-b1845cf4050c
+    /ltft-training-policy-midlands[1]:
+      jcr:primaryType: heeweb:article
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 143c4fbe-a1a3-411f-8101-ad74808cd9af
+      heeweb:summary: |-
+        <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+        <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+        <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+        <p>Consider:</p>
+
+        <p>the effect on your income – reduced hours means less take-home pay</p>
+
+        <p>where you want to be both now and in the future. This may mean setting short-term and long- term goals</p>
+
+        <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+        <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+        <p>eligibility for less than full-time training (LTFT)</p>
+
+        <p>applying for LTFT</p>
+
+        <h3>Eligibility for less than full-time training (LTFT)</h3>
+
+        <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+        <h4>Category 1</h4>
+
+        <p>Those doctors in training with:</p>
+
+        <p>disability or ill health (this may include those on in vitro fertility programmes)</p>
+
+        <p>responsibility for caring (men and women) for children</p>
+
+        <p>responsibility for caring for an ill/disabled partner, relative or other dependent</p>
+
+        <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+        <h4>Category 2</h4>
+
+        <p>Those doctors in training with:</p>
+
+        <p>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</p>
+
+        <p>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</p>
+
+        <p>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</p>
+
+        <h3>Applying for LTFT</h3>
+
+        <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+      heeweb:title: 'Less than full-time training policy [Region: Midlands]'
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-01T11:36:43.271+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 3ee66aef-f230-4c35-ac1b-2644b0be173f
+      hippotranslation:locale: en
+      /heeweb:summary:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>[<strong>Credit:</strong> <a href="https://www.healthcareers.nhs.uk/explore-roles/doctors/career-opportunities-doctors/less-full-time-training-doctors">Less than full-time training for doctors</a>]</p>
+
+          <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+          <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+          <p>Consider:</p>
+
+          <ul>
+           <li>the effect on your income – reduced hours means less take-home pay</li>
+           <li>where you want to be both now and in the future. This may mean setting short-term and long- term goals</li>
+          </ul>
+
+          <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+          <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+          <ul>
+           <li><a href="#eligibility">eligibility for less than full-time training (LTFT)</a></li>
+           <li><a href="#applying">applying for LTFT</a></li>
+          </ul>
+
+          <h3>Eligibility for less than full-time training (LTFT)</h3>
+
+          <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+          <h4>Category 1</h4>
+
+          <p>Those doctors in training with:</p>
+
+          <ul>
+           <li>disability or ill health (this may include those on in vitro fertility programmes)</li>
+           <li>responsibility for caring (men and women) for children</li>
+           <li>responsibility for caring for an ill/disabled partner, relative or other dependent</li>
+          </ul>
+
+          <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+          <h4>Category 2</h4>
+
+          <p>Those doctors in training with:</p>
+
+          <ul>
+           <li>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</li>
+           <li>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</li>
+           <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
+          </ul>
+
+          <h3>Applying for LTFT</h3>
+
+          <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+    /ltft-training-policy-midlands[2]:
+      jcr:primaryType: heeweb:article
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 1381b585-77f3-4753-a9e4-2a7444483b95
+      heeweb:summary: |-
+        <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+        <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+        <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+        <p>Consider:</p>
+
+        <p>the effect on your income – reduced hours means less take-home pay</p>
+
+        <p>where you want to be both now and in the future. This may mean setting short-term and long- term goals</p>
+
+        <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+        <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+        <p>eligibility for less than full-time training (LTFT)</p>
+
+        <p>applying for LTFT</p>
+
+        <h3>Eligibility for less than full-time training (LTFT)</h3>
+
+        <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+        <h4>Category 1</h4>
+
+        <p>Those doctors in training with:</p>
+
+        <p>disability or ill health (this may include those on in vitro fertility programmes)</p>
+
+        <p>responsibility for caring (men and women) for children</p>
+
+        <p>responsibility for caring for an ill/disabled partner, relative or other dependent</p>
+
+        <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+        <h4>Category 2</h4>
+
+        <p>Those doctors in training with:</p>
+
+        <p>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</p>
+
+        <p>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</p>
+
+        <p>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</p>
+
+        <h3>Applying for LTFT</h3>
+
+        <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+      heeweb:title: 'Less than full-time training policy [Region: Midlands]'
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-01T11:36:31.765+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 3ee66aef-f230-4c35-ac1b-2644b0be173f
+      hippotranslation:locale: en
+      /heeweb:summary:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>[<strong>Credit:</strong> <a href="https://www.healthcareers.nhs.uk/explore-roles/doctors/career-opportunities-doctors/less-full-time-training-doctors">Less than full-time training for doctors</a>]</p>
+
+          <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+          <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+          <p>Consider:</p>
+
+          <ul>
+           <li>the effect on your income – reduced hours means less take-home pay</li>
+           <li>where you want to be both now and in the future. This may mean setting short-term and long- term goals</li>
+          </ul>
+
+          <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+          <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+          <ul>
+           <li><a href="#eligibility">eligibility for less than full-time training (LTFT)</a></li>
+           <li><a href="#applying">applying for LTFT</a></li>
+          </ul>
+
+          <h3>Eligibility for less than full-time training (LTFT)</h3>
+
+          <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+          <h4>Category 1</h4>
+
+          <p>Those doctors in training with:</p>
+
+          <ul>
+           <li>disability or ill health (this may include those on in vitro fertility programmes)</li>
+           <li>responsibility for caring (men and women) for children</li>
+           <li>responsibility for caring for an ill/disabled partner, relative or other dependent</li>
+          </ul>
+
+          <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+          <h4>Category 2</h4>
+
+          <p>Those doctors in training with:</p>
+
+          <ul>
+           <li>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</li>
+           <li>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</li>
+           <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
+          </ul>
+
+          <h3>Applying for LTFT</h3>
+
+          <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+    /ltft-training-policy-midlands[3]:
+      jcr:primaryType: heeweb:article
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c9c64a83-7eed-482a-ae7b-c4a644c043db
+      heeweb:summary: |-
+        <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+        <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+        <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+        <p>Consider:</p>
+
+        <p>the effect on your income – reduced hours means less take-home pay</p>
+
+        <p>where you want to be both now and in the future. This may mean setting short-term and long- term goals</p>
+
+        <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+        <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+        <p>eligibility for less than full-time training (LTFT)</p>
+
+        <p>applying for LTFT</p>
+
+        <h3>Eligibility for less than full-time training (LTFT)</h3>
+
+        <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+        <h4>Category 1</h4>
+
+        <p>Those doctors in training with:</p>
+
+        <p>disability or ill health (this may include those on in vitro fertility programmes)</p>
+
+        <p>responsibility for caring (men and women) for children</p>
+
+        <p>responsibility for caring for an ill/disabled partner, relative or other dependent</p>
+
+        <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+        <h4>Category 2</h4>
+
+        <p>Those doctors in training with:</p>
+
+        <p>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</p>
+
+        <p>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</p>
+
+        <p>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</p>
+
+        <h3>Applying for LTFT</h3>
+
+        <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+      heeweb:title: 'Less than full-time training policy [Region: Midlands]'
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-01T11:36:43.271+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-06-01T11:36:45.573+05:30
+      hippotranslation:id: 3ee66aef-f230-4c35-ac1b-2644b0be173f
+      hippotranslation:locale: en
+      /heeweb:summary:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>[<strong>Credit:</strong> <a href="https://www.healthcareers.nhs.uk/explore-roles/doctors/career-opportunities-doctors/less-full-time-training-doctors">Less than full-time training for doctors</a>]</p>
+
+          <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+          <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+          <p>Consider:</p>
+
+          <ul>
+           <li>the effect on your income – reduced hours means less take-home pay</li>
+           <li>where you want to be both now and in the future. This may mean setting short-term and long- term goals</li>
+          </ul>
+
+          <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+          <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+          <ul>
+           <li><a href="#eligibility">eligibility for less than full-time training (LTFT)</a></li>
+           <li><a href="#applying">applying for LTFT</a></li>
+          </ul>
+
+          <h3>Eligibility for less than full-time training (LTFT)</h3>
+
+          <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+          <h4>Category 1</h4>
+
+          <p>Those doctors in training with:</p>
+
+          <ul>
+           <li>disability or ill health (this may include those on in vitro fertility programmes)</li>
+           <li>responsibility for caring (men and women) for children</li>
+           <li>responsibility for caring for an ill/disabled partner, relative or other dependent</li>
+          </ul>
+
+          <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+          <h4>Category 2</h4>
+
+          <p>Those doctors in training with:</p>
+
+          <ul>
+           <li>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</li>
+           <li>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</li>
+           <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
+          </ul>
+
+          <h3>Applying for LTFT</h3>
+
+          <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>

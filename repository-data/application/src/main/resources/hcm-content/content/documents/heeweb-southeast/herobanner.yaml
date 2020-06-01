@@ -1,0 +1,128 @@
+/content/documents/heeweb-southeast/herobanner:
+  .meta:order-before: article
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 6480948b-9278-4257-9c30-16309b73bb92
+  hippo:name: HeroBanner
+  hippostd:foldertype: [new-heroBanner-folder, new-heroBanner-document]
+  hippotranslation:id: d7cbae2a-324a-49d3-99be-ff710b9243a8
+  hippotranslation:locale: en
+  /home-hero-banner-southeast:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: d69a7831-2aaf-49b0-90b6-23410c0c1bc8
+    hippo:name: Home Hero Banner (SouthEast)
+    hippo:versionHistory: 51ed189f-50ac-4e2b-a20e-ca0277fa02f4
+    /home-hero-banner-southeast[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 75e1f1ca-777d-4f12-b3b8-c6a3f906c64b
+      heeweb:heading: '[Region: SouthEast] We''re here for you!'
+      heeweb:summaryText: '[Region: SouthEast] Health Education England (HEE) exists
+        for one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.'
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-30T23:44:53.337+05:30
+      hippostdpubwf:lastModifiedBy: southeast-editor
+      hippotranslation:id: 4b3bda96-89fe-480c-8fae-193927032ffc
+      hippotranslation:locale: en
+    /home-hero-banner-southeast[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: dd1e165e-aa8f-4c1c-a30c-2b425beb8bdf
+      heeweb:heading: '[Region: SouthEast] We''re here for you!'
+      heeweb:summaryText: '[Region: SouthEast] Health Education England (HEE) exists
+        for one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.'
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-30T23:45:01.696+05:30
+      hippostdpubwf:lastModifiedBy: southeast-editor
+      hippotranslation:id: 4b3bda96-89fe-480c-8fae-193927032ffc
+      hippotranslation:locale: en
+    /home-hero-banner-southeast[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: a2356435-7ec8-4c18-aaca-94008d3f0a17
+      heeweb:heading: '[Region: SouthEast] We''re here for you!'
+      heeweb:summaryText: '[Region: SouthEast] Health Education England (HEE) exists
+        for one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.'
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-30T23:45:01.696+05:30
+      hippostdpubwf:lastModifiedBy: southeast-editor
+      hippostdpubwf:publicationDate: 2020-05-31T17:32:04.930+05:30
+      hippotranslation:id: 4b3bda96-89fe-480c-8fae-193927032ffc
+      hippotranslation:locale: en
+  /ltft-hero-banner-southeast:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: b3408550-9eef-4aa0-832a-b8cd5e9ba9f7
+    hippo:name: LTFT Hero Banner (SouthEast)
+    hippo:versionHistory: 03e6b49c-a7da-43f1-a488-b33b06664f9f
+    /ltft-hero-banner-southeast[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 2fa1e1fa-dab5-4eec-99c5-262f3108322c
+      heeweb:heading: '[Region: SouthEast] Less than full-time training'
+      heeweb:summaryText: '[Region: SouthEast] Less Than Full Time (LTFT) training
+        is a scheme whereby eligible trainee doctors and dentists of all grades are
+        able to work on a part time basis when full-time work is impossible or unreasonable
+        rather than having to give up work.'
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-31T17:33:47.718+05:30
+      hippostdpubwf:lastModifiedBy: southeast-editor
+      hippotranslation:id: a5ff1f2a-4326-4abb-bdab-efee3a9018e4
+      hippotranslation:locale: en
+    /ltft-hero-banner-southeast[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 21956100-e1c2-45a0-94dd-f2fe83641539
+      heeweb:heading: '[Region: SouthEast] Less than full-time training'
+      heeweb:summaryText: '[Region: SouthEast] Less Than Full Time (LTFT) training
+        is a scheme whereby eligible trainee doctors and dentists of all grades are
+        able to work on a part time basis when full-time work is impossible or unreasonable
+        rather than having to give up work.'
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-31T17:33:18.911+05:30
+      hippostdpubwf:lastModifiedBy: southeast-editor
+      hippotranslation:id: a5ff1f2a-4326-4abb-bdab-efee3a9018e4
+      hippotranslation:locale: en
+    /ltft-hero-banner-southeast[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 0782acd4-2c62-49cf-bbea-ccedcf856870
+      heeweb:heading: '[Region: SouthEast] Less than full-time training'
+      heeweb:summaryText: '[Region: SouthEast] Less Than Full Time (LTFT) training
+        is a scheme whereby eligible trainee doctors and dentists of all grades are
+        able to work on a part time basis when full-time work is impossible or unreasonable
+        rather than having to give up work.'
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-31T17:33:47.718+05:30
+      hippostdpubwf:lastModifiedBy: southeast-editor
+      hippostdpubwf:publicationDate: 2020-05-31T17:33:50.305+05:30
+      hippotranslation:id: a5ff1f2a-4326-4abb-bdab-efee3a9018e4
+      hippotranslation:locale: en

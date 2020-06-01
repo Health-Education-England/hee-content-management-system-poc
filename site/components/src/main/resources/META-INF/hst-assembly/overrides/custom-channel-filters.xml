@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Custom channel filters be added here. -->
+    <bean id="customChannelFilters" class="org.springframework.beans.factory.config.ListFactoryBean">
+        <property name="sourceList">
+            <list>
+                <bean id="globalChannelAccessFilter" class="uk.nhs.hee.web.platform.services.channel.GlobalChannelAccessFilter"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

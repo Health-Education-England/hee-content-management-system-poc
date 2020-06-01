@@ -1,4 +1,5 @@
 /hst:hst/hst:configurations/heeweb/hst:workspace/hst:sitemenus/main/User Home Page:
+  .meta:order-before: LTFT Policy
   jcr:primaryType: hst:sitemenuitem
   hst:referencesitemapitem: user-home-page
   hst:repobased: false

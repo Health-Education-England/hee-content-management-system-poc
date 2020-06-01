@@ -1,0 +1,3 @@
+/hst:hst/hst:sites/heeweb-southeast:
+  jcr:primaryType: hst:site
+  hst:content: /content/documents/heeweb-southeast

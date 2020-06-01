@@ -14,6 +14,16 @@ definitions:
           hst:mountpoint: /hst:heeweb/hst:sites/heeweb
           hst:locale: en_GB
           hst:pagemodelapi: resourceapi
-          hst:namedpipeline: SpaSitePipeline
           hst:responseheaders: ['Access-Control-Allow-Credentials: true', 'Access-Control-Allow-Origin:
               http://localhost:3000']
+          hst:namedpipeline: SpaSitePipeline
+          /southeast:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:mountpoint: /hst:heeweb/hst:sites/heeweb-southeast
+            hst:pagemodelapi: resourceapi
+          /westmidlands:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:mountpoint: /hst:heeweb/hst:sites/heeweb-westmidlands
+            hst:pagemodelapi: resourceapi

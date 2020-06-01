@@ -1,0 +1,4 @@
+/hst:hst/hst:configurations/heeweb-westmidlands/hst:workspace/hst:sitemenus/main/LTFT Policy:
+  jcr:primaryType: hst:sitemenuitem
+  hst:referencesitemapitem: ltft-training-policy
+  hst:repobased: false

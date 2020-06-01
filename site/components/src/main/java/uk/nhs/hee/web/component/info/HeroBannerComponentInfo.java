@@ -14,7 +14,7 @@ public interface HeroBannerComponentInfo {
             isRelative = true,
             pickerConfiguration = "cms-pickers/documents-only",
             pickerSelectableNodeTypes = {"heeweb:heroBanner"},
-            pickerInitialPath = "HeroBanner"
+            pickerInitialPath = "herobanner"
     )
     String getHeroBannerDocument();
 

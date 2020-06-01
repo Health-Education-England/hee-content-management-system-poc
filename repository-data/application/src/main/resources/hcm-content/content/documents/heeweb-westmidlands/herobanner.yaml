@@ -1,0 +1,128 @@
+/content/documents/heeweb-westmidlands/herobanner:
+  .meta:order-before: article
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 63a146e4-e54e-4915-be94-d3920ef8ac6c
+  hippo:name: HeroBanner
+  hippostd:foldertype: [new-heroBanner-folder, new-heroBanner-document]
+  hippotranslation:id: f4e8a98e-32f5-48f0-a77e-426bd45cb8a4
+  hippotranslation:locale: en
+  /home-hero-banner-midlands:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 3348771b-3442-4c71-bbc3-aa8c60c7e0de
+    hippo:name: Home Hero Banner (Midlands)
+    hippo:versionHistory: 4a8c5a8d-cdc5-4e62-8f18-5473ad12b11c
+    /home-hero-banner-midlands[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 57e8f909-284d-46b5-a1ed-1b9e385dcc50
+      heeweb:heading: '[Region: Midlands] We''re here for you!'
+      heeweb:summaryText: '[Region: Midlands] Health Education England (HEE) exists
+        for one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.'
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-30T23:48:35.886+05:30
+      hippostdpubwf:lastModifiedBy: midlands-author
+      hippotranslation:id: e35c1b08-8a8f-4574-ae6c-928eb890805d
+      hippotranslation:locale: en
+    /home-hero-banner-midlands[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: bca50838-c38a-4d35-a1be-951c0e4d0714
+      heeweb:heading: '[Region: Midlands] We''re here for you!'
+      heeweb:summaryText: '[Region: Midlands] Health Education England (HEE) exists
+        for one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.'
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-30T23:48:39.951+05:30
+      hippostdpubwf:lastModifiedBy: midlands-author
+      hippotranslation:id: e35c1b08-8a8f-4574-ae6c-928eb890805d
+      hippotranslation:locale: en
+    /home-hero-banner-midlands[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 715cb388-d6de-48ad-a100-3bab7e827d37
+      heeweb:heading: '[Region: Midlands] We''re here for you!'
+      heeweb:summaryText: '[Region: Midlands] Health Education England (HEE) exists
+        for one reason only: to support the delivery of excellent healthcare and health
+        improvement to the patients and public of England by ensuring that the workforce
+        of today and tomorrow has the right numbers, skills, values and behaviours,
+        at the right time and in the right place.'
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-30T23:48:39.951+05:30
+      hippostdpubwf:lastModifiedBy: midlands-author
+      hippostdpubwf:publicationDate: 2020-05-31T17:36:17.357+05:30
+      hippotranslation:id: e35c1b08-8a8f-4574-ae6c-928eb890805d
+      hippotranslation:locale: en
+  /ltft-hero-banner-midlands:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 1e10f91c-e660-42d7-86b8-91b9334169e1
+    hippo:name: LTFT Hero Banner (Midlands)
+    hippo:versionHistory: 33406493-cd49-4fa4-961c-27795a86119e
+    /ltft-hero-banner-midlands[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: c002d198-8807-4c18-bd4a-b5e78339b66a
+      heeweb:heading: '[Region: WestMidlands] Less than full-time training'
+      heeweb:summaryText: '[Region: WestMidlands] Less Than Full Time (LTFT) training
+        is a scheme whereby eligible trainee doctors and dentists of all grades are
+        able to work on a part time basis when full-time work is impossible or unreasonable
+        rather than having to give up work.'
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-31T17:52:29.348+05:30
+      hippostdpubwf:lastModifiedBy: westmidlands-editor
+      hippotranslation:id: 0fed92a1-98d2-4f32-8322-4b0fb52e2206
+      hippotranslation:locale: en
+    /ltft-hero-banner-midlands[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 8be3d0b9-216d-42f6-b520-be43841400b4
+      heeweb:heading: '[Region: WestMidlands] Less than full-time training'
+      heeweb:summaryText: '[Region: WestMidlands] Less Than Full Time (LTFT) training
+        is a scheme whereby eligible trainee doctors and dentists of all grades are
+        able to work on a part time basis when full-time work is impossible or unreasonable
+        rather than having to give up work.'
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-31T17:52:29.348+05:30
+      hippostdpubwf:lastModifiedBy: westmidlands-editor
+      hippostdpubwf:publicationDate: 2020-05-31T17:52:31.251+05:30
+      hippotranslation:id: 0fed92a1-98d2-4f32-8322-4b0fb52e2206
+      hippotranslation:locale: en
+    /ltft-hero-banner-midlands[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c39e81d6-184c-40eb-94f3-d4ffcb396ea9
+      heeweb:heading: '[Region: WestMidlands] Less than full-time training'
+      heeweb:summaryText: '[Region: WestMidlands] Less Than Full Time (LTFT) training
+        is a scheme whereby eligible trainee doctors and dentists of all grades are
+        able to work on a part time basis when full-time work is impossible or unreasonable
+        rather than having to give up work.'
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-05-31T17:52:17.058+05:30
+      hippostdpubwf:lastModifiedBy: westmidlands-editor
+      hippotranslation:id: 0fed92a1-98d2-4f32-8322-4b0fb52e2206
+      hippotranslation:locale: en
