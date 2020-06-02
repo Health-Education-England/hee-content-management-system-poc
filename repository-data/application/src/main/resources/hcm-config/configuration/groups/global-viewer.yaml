@@ -6,7 +6,7 @@ definitions:
         .meta:category: system
         .meta:add-new-system-values: true
         type: string
-        value: [southeast-author, southeast-editor, westmidlands-author, westmidlands-editor]
+        value: [south-east-author, south-east-editor, west-midlands-author, west-midlands-editor]
       hipposys:securityprovider: internal
       hipposys:userroles:
         .meta:category: system

@@ -1,0 +1,143 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates/regional-blueprint:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 28efa1fe-0886-4185-869a-12528f36ec99
+      hippo:name: ''
+      hippostd:foldertype: [new-translated-folder, new-document]
+      hippotranslation:id: 852a2ba0-49c2-435c-9944-6341cf62086c
+      hippotranslation:locale: en
+      /herobanner:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+        jcr:uuid: dedaa4c6-a23c-4fd7-b569-d93076996d5f
+        hippo:name: HeroBanner
+        hippostd:foldertype: [new-heroBanner-folder, new-heroBanner-document]
+        hippotranslation:id: 621fda6d-47f2-4263-be9c-a347ed00375c
+        hippotranslation:locale: en
+        /home-hero-banner:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+          jcr:uuid: 06feaec8-d6eb-4e8a-943c-d914a0b8cd04
+          hippo:name: Home Hero Banner (<region>)
+          /home-hero-banner[1]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 66cb2ac3-dae0-457c-8672-11fdceeadfa3
+            heeweb:heading: '[Region: <region>] We''re here for you!'
+            heeweb:summaryText: '[Region: <region>] Health Education England (HEE)
+              exists for one reason only: to support the delivery of excellent healthcare
+              and health improvement to the patients and public of England by ensuring
+              that the workforce of today and tomorrow has the right numbers, skills,
+              values and behaviours, at the right time and in the right place.'
+            hippo:availability: []
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-01T23:37:47.703+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 678b9e57-ba3a-4332-a2d6-6605a69d4469
+            hippotranslation:locale: en
+          /home-hero-banner[2]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 09c47e2b-9a0e-4201-a9ec-12f8734ca545
+            heeweb:heading: '[Region: <region>] We''re here for you!'
+            heeweb:summaryText: '[Region: SouthEast] Health Education England (HEE)
+              exists for one reason only: to support the delivery of excellent healthcare
+              and health improvement to the patients and public of England by ensuring
+              that the workforce of today and tomorrow has the right numbers, skills,
+              values and behaviours, at the right time and in the right place.'
+            hippo:availability: [preview]
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-05-30T23:45:01.696+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 678b9e57-ba3a-4332-a2d6-6605a69d4469
+            hippotranslation:locale: en
+          /home-hero-banner[3]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 40ec6536-80c0-4e09-8d10-f7462b3de7d9
+            heeweb:heading: '[Region: <region>] We''re here for you!'
+            heeweb:summaryText: '[Region: <region>] Health Education England (HEE)
+              exists for one reason only: to support the delivery of excellent healthcare
+              and health improvement to the patients and public of England by ensuring
+              that the workforce of today and tomorrow has the right numbers, skills,
+              values and behaviours, at the right time and in the right place.'
+            hippo:availability: [live]
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-05-30T23:45:01.696+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2020-05-31T17:32:04.930+05:30
+            hippotranslation:id: 678b9e57-ba3a-4332-a2d6-6605a69d4469
+            hippotranslation:locale: en
+        /ltft-hero-banner:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+          jcr:uuid: 45aa84c4-3445-4837-834f-6b9f51c54149
+          hippo:name: LTFT Hero Banner (<region>)
+          /ltft-hero-banner[1]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: a3f81fed-1e4a-4ab9-a7f4-c6638665dc95
+            heeweb:heading: '[Region: <region>] Less than full-time training'
+            heeweb:summaryText: '[Region: <region>] Less Than Full Time (LTFT) training
+              is a scheme whereby eligible trainee doctors and dentists of all grades
+              are able to work on a part time basis when full-time work is impossible
+              or unreasonable rather than having to give up work.'
+            hippo:availability: [preview]
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-05-31T17:33:47.718+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 9dbe015e-0c2e-41b6-a99d-3b77c83ceb39
+            hippotranslation:locale: en
+          /ltft-hero-banner[2]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: bb24ffcd-cfb7-4828-9225-57157f5497f6
+            heeweb:heading: '[Region: <region>] Less than full-time training'
+            heeweb:summaryText: '[Region: <region>] Less Than Full Time (LTFT) training
+              is a scheme whereby eligible trainee doctors and dentists of all grades
+              are able to work on a part time basis when full-time work is impossible
+              or unreasonable rather than having to give up work.'
+            hippo:availability: []
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-05-31T17:33:18.911+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 9dbe015e-0c2e-41b6-a99d-3b77c83ceb39
+            hippotranslation:locale: en
+          /ltft-hero-banner[3]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 9e0bf7e8-3187-48e6-90a3-da1f37a994d9
+            heeweb:heading: '[Region: <region>] Less than full-time training'
+            heeweb:summaryText: '[Region: <region>] Less Than Full Time (LTFT) training
+              is a scheme whereby eligible trainee doctors and dentists of all grades
+              are able to work on a part time basis when full-time work is impossible
+              or unreasonable rather than having to give up work.'
+            hippo:availability: [live]
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-05-31T17:33:47.718+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2020-05-31T17:33:50.305+05:30
+            hippotranslation:id: 9dbe015e-0c2e-41b6-a99d-3b77c83ceb39
+            hippotranslation:locale: en
+      /article:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+        jcr:uuid: a142f0a5-e034-4c57-b915-79160ed7c7bc
+        hippo:name: Article
+        hippostd:foldertype: [new-article-folder, new-article-document]
+        hippotranslation:id: 99f6a281-64b9-4a04-b6f6-23440197d1b5
+        hippotranslation:locale: en

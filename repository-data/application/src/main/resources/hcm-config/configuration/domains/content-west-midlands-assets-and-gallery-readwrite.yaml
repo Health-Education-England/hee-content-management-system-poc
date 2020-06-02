@@ -1,0 +1,57 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-west-midlands-assets-and-gallery-readwrite:
+      jcr:primaryType: hipposys:domain
+      /assets-domain:
+        jcr:primaryType: hipposys:domainrule
+        /documents-only:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: hippo:availability
+          hipposys:type: String
+          hipposys:value: live
+        /non-publishable:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: nodetype
+          hipposys:type: String
+          hipposys:value: hippostd:publishable
+        /west-midlands-assets-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/assets/west-midlands
+      /rewrite:
+        jcr:primaryType: hipposys:authrole
+        hipposys:groups:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: [west-midlands-author, west-midlands-editor]
+        hipposys:role: readwrite
+        hipposys:users:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: []
+      /gallery-domain:
+        jcr:primaryType: hipposys:domainrule
+        /documents-only:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: hippo:availability
+          hipposys:type: String
+          hipposys:value: live
+        /non-publishable:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: nodetype
+          hipposys:type: String
+          hipposys:value: hippostd:publishable
+        /west-midlands-gallery-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/gallery/west-midlands

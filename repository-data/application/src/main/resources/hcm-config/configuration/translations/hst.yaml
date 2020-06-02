@@ -21,3 +21,4 @@ definitions:
                       orgDescriptor: Org. Descriptor
                       orgName: Org. Name
                       orgSplit: Org. Split
+                      whiteHeaderBg: Apply White Header Background ?

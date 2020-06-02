@@ -78,12 +78,12 @@ definitions:
               hst:componentclassname: uk.nhs.hee.web.component.ArticleComponent
               hst:iconpath: images/essentials/catalog-component-icons/article.svg
               hst:label: Article
-      /heeweb:
+      /global:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
-      /heeweb-southeast:
+      /south-east:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
-      /heeweb-westmidlands:
+      /west-midlands:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

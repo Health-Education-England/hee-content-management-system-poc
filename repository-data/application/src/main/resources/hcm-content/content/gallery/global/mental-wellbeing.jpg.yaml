@@ -1,0 +1,28 @@
+/content/gallery/global/mental-wellbeing.jpg:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 2192941a-2170-4fe5-b1c1-dd32e66f4a66
+  hippo:name: Mental wellbeing.jpg
+  /mental-wellbeing.jpg:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:filename: Mental wellbeing.jpg
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: Mental wellbeing.jpg
+      hippogallery:height: 40
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/global/mental-wellbeing.jpg/Mental-wellbeing_thumbnail.jpg
+      jcr:lastModified: 2020-06-01T18:07:53.437+05:30
+      jcr:mimeType: image/jpeg
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 439
+      hippogallery:width: 658
+      jcr:data:
+        type: binary
+        resource: /content/gallery/global/mental-wellbeing.jpg/Mental-wellbeing_original.jpg
+      jcr:lastModified: 2020-06-01T18:07:53.437+05:30
+      jcr:mimeType: image/jpeg

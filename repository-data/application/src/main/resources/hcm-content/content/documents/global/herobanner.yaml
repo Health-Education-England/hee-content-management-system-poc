@@ -1,0 +1,70 @@
+/content/documents/global/herobanner:
+  .meta:order-before: article
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: be23d303-0604-41d5-9880-878a42773177
+  hippo:name: HeroBanner
+  hippostd:foldertype: [new-heroBanner-folder, new-heroBanner-document]
+  hippotranslation:id: 1512a94e-7e5c-44c4-a091-f3a38b679c01
+  hippotranslation:locale: en
+  /home-hero-banner-global:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: ade96cba-7888-4412-9b37-db4ed5b33f34
+    hippo:name: Home Hero Banner (Global)
+    hippo:versionHistory: 8dd6c419-87c9-4eb0-bcbe-bf723e61e130
+    /home-hero-banner-global[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 9ea54606-9944-4cac-bc67-5512dd424c99
+      heeweb:heading: '[Global] We''re here for you!'
+      heeweb:summaryText: '[Global] Health Education England (HEE) exists for one
+        reason only: to support the delivery of excellent healthcare and health improvement
+        to the patients and public of England by ensuring that the workforce of today
+        and tomorrow has the right numbers, skills, values and behaviours, at the
+        right time and in the right place.'
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-01T19:20:40.450+05:30
+      hippostdpubwf:lastModifiedBy: global-editor
+      hippotranslation:id: d719bdbb-fc2c-4383-9f22-de0746edfed4
+      hippotranslation:locale: en
+    /home-hero-banner-global[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: ae5046d6-6fee-433f-bba8-8be08ef64d15
+      heeweb:heading: '[Global] We''re here for you!'
+      heeweb:summaryText: '[Global] Health Education England (HEE) exists for one
+        reason only: to support the delivery of excellent healthcare and health improvement
+        to the patients and public of England by ensuring that the workforce of today
+        and tomorrow has the right numbers, skills, values and behaviours, at the
+        right time and in the right place.'
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-01T17:24:00.238+05:30
+      hippostdpubwf:lastModifiedBy: global-editor
+      hippotranslation:id: d719bdbb-fc2c-4383-9f22-de0746edfed4
+      hippotranslation:locale: en
+    /home-hero-banner-global[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 72f04bcc-13d9-46f4-94f1-7d4a32fe23bc
+      heeweb:heading: '[Global] We''re here for you!'
+      heeweb:summaryText: '[Global] Health Education England (HEE) exists for one
+        reason only: to support the delivery of excellent healthcare and health improvement
+        to the patients and public of England by ensuring that the workforce of today
+        and tomorrow has the right numbers, skills, values and behaviours, at the
+        right time and in the right place.'
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-01T17:24:00.238+05:30
+      hippostdpubwf:lastModifiedBy: global-editor
+      hippostdpubwf:publicationDate: 2020-06-01T17:24:03.599+05:30
+      hippotranslation:id: d719bdbb-fc2c-4383-9f22-de0746edfed4
+      hippotranslation:locale: en

@@ -1,8 +1,0 @@
-/content/documents/heeweb-southeast:
-  jcr:primaryType: hippostd:folder
-  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
-  jcr:uuid: 2f2b6a4c-5301-4f94-b56a-e7377055e6b2
-  hippo:name: HEE Web SouthEast
-  hippostd:foldertype: [new-translated-folder, new-document]
-  hippotranslation:id: f2406da8-4b9a-4825-b304-43fd2b5eac1a
-  hippotranslation:locale: en

@@ -1,0 +1,6 @@
+/hst:hst/hst:configurations/south-east/hst:workspace/hst:channel/hst:channelinfo:
+  jcr:primaryType: hst:channelinfo
+  orgDescriptor: ''
+  orgName: Health Education England
+  orgSplit: South East Region
+  whiteHeaderBg: true

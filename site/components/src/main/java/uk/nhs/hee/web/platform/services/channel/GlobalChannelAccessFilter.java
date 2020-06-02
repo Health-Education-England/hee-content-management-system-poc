@@ -1,17 +1,18 @@
 package uk.nhs.hee.web.platform.services.channel;
 
-import org.hippoecm.hst.container.RequestContextProvider;
-import org.onehippo.cms7.services.hst.Channel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.jcr.Session;
-import javax.jcr.security.Privilege;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiPredicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import javax.jcr.Session;
+import javax.jcr.security.Privilege;
+
+import org.hippoecm.hst.container.RequestContextProvider;
+import org.onehippo.cms7.services.hst.Channel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Restricts/hides the channel if the user doesn't have one of
@@ -41,7 +42,7 @@ public class GlobalChannelAccessFilter implements BiPredicate<Session, Channel> 
 
             Privilege[] privileges = cmsSession.getAccessControlManager().getPrivileges(channel.getContentRoot());
 
-            LOGGER.info("User has got   {} privileges on the content folder '{}'",
+            LOGGER.info("User has got {} privileges on the content folder '{}'",
                     Stream.of(privileges).map(Privilege::getName).collect(Collectors.toList()),
                     channel.getContentRoot());
 

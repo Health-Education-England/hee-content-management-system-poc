@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 888b4f32-245f-4311-afb2-df4cb2b82558
+          jcr:uuid: b550665f-703b-4e44-9930-dd4161bb2eb9
           hipposysedit:node: true
           hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
@@ -31,12 +31,20 @@ definitions:
             hipposysedit:path: heeweb:summary
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
+          /relatedNews:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:relatedNews
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: heeweb:article
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 213f4719-1f1f-4cd7-8c00-cec442d1e0a7
+          jcr:uuid: 4711bd21-c435-411b-9280-f8b4cc9e30e5
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -49,6 +57,9 @@ definitions:
           /heeweb:summary:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
+          /heeweb:relatedNews:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -73,6 +84,14 @@ definitions:
             caption: Summary
             field: html
             hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /relatedNews:
+            jcr:primaryType: frontend:plugin
+            caption: Related News
+            field: relatedNews
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:

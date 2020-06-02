@@ -1,0 +1,57 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-south-east-assets-and-gallery-readwrite:
+      jcr:primaryType: hipposys:domain
+      /assets-domain:
+        jcr:primaryType: hipposys:domainrule
+        /documents-only:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: hippo:availability
+          hipposys:type: String
+          hipposys:value: live
+        /non-publishable:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: nodetype
+          hipposys:type: String
+          hipposys:value: hippostd:publishable
+        /south-east-assets-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/assets/south-east
+      /rewrite:
+        jcr:primaryType: hipposys:authrole
+        hipposys:groups:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: [southeast-author, southeast-editor]
+        hipposys:role: readwrite
+        hipposys:users:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: []
+      /gallery-domain:
+        jcr:primaryType: hipposys:domainrule
+        /documents-only:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: hippo:availability
+          hipposys:type: String
+          hipposys:value: live
+        /non-publishable:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: nodetype
+          hipposys:type: String
+          hipposys:value: hippostd:publishable
+        /south-east-gallery-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/gallery/south-east

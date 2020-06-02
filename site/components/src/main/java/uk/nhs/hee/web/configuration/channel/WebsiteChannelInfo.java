@@ -6,6 +6,11 @@ import org.hippoecm.hst.core.parameters.Parameter;
 
 public interface WebsiteChannelInfo extends ChannelInfo {
 
+    @Parameter(name = "whiteHeaderBg",
+            displayName = "Apply White Header Background ?",
+            defaultValue = "false")
+    Boolean getWhiteHeaderBg();
+
     @Parameter(name = "orgName",
             displayName = "Org. Name",
             defaultValue = "Health Education England")
@@ -17,8 +22,7 @@ public interface WebsiteChannelInfo extends ChannelInfo {
     String getOrgSplit();
 
     @Parameter(name = "orgDescriptor",
-            displayName = "Org. Descriptor",
-            required = false)
+            displayName = "Org. Descriptor")
     String getOrgDescriptor();
 
 }

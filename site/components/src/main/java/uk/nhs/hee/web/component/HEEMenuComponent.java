@@ -6,17 +6,20 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsMenuComponent;
 import org.onehippo.cms7.essentials.components.info.EssentialsMenuComponentInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import uk.nhs.hee.web.beans.LogoOrgTheme;
+import uk.nhs.hee.web.beans.HeaderTheme;
 import uk.nhs.hee.web.configuration.channel.WebsiteChannelInfo;
 
 @ParametersInfo(type = EssentialsMenuComponentInfo.class)
 public class HEEMenuComponent extends EssentialsMenuComponent {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(HEEMenuComponent.class);
+
     @Override
     public void doBeforeRender(HstRequest request, HstResponse response) {
         super.doBeforeRender(request, response);
-        // setComponentId(request, response);
 
         Mount mount = request.getRequestContext().getResolvedMount().getMount();
 
@@ -26,11 +29,16 @@ public class HEEMenuComponent extends EssentialsMenuComponent {
 
         WebsiteChannelInfo channelInfo = mount.getChannelInfo();
 
-        final LogoOrgTheme logoOrgTheme =
-                new LogoOrgTheme(channelInfo.getOrgName(), channelInfo.getOrgSplit(), channelInfo.getOrgDescriptor());
+        final HeaderTheme headerTheme =
+                new HeaderTheme(
+                        channelInfo.getWhiteHeaderBg(),
+                        channelInfo.getOrgName(),
+                        channelInfo.getOrgSplit(),
+                        channelInfo.getOrgDescriptor());
 
-        // request.setModel("channelInfo", channelInfo);
-        request.setModel("logoOrgTheme", logoOrgTheme);
+        LOGGER.debug("Header Theme => {}", headerTheme);
+
+        request.setModel("headerTheme", headerTheme);
     }
 
 }

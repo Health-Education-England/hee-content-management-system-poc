@@ -29,8 +29,8 @@
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
 <script src="/site/static/js/runtime-main.fa5d0597.js"></script>
-<script src="/site/static/js/2.e80c16d7.chunk.js"></script>
-<script src="/site/static/js/main.3239373e.chunk.js"></script>
+<script src="/site/static/js/2.d1204b26.chunk.js"></script>
+<script src="/site/static/js/main.6ac7cc5e.chunk.js"></script>
 </body>
 </html>
 
