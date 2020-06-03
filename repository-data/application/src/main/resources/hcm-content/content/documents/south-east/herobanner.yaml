@@ -7,13 +7,13 @@
   hippostd:foldertype: [new-heroBanner-folder, new-heroBanner-document]
   hippotranslation:id: 43f83125-f0c2-4c6f-8db0-1c2043fb9528
   hippotranslation:locale: en
-  /home-hero-banner-global:
+  /home-hero-banner:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 78f5aec4-b30e-48e5-ae0c-cc142ce49c3c
     hippo:name: Home Hero Banner (South East)
     hippo:versionHistory: 0cc83744-0368-4735-8320-a008842dbcb1
-    /home-hero-banner-global[1]:
+    /home-hero-banner[1]:
       jcr:primaryType: heeweb:heroBanner
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e39df451-9930-48b7-8bab-bc36184a23af
@@ -31,7 +31,7 @@
       hippostdpubwf:lastModifiedBy: south-east-editor
       hippotranslation:id: 1efab567-2c87-41df-acf6-0c1c0c128010
       hippotranslation:locale: en
-    /home-hero-banner-global[2]:
+    /home-hero-banner[2]:
       jcr:primaryType: heeweb:heroBanner
       jcr:mixinTypes: ['mix:versionable']
       jcr:uuid: 1bacd610-3bbb-461f-89c3-53257549545e
@@ -49,7 +49,7 @@
       hippostdpubwf:lastModifiedBy: south-east-editor
       hippotranslation:id: 1efab567-2c87-41df-acf6-0c1c0c128010
       hippotranslation:locale: en
-    /home-hero-banner-global[3]:
+    /home-hero-banner[3]:
       jcr:primaryType: heeweb:heroBanner
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 2a422cff-8c52-4235-a48f-12b762cf23bf
@@ -65,6 +65,64 @@
       hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
       hippostdpubwf:lastModificationDate: 2020-06-02T00:14:53.783+05:30
       hippostdpubwf:lastModifiedBy: south-east-editor
-      hippostdpubwf:publicationDate: 2020-06-02T00:14:55.801+05:30
+      hippostdpubwf:publicationDate: 2020-06-03T13:20:25.166+05:30
       hippotranslation:id: 1efab567-2c87-41df-acf6-0c1c0c128010
+      hippotranslation:locale: en
+  /ltft-hero-banner:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 33f5d9b8-e3b8-47ac-a21f-bd6150e4e94a
+    hippo:name: LTFT Hero Banner (South East)
+    hippo:versionHistory: 10e07754-d3f6-4c0a-9423-10b13a00018c
+    /ltft-hero-banner[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 15f1fb92-c01c-41ca-bad6-057514a67f37
+      heeweb:heading: '[South East] Less than full-time training'
+      heeweb:summaryText: Less Than Full Time (LTFT) training is a scheme whereby
+        eligible trainee doctors and dentists of all grades are able to work on a
+        part time basis when full-time work is impossible or unreasonable rather than
+        having to give up work.
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-03T17:57:46.062+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-06-03T17:57:47.722+05:30
+      hippotranslation:id: 33730a20-1d55-4b88-a210-2de492966795
+      hippotranslation:locale: en
+    /ltft-hero-banner[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 8c0d4fef-8611-401b-8f69-cb3ac687875c
+      heeweb:heading: '[South East] Less than full-time training'
+      heeweb:summaryText: Less Than Full Time (LTFT) training is a scheme whereby
+        eligible trainee doctors and dentists of all grades are able to work on a
+        part time basis when full-time work is impossible or unreasonable rather than
+        having to give up work.
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-03T17:57:46.062+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 33730a20-1d55-4b88-a210-2de492966795
+      hippotranslation:locale: en
+    /ltft-hero-banner[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 541c4871-8229-49fd-a514-30e50de6fe84
+      heeweb:heading: '[South East] Less than full-time training'
+      heeweb:summaryText: Less Than Full Time (LTFT) training is a scheme whereby
+        eligible trainee doctors and dentists of all grades are able to work on a
+        part time basis when full-time work is impossible or unreasonable rather than
+        having to give up work.
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-03T17:57:40.239+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 33730a20-1d55-4b88-a210-2de492966795
       hippotranslation:locale: en

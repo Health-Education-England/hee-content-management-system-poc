@@ -13,9 +13,16 @@
       hst:iconpath: images/essentials/catalog-component-icons/article.svg
       hst:label: Article
       hst:parameternames: [articleDocument]
-      hst:parametervalues: [/content/documents/south-east/article/ltft-training-policy-global]
+      hst:parametervalues: [/content/documents/south-east/article/ltft-training-policy]
   /hero:
     jcr:primaryType: hst:containercomponent
     hst:label: Hero
-    hst:lastmodified: 2020-05-31T23:36:37.002+05:30
+    hst:lastmodified: 2020-06-03T18:06:09.500+05:30
     hst:xtype: hst.vbox
+    /hero-banner:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+      hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+      hst:label: Hero Banner
+      hst:parameternames: [heroBannerDocument]
+      hst:parametervalues: [herobanner/ltft-hero-banner]

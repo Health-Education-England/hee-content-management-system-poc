@@ -6,13 +6,13 @@
   hippostd:foldertype: [new-article-folder, new-article-document]
   hippotranslation:id: deb4ed88-8cdf-4c2a-9449-48232a6979a1
   hippotranslation:locale: en
-  /ltft-training-policy-global:
+  /ltft-training-policy:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 0598a29c-9fc6-4024-96a2-7880b7e65dc0
     hippo:name: LTFT training policy (West Midlands)
     hippo:versionHistory: fdb74ce4-3f43-4aed-9697-55732462ce17
-    /ltft-training-policy-global[1]:
+    /ltft-training-policy[1]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: ae42afa9-6cf8-4e79-9144-c25de45f8275
@@ -66,12 +66,12 @@
         <h3>Applying for LTFT</h3>
 
         <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
-      heeweb:title: Less than full-time training policy [West Midlands]
+      heeweb:title: '[West Midlands] Less than full-time training policy'
       hippo:availability: []
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-02T14:04:37.779+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-03T17:58:30.048+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: d3ad87e1-ba4c-46d2-8103-7aa929e78e78
       hippotranslation:locale: en
@@ -134,7 +134,7 @@
       /heeweb:relatedNews:
         jcr:primaryType: hippo:mirror
         hippo:docbase: cc4c1494-8adc-43b9-813c-f77510179d8e
-    /ltft-training-policy-global[2]:
+    /ltft-training-policy[2]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:versionable']
       jcr:uuid: aaf40609-8f26-452b-9975-16ce6840f307
@@ -188,12 +188,12 @@
         <h3>Applying for LTFT</h3>
 
         <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
-      heeweb:title: Less than full-time training policy [West Midlands]
+      heeweb:title: '[West Midlands] Less than full-time training policy'
       hippo:availability: [preview]
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-02T14:04:57.577+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-03T17:58:37.924+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: d3ad87e1-ba4c-46d2-8103-7aa929e78e78
       hippotranslation:locale: en
@@ -256,7 +256,7 @@
       /heeweb:relatedNews:
         jcr:primaryType: hippo:mirror
         hippo:docbase: cc4c1494-8adc-43b9-813c-f77510179d8e
-    /ltft-training-policy-global[3]:
+    /ltft-training-policy[3]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 351fa9e2-b851-49b4-a30e-37bc4dd691b1
@@ -310,14 +310,14 @@
         <h3>Applying for LTFT</h3>
 
         <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
-      heeweb:title: Less than full-time training policy [West Midlands]
+      heeweb:title: '[West Midlands] Less than full-time training policy'
       hippo:availability: [live]
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-02T14:04:57.577+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-03T17:58:37.924+05:30
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2020-06-02T14:04:59.620+05:30
+      hippostdpubwf:publicationDate: 2020-06-03T17:58:40.122+05:30
       hippotranslation:id: d3ad87e1-ba4c-46d2-8103-7aa929e78e78
       hippotranslation:locale: en
       /heeweb:summary:

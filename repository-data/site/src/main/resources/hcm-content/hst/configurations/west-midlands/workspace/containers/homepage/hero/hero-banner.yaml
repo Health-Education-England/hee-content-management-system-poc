@@ -4,4 +4,4 @@
   hst:iconpath: images/essentials/catalog-component-icons/banner.svg
   hst:label: Hero Banner
   hst:parameternames: [heroBannerDocument]
-  hst:parametervalues: [herobanner/home-hero-banner-global]
+  hst:parametervalues: [herobanner/home-hero-banner]

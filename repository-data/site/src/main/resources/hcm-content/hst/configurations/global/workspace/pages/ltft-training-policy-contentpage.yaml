@@ -13,7 +13,7 @@
       hst:iconpath: images/essentials/catalog-component-icons/article.svg
       hst:label: Article
       hst:parameternames: [articleDocument]
-      hst:parametervalues: [/content/documents/global/article/ltft-training-policy-global]
+      hst:parametervalues: [/content/documents/global/article/ltft-training-policy]
   /hero:
     jcr:primaryType: hst:containercomponent
     hst:label: Hero

@@ -1,0 +1,5 @@
+/hippo:configuration/hippo:groups/{{ regionId }}-author:
+  jcr:primaryType: hipposys:group
+  hipposys:members: [{{ regionId }}-author]
+  hipposys:securityprovider: internal
+  hipposys:userroles: [xm.cms.user, xm.content.user, xm.channel.user, xm.channel.viewer, xm.dashboard.user]

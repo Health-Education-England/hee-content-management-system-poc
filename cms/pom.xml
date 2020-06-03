@@ -25,6 +25,7 @@
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
+          <archiveClasses>true</archiveClasses>
           <archive>
             <manifestEntries>
               <BloomReach-Release-Version>${hippo.release.version}</BloomReach-Release-Version>

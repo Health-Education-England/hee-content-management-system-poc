@@ -28,11 +28,12 @@ definitions:
           .meta:category: system
           .meta:add-new-system-values: true
           type: string
-          value: [southeast-author, southeast-editor]
+          value: [south-east-author, south-east-editor]
         hipposys:role: readwrite
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /gallery-domain:

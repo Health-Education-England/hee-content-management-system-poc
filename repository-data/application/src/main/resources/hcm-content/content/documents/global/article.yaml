@@ -6,13 +6,13 @@
   hippostd:foldertype: [new-article-folder, new-article-document]
   hippotranslation:id: 81713d6a-8b2c-43b4-a2ec-903e263e4db3
   hippotranslation:locale: en
-  /ltft-training-policy-global:
+  /ltft-training-policy:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: cc4c1494-8adc-43b9-813c-f77510179d8e
     hippo:name: LTFT training policy (Global)
     hippo:versionHistory: 1935075b-6faf-4943-9660-201e493effff
-    /ltft-training-policy-global[1]:
+    /ltft-training-policy[1]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 6404e5fe-34f1-48bc-9e8d-322ad6c5a780
@@ -66,13 +66,13 @@
         <h3>Applying for LTFT</h3>
 
         <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
-      heeweb:title: Less than full-time training policy [Global]
+      heeweb:title: '[Global] Less than full-time training policy'
       hippo:availability: []
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-02T14:03:10.256+05:30
-      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:lastModificationDate: 2020-06-03T21:08:51.737+05:30
+      hippostdpubwf:lastModifiedBy: global-editor
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
       /heeweb:summary:
@@ -137,7 +137,10 @@
       /heeweb:relatedNews[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 0598a29c-9fc6-4024-96a2-7880b7e65dc0
-    /ltft-training-policy-global[2]:
+      /heeweb:relatedNews[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: e31e3a44-b8f5-4f44-8b81-1e099019fd43
+    /ltft-training-policy[2]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 28d93cb7-7a46-4411-aa47-65c6129deff8
@@ -191,13 +194,13 @@
         <h3>Applying for LTFT</h3>
 
         <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
-      heeweb:title: Less than full-time training policy [Global]
+      heeweb:title: '[Global] Less than full-time training policy'
       hippo:availability: [preview]
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-02T14:02:15.935+05:30
-      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:lastModificationDate: 2020-06-03T21:09:04.647+05:30
+      hippostdpubwf:lastModifiedBy: global-editor
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
       /heeweb:summary:
@@ -262,7 +265,10 @@
       /heeweb:relatedNews[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 0598a29c-9fc6-4024-96a2-7880b7e65dc0
-    /ltft-training-policy-global[3]:
+      /heeweb:relatedNews[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: e31e3a44-b8f5-4f44-8b81-1e099019fd43
+    /ltft-training-policy[3]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 805ae961-a42b-4824-bdad-c749ad5dcb7e
@@ -316,14 +322,14 @@
         <h3>Applying for LTFT</h3>
 
         <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
-      heeweb:title: Less than full-time training policy [Global]
+      heeweb:title: '[Global] Less than full-time training policy'
       hippo:availability: [live]
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-02T14:02:15.935+05:30
-      hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2020-06-02T14:02:18.569+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-03T21:09:04.647+05:30
+      hippostdpubwf:lastModifiedBy: global-editor
+      hippostdpubwf:publicationDate: 2020-06-03T21:09:07.629+05:30
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
       /heeweb:summary:
@@ -388,3 +394,6 @@
       /heeweb:relatedNews[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 0598a29c-9fc6-4024-96a2-7880b7e65dc0
+      /heeweb:relatedNews[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: e31e3a44-b8f5-4f44-8b81-1e099019fd43
