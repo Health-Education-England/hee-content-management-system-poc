@@ -3,6 +3,6 @@
   jcr:primaryType: hippogallery:stdImageGallery
   jcr:mixinTypes: ['hippo:named', 'mix:versionable']
   jcr:uuid: 9844270f-086c-4308-917b-a1848f917059
-  hippo:name: HEE Web Midlands
+  hippo:name: West Midlands
   hippostd:foldertype: [new-image-folder]
   hippostd:gallerytype: ['hippogallery:imageset']

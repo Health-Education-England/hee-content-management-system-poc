@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hst:hst/hst:hosts/tst-brc-site:
+    /hst:hst/hst:hosts/dev-brcloud:
       .meta:residual-child-node-category: content
       jcr:primaryType: hst:virtualhostgroup
-      hst:defaultport: 80
+      hst:defaultport: 8080

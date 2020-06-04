@@ -2,6 +2,6 @@
   jcr:primaryType: hippogallery:stdImageGallery
   jcr:mixinTypes: ['hippo:named', 'mix:versionable']
   jcr:uuid: cb2c0960-89ab-49dc-b4db-1d543fd6c5df
-  hippo:name: HEE Web SouthEast
+  hippo:name: South East
   hippostd:foldertype: [new-image-folder]
   hippostd:gallerytype: ['hippogallery:imageset']
