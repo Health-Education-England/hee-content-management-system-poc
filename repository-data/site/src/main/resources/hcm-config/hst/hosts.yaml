@@ -34,3 +34,4 @@ definitions:
             hst:isSite: 'false'
             hst:namedpipeline: JaxrsRestPlainPipeline
             hst:types: [rest]
+            hst:nochannelinfo: true

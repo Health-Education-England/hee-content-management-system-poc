@@ -1,5 +1,4 @@
 /content/documents/global/pagemetadata:
-  .meta:order-before: article
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: 039579ed-e1a0-4a1e-bdce-6a1833db4df4

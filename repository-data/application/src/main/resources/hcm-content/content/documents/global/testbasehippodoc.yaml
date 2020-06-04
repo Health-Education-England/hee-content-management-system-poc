@@ -1,4 +1,4 @@
-/content/documents/heeweb/testbasehippodoc:
+/content/documents/global/testbasehippodoc:
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 6861e0b1-c8ae-4cb4-b17d-a96ea4d638a0
