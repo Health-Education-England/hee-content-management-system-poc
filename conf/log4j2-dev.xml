@@ -139,6 +139,9 @@
     <!-- project logging -->
     <Logger name="uk.nhs.hee.web" level="debug"/>
 
+    <!-- apache camel logging -->
+    <Logger name="org.apache.camel" level="info"/>
+
     <Root level="warn">
       <AppenderRef ref="site"/>
       <AppenderRef ref="cms"/>

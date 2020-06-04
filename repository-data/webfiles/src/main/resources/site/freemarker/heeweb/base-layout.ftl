@@ -30,7 +30,7 @@
 <div id="root"></div>
 <script src="/site/static/js/runtime-main.fa5d0597.js"></script>
 <script src="/site/static/js/2.d1204b26.chunk.js"></script>
-<script src="/site/static/js/main.6ac7cc5e.chunk.js"></script>
+<script src="/site/static/js/main.609aef6a.chunk.js"></script>
 </body>
 </html>
 

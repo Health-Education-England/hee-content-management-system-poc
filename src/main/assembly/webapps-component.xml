@@ -11,5 +11,10 @@
       <outputDirectory>webapps</outputDirectory>
       <destName>site.war</destName>
     </file>
+    <file>
+      <source>hawtio/target/hawtio.war</source>
+      <outputDirectory>webapps</outputDirectory>
+      <destName>hawtio.war</destName>
+    </file>
   </files>
 </component>

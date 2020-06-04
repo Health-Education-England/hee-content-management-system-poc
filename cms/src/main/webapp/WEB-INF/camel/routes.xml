@@ -33,14 +33,14 @@
             <to uri="log:org.onehippo.forge.camel.demo?level=DEBUG"/>
 
             <!-- Store the JSON string to a file in the 'inbox' folder. -->
-            <to uri="file:inbox?autoCreate=true&amp;charset=utf-8" />
+            <to uri="file:/tmp/inbox?autoCreate=true&amp;charset=utf-8" />
 
         </route>
 
         <route id="Route-File-to-REST">
 
             <!-- Subscribe file events from the 'inbox' folder. -->
-            <from uri="file:inbox?autoCreate=true&amp;charset=utf-8&amp;preMove=.processing&amp;delete=true&amp;moveFailed=.error" />
+            <from uri="file:/tmp/inbox?autoCreate=true&amp;charset=utf-8&amp;preMove=.processing&amp;delete=true&amp;moveFailed=.error" />
 
             <!-- Convert the file message to String. -->
             <convertBodyTo type="java.lang.String" />
