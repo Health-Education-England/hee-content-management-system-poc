@@ -11,6 +11,8 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import uk.nhs.hee.web.beans.BaseHippoDocument;
 
 import javax.jcr.ItemNotFoundException;
@@ -18,6 +20,7 @@ import javax.jcr.Node;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
+@PropertySource("classpath:algolia.properties")
 @Path("/algolia/update/")
 public class AlgoliaUpdateResource extends AbstractResource {
     public static final String INDEX_ACTION = "index";
@@ -25,6 +28,12 @@ public class AlgoliaUpdateResource extends AbstractResource {
 
     private final SearchClient client;
     private final SearchIndex<BaseHippoContent> index;
+
+    @Value("${algolia.application.id}")
+    private String applicationId;
+
+    @Value("${algolia.api.key}")
+    private String apiKey;
 
     public AlgoliaUpdateResource() {
        this.client =
