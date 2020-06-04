@@ -73,5 +73,59 @@
       <groupId>com.onehippo.cms7</groupId>
       <artifactId>hippo-addon-urlrewriter-module-repository</artifactId>
     </dependency>
+    <!-- Camel Integration Dependencies -->
+    <dependency>
+      <groupId>org.onehippo.forge.camel-hippoevt</groupId>
+      <artifactId>camel-hippoevt</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-jms</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-http4</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.apache.httpcomponents</groupId>-->
+<!--      <artifactId>httpcore</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.httpcomponents</groupId>-->
+<!--      <artifactId>httpclient</artifactId>-->
+<!--    </dependency>-->
   </dependencies>
 </project>

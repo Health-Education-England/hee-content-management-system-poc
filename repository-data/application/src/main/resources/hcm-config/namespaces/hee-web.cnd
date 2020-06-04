@@ -10,6 +10,9 @@
 [heeweb:article] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[heeweb:BaseHippoDocument] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [heeweb:heroBanner] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
