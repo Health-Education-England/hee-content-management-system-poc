@@ -11,7 +11,6 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import uk.nhs.hee.web.beans.BaseHippoDocument;
 
@@ -29,17 +28,9 @@ public class AlgoliaUpdateResource extends AbstractResource {
     private final SearchClient client;
     private final SearchIndex<BaseHippoContent> index;
 
-    @Value("${algolia.application.id}")
-    private String applicationId;
-
-    @Value("${algolia.api.key}")
-    private String apiKey;
-
-    public AlgoliaUpdateResource() {
-       this.client =
-                DefaultSearchClient.create("UDB415NOQA", "f17388442e4a195de258094b0ce36c96");
-
-       this.index = client.initIndex("brdocs", BaseHippoContent.class);
+    public AlgoliaUpdateResource(String applicationId, String apiKey) {
+        this.client = DefaultSearchClient.create(applicationId, apiKey);
+        this.index = this.client.initIndex("brdocs", BaseHippoContent.class);
     }
 
     @POST
@@ -68,10 +59,10 @@ public class AlgoliaUpdateResource extends AbstractResource {
                         baseHippoContent.setTitle(document.getIntroduction());
                         baseHippoContent.setObjectID(document.getCanonicalUUID());
 
-                        BatchIndexingResponse response = index.saveObject(baseHippoContent);
+                        BatchIndexingResponse response = this.index.saveObject(baseHippoContent);
                         log.info("algolia resp" + response.toString());
 
-                        return Response.status(200).entity("Sucess Yeey!").build();
+                        return Response.status(200).entity("Sucess!").build();
 
                     } else {
                         log.warn("The bean from '{}' is not a BaseHippoDocument.", handleUuid);
