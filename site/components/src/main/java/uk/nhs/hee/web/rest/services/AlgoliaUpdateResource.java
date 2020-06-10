@@ -4,6 +4,7 @@ import com.algolia.search.DefaultSearchClient;
 import com.algolia.search.SearchClient;
 import com.algolia.search.SearchIndex;
 import com.algolia.search.models.indexing.BatchIndexingResponse;
+import com.algolia.search.models.settings.IndexSettings;
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -18,6 +19,7 @@ import javax.jcr.ItemNotFoundException;
 import javax.jcr.Node;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.util.Arrays;
 
 @PropertySource("classpath:algolia.properties")
 @Path("/algolia/update/")
@@ -31,6 +33,20 @@ public class AlgoliaUpdateResource extends AbstractResource {
     public AlgoliaUpdateResource(String applicationId, String apiKey) {
         this.client = DefaultSearchClient.create(applicationId, apiKey);
         this.index = this.client.initIndex("brdocs", BaseHippoContent.class);
+        this.index.setSettings(
+                new IndexSettings().setAttributesForFaceting(Arrays.asList(
+                        "category",
+                        "region",
+                        "speciality",
+                        "subSpeciality"
+                )).setSearchableAttributes(
+                        Arrays.asList(
+                                "content",
+                                "introduction",
+                                "title"
+                        )
+                )
+        );
     }
 
     @POST
@@ -42,26 +58,15 @@ public class AlgoliaUpdateResource extends AbstractResource {
         if (StringUtils.isNotEmpty(handleUuid)) {
             try {
                 HstRequestContext requestContext = RequestContextProvider.get();
-                log.info("Request context" + requestContext);
                 if (INDEX_ACTION.equals(action)) {
 
                     Node node = requestContext.getSession().getNodeByIdentifier(handleUuid);
-
-                    log.info("Node" + node);
                     HippoBean bean = (HippoBean) getObjectConverter(requestContext).getObject(node);
 
                     if (bean instanceof BaseHippoDocument) {
                         BaseHippoDocument document = (BaseHippoDocument) bean;
-                        log.info("document taken " + document.getTitle());
-                        BaseHippoContent baseHippoContent = new BaseHippoContent();
-                        baseHippoContent.setContent(document.getContent());
-                        baseHippoContent.setIntroduction(document.getIntroduction());
-                        baseHippoContent.setTitle(document.getIntroduction());
-                        baseHippoContent.setObjectID(document.getCanonicalUUID());
-
+                        BaseHippoContent baseHippoContent = createPayload(document);
                         BatchIndexingResponse response = this.index.saveObject(baseHippoContent);
-                        log.info("algolia resp" + response.toString());
-
                         return Response.status(200).entity("Sucess!").build();
 
                     } else {
@@ -85,6 +90,20 @@ public class AlgoliaUpdateResource extends AbstractResource {
         }
 
         return Response.ok().build();
+    }
+
+    private BaseHippoContent createPayload(BaseHippoDocument document) {
+        BaseHippoContent baseHippoContent = new BaseHippoContent();
+        baseHippoContent.setContent(document.getContent());
+        baseHippoContent.setIntroduction(document.getIntroduction());
+        baseHippoContent.setTitle(document.getIntroduction());
+        baseHippoContent.setCategory(document.getCategory());
+        baseHippoContent.setRegion(document.getRegion());
+        baseHippoContent.setSpeciality(document.getSpeciality());
+        baseHippoContent.setSubSpeciality(document.getSubspeciality());
+        baseHippoContent.setObjectID(document.getCanonicalUUID());
+
+        return baseHippoContent;
     }
 
     /**

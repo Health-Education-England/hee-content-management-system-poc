@@ -3,19 +3,26 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 6861e0b1-c8ae-4cb4-b17d-a96ea4d638a0
   hippo:name: TestBaseHippoDoc
-  hippo:versionHistory: b991cb47-5cde-474b-a55d-7cbcb742264f
+  hippo:versionHistory: 7042706c-364b-488c-8ecc-23e90dcae36b
   /testbasehippodoc[1]:
     jcr:primaryType: heeweb:BaseHippoDocument
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 0f0dff49-72cb-40f5-a265-492f2a519a83
-    heeweb:content: <p>Contnet block here</p>
-    heeweb:introduction: This is introduction
-    heeweb:title: Hi there title
+    heeweb:category: [Volunteering]
+    heeweb:content: |-
+      <p>Contnet block here&nbsp;</p>
+
+      <p>Hello update Covid&nbsp;</p>
+    heeweb:introduction: During this hard times we would appreciate any help in dealing
+      with the increasing number of Covid-19 cases.
+    heeweb:region: West Midlands
+    heeweb:speciality: Intensive care medicine
+    heeweb:title: Volunteers needed!
     hippo:availability: []
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2020-05-28T09:23:54.278+01:00
-    hippostdpubwf:lastModificationDate: 2020-05-28T09:24:16.775+01:00
+    hippostdpubwf:lastModificationDate: 2020-06-10T16:09:55.576+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: f91e7a35-c701-48c4-bea6-1896058e3549
     hippotranslation:locale: en
@@ -23,14 +30,21 @@
     jcr:primaryType: heeweb:BaseHippoDocument
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
     jcr:uuid: 223cdbf3-018f-4bac-af79-038ae4665e5a
-    heeweb:content: <p>Contnet block here</p>
-    heeweb:introduction: This is introduction
-    heeweb:title: Hi there title
+    heeweb:category: [Volunteering]
+    heeweb:content: |-
+      <p>Contnet block here&nbsp;</p>
+
+      <p>Hello update Covid&nbsp;</p>
+    heeweb:introduction: During this hard times we would appreciate any help in dealing
+      with the increasing number of Covid-19 cases.
+    heeweb:region: West Midlands
+    heeweb:speciality: Intensive care medicine
+    heeweb:title: Volunteers needed!
     hippo:availability: [preview]
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2020-05-28T09:23:54.278+01:00
-    hippostdpubwf:lastModificationDate: 2020-05-28T09:24:16.499+01:00
+    hippostdpubwf:lastModificationDate: 2020-06-10T16:09:55.481+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: f91e7a35-c701-48c4-bea6-1896058e3549
     hippotranslation:locale: en
@@ -38,15 +52,22 @@
     jcr:primaryType: heeweb:BaseHippoDocument
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: f325b557-ac46-4b9c-a214-ffd652817257
-    heeweb:content: <p>Contnet block here</p>
-    heeweb:introduction: This is introduction
-    heeweb:title: Hi there title
+    heeweb:category: [Volunteering]
+    heeweb:content: |-
+      <p>Contnet block here&nbsp;</p>
+
+      <p>Hello update Covid&nbsp;</p>
+    heeweb:introduction: During this hard times we would appreciate any help in dealing
+      with the increasing number of Covid-19 cases.
+    heeweb:region: West Midlands
+    heeweb:speciality: Intensive care medicine
+    heeweb:title: Volunteers needed!
     hippo:availability: [live]
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2020-05-28T09:23:54.278+01:00
-    hippostdpubwf:lastModificationDate: 2020-05-28T09:24:16.499+01:00
+    hippostdpubwf:lastModificationDate: 2020-06-10T16:09:55.481+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2020-05-28T09:24:24.246+01:00
+    hippostdpubwf:publicationDate: 2020-06-10T16:10:02.858+01:00
     hippotranslation:id: f91e7a35-c701-48c4-bea6-1896058e3549
     hippotranslation:locale: en
