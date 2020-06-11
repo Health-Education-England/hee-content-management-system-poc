@@ -45,7 +45,13 @@ public class AlgoliaUpdateResource extends AbstractResource {
                                 "introduction",
                                 "title"
                         )
-                )
+                ).setAttributesToSnippet(
+                        Arrays.asList(
+                                "content:80",
+                                "introduction:40",
+                                "title:40"
+                        )
+                ).setSnippetEllipsisText("…")
         );
     }
 
