@@ -78,6 +78,11 @@ definitions:
               hst:componentclassname: uk.nhs.hee.web.component.ArticleComponent
               hst:iconpath: images/essentials/catalog-component-icons/article.svg
               hst:label: Article
+            /search:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.component.SearchComponent
+              hst:iconpath: images/essentials/catalog-component-icons/search-24px.svg
+              hst:label: Search
       /global:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

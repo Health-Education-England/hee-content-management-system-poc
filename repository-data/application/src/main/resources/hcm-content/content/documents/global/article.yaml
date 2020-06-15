@@ -11,11 +11,13 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: cc4c1494-8adc-43b9-813c-f77510179d8e
     hippo:name: LTFT training policy (Global)
-    hippo:versionHistory: 1935075b-6faf-4943-9660-201e493effff
+    hippo:versionHistory: 0655e6d2-ba9e-4ffa-a3cf-a5fbe9787e91
     /ltft-training-policy[1]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 6404e5fe-34f1-48bc-9e8d-322ad6c5a780
+      heeweb:category: [General]
+      heeweb:region: Global
       heeweb:summary: |-
         <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
@@ -71,8 +73,8 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-03T21:08:51.737+05:30
-      hippostdpubwf:lastModifiedBy: global-editor
+      hippostdpubwf:lastModificationDate: 2020-06-15T11:51:32.198+01:00
+      hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
       /heeweb:summary:
@@ -82,7 +84,7 @@
 
           <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
-          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;</p>
 
           <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
 
@@ -102,7 +104,7 @@
            <li><a href="#applying">applying for LTFT</a></li>
           </ul>
 
-          <h3 id="eligibility">Eligibility for less than full-time training (LTFT)</h3>
+          <h3>Eligibility for less than full-time training (LTFT)</h3>
 
           <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
 
@@ -128,7 +130,7 @@
            <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
           </ul>
 
-          <h3 id="applying">Applying for LTFT</h3>
+          <h3>Applying for LTFT</h3>
 
           <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
       /heeweb:relatedNews[1]:
@@ -144,6 +146,8 @@
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 28d93cb7-7a46-4411-aa47-65c6129deff8
+      heeweb:category: [General]
+      heeweb:region: Global
       heeweb:summary: |-
         <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
@@ -199,8 +203,8 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-03T21:09:04.647+05:30
-      hippostdpubwf:lastModifiedBy: global-editor
+      hippostdpubwf:lastModificationDate: 2020-06-15T11:46:51.960+01:00
+      hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
       /heeweb:summary:
@@ -210,7 +214,7 @@
 
           <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
-          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;</p>
 
           <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
 
@@ -230,7 +234,7 @@
            <li><a href="#applying">applying for LTFT</a></li>
           </ul>
 
-          <h3 id="eligibility">Eligibility for less than full-time training (LTFT)</h3>
+          <h3>Eligibility for less than full-time training (LTFT)</h3>
 
           <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
 
@@ -256,7 +260,7 @@
            <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
           </ul>
 
-          <h3 id="applying">Applying for LTFT</h3>
+          <h3>Applying for LTFT</h3>
 
           <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
       /heeweb:relatedNews[1]:
@@ -272,6 +276,8 @@
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 805ae961-a42b-4824-bdad-c749ad5dcb7e
+      heeweb:category: [General]
+      heeweb:region: Global
       heeweb:summary: |-
         <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
@@ -327,9 +333,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-03T21:09:04.647+05:30
-      hippostdpubwf:lastModifiedBy: global-editor
-      hippostdpubwf:publicationDate: 2020-06-03T21:09:07.629+05:30
+      hippostdpubwf:lastModificationDate: 2020-06-15T11:46:51.960+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-06-15T11:46:59.926+01:00
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
       /heeweb:summary:
@@ -339,7 +345,7 @@
 
           <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
-          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;</p>
 
           <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
 
@@ -359,7 +365,7 @@
            <li><a href="#applying">applying for LTFT</a></li>
           </ul>
 
-          <h3 id="eligibility">Eligibility for less than full-time training (LTFT)</h3>
+          <h3>Eligibility for less than full-time training (LTFT)</h3>
 
           <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
 
@@ -385,7 +391,7 @@
            <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
           </ul>
 
-          <h3 id="applying">Applying for LTFT</h3>
+          <h3>Applying for LTFT</h3>
 
           <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
       /heeweb:relatedNews[1]:

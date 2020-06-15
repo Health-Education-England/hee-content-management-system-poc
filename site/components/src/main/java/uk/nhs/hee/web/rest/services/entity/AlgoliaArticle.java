@@ -1,28 +1,28 @@
-package uk.nhs.hee.web.rest.services;
+package uk.nhs.hee.web.rest.services.entity;
 
-public class BaseHippoContent {
+public class AlgoliaArticle {
     private String title;
-    private String content;
-    private String introduction;
+    private String summary;
     private String[] category;
     private String region;
     private String speciality;
     private String subSpeciality;
+    private Long lastUpdateAt;
     private String objectID;
 
-    public BaseHippoContent() {
+    public AlgoliaArticle() {
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction;
     }
 
     public void setCategory(String[] category) {
@@ -49,14 +49,6 @@ public class BaseHippoContent {
         return title;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public String getIntroduction() {
-        return introduction;
-    }
-
     public String[] getCategory() {
         return category;
     }
@@ -75,5 +67,13 @@ public class BaseHippoContent {
 
     public String getObjectID() {
         return objectID;
+    }
+
+    public Long getLastUpdateAt() {
+        return lastUpdateAt;
+    }
+
+    public void setLastUpdateAt(Long lastUpdateAt) {
+        this.lastUpdateAt = lastUpdateAt;
     }
 }

@@ -23,4 +23,24 @@ public class Article extends BaseDocument {
     public List<HippoBean> getRelatedNews() {
         return getLinkedBeans("heeweb:relatedNews", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "heeweb:category")
+    public String[] getCategory() {
+        return getMultipleProperty("heeweb:category");
+    }
+
+    @HippoEssentialsGenerated(internalName = "heeweb:region")
+    public String getRegion() {
+        return getSingleProperty("heeweb:region");
+    }
+
+    @HippoEssentialsGenerated(internalName = "heeweb:speciality")
+    public String getSpeciality() {
+        return getSingleProperty("heeweb:speciality");
+    }
+
+    @HippoEssentialsGenerated(internalName = "heeweb:subspeciality")
+    public String getSubspeciality() {
+        return getSingleProperty("heeweb:subspeciality");
+    }
 }

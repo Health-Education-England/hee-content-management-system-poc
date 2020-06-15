@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b550665f-703b-4e44-9930-dd4161bb2eb9
+          jcr:uuid: 324e1c27-8f1c-40e0-ac7a-d9e9aad0f139
           hipposysedit:node: true
           hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
@@ -39,12 +39,48 @@ definitions:
             hipposysedit:path: heeweb:relatedNews
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+          /category:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:category
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [required]
+          /region:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:region
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [required]
+          /speciality:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:speciality
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [optional]
+          /subspeciality:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:subspeciality
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: heeweb:article
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 4711bd21-c435-411b-9280-f8b4cc9e30e5
+          jcr:uuid: 6d47cf6c-e009-4b55-9187-b5752876e3b0
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -54,6 +90,8 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           heeweb:title: ''
+          heeweb:region: Global
+          heeweb:category: [General]
           /heeweb:summary:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -96,3 +134,48 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /category:
+            jcr:primaryType: frontend:plugin
+            caption: Category
+            field: category
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: General,Applications,Health Careers,Online Learning,Volunteering,News,Events
+          /region:
+            jcr:primaryType: frontend:plugin
+            caption: Region
+            field: region
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: Global,South East,West Midlands,Greater London,North
+                East,North West,South West England,East Midlands,East England,Yorkshire
+                And Humber
+          /speciality:
+            jcr:primaryType: frontend:plugin
+            caption: Speciality
+            field: speciality
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: Anaesthesia,Clinical oncology,Clinical radiology,Community
+                sexual and reproductive health,Emergency medicine,General practice
+                (GP),Intensive care medicine,Medicine,Obstetrics and gynaecology,Occupational
+                medicine,Ophthalmology,Paediatrics,Pathology,Psychiatry,Public Health,Surgery
+          /subspeciality:
+            jcr:primaryType: frontend:plugin
+            caption: Sub-speciality
+            field: subspeciality
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: Cardiothoracic surgery,General surgery,Neurosurgery,Oral
+                and maxillofacial surgery,Otorhinolaryngology,Paediatric surgery,Plastic
+                surgery,Trauma and orthopaedic surgery,Urology,Vascular surgery

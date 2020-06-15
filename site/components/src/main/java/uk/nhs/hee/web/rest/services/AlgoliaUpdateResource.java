@@ -13,13 +13,17 @@ import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.PropertySource;
+import uk.nhs.hee.web.beans.Article;
 import uk.nhs.hee.web.beans.BaseHippoDocument;
+import uk.nhs.hee.web.rest.services.entity.AlgoliaArticle;
 
 import javax.jcr.ItemNotFoundException;
 import javax.jcr.Node;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.GregorianCalendar;
 
 @PropertySource("classpath:algolia.properties")
 @Path("/algolia/update/")
@@ -28,30 +32,52 @@ public class AlgoliaUpdateResource extends AbstractResource {
     private static final Logger log = LoggerFactory.getLogger(AlgoliaUpdateResource.class);
 
     private final SearchClient client;
-    private final SearchIndex<BaseHippoContent> index;
+    private final SearchIndex<AlgoliaArticle> index;
 
     public AlgoliaUpdateResource(String applicationId, String apiKey) {
         this.client = DefaultSearchClient.create(applicationId, apiKey);
-        this.index = this.client.initIndex("brdocs", BaseHippoContent.class);
+        this.index = this.client.initIndex("articles", AlgoliaArticle.class);
         this.index.setSettings(
-                new IndexSettings().setAttributesForFaceting(Arrays.asList(
-                        "category",
-                        "region",
-                        "speciality",
-                        "subSpeciality"
-                )).setSearchableAttributes(
-                        Arrays.asList(
-                                "content",
-                                "introduction",
-                                "title"
+                new IndexSettings()
+                        .setAttributesForFaceting(Arrays.asList(
+                                "category",
+                                "region",
+                                "speciality",
+                                "subSpeciality"
+                        ))
+                        .setSearchableAttributes(
+                                Arrays.asList(
+                                        "summary",
+                                        "introduction",
+                                        "title"
+                                )
                         )
-                ).setAttributesToSnippet(
-                        Arrays.asList(
-                                "content:80",
-                                "introduction:40",
-                                "title:40"
+                        .setAttributesToSnippet(
+                                Arrays.asList(
+                                        "summary:80",
+                                        "introduction:40",
+                                        "title:40"
+                                )
                         )
-                ).setSnippetEllipsisText("…")
+                        .setSnippetEllipsisText("…")
+                        .setReplicas(Collections.singletonList(
+                                "articles_date_desc"
+                        )),
+                true
+        );
+        SearchIndex<AlgoliaArticle> replicaIndex = this.client.initIndex("articles_date_desc", AlgoliaArticle.class);
+        replicaIndex.setSettings(
+                new IndexSettings().setRanking(Arrays.asList(
+                        "desc(lastUpdateAt)",
+                        "typo",
+                        "geo",
+                        "words",
+                        "filters",
+                        "proximity",
+                        "attribute",
+                        "exact",
+                        "custom"
+                ))
         );
     }
 
@@ -69,9 +95,9 @@ public class AlgoliaUpdateResource extends AbstractResource {
                     Node node = requestContext.getSession().getNodeByIdentifier(handleUuid);
                     HippoBean bean = (HippoBean) getObjectConverter(requestContext).getObject(node);
 
-                    if (bean instanceof BaseHippoDocument) {
-                        BaseHippoDocument document = (BaseHippoDocument) bean;
-                        BaseHippoContent baseHippoContent = createPayload(document);
+                    if (bean instanceof Article) {
+                        Article document = (Article) bean;
+                        AlgoliaArticle baseHippoContent = createPayload(document);
                         BatchIndexingResponse response = this.index.saveObject(baseHippoContent);
                         return Response.status(200).entity("Sucess!").build();
 
@@ -98,18 +124,21 @@ public class AlgoliaUpdateResource extends AbstractResource {
         return Response.ok().build();
     }
 
-    private BaseHippoContent createPayload(BaseHippoDocument document) {
-        BaseHippoContent baseHippoContent = new BaseHippoContent();
-        baseHippoContent.setContent(document.getContent());
-        baseHippoContent.setIntroduction(document.getIntroduction());
-        baseHippoContent.setTitle(document.getIntroduction());
-        baseHippoContent.setCategory(document.getCategory());
-        baseHippoContent.setRegion(document.getRegion());
-        baseHippoContent.setSpeciality(document.getSpeciality());
-        baseHippoContent.setSubSpeciality(document.getSubspeciality());
-        baseHippoContent.setObjectID(document.getCanonicalUUID());
+    private AlgoliaArticle createPayload(Article document) {
+        AlgoliaArticle algoliaArticle = new AlgoliaArticle();
+        algoliaArticle.setSummary(document.getSummary().getContent());
+        algoliaArticle.setTitle(document.getTitle());
+        algoliaArticle.setCategory(document.getCategory());
+        algoliaArticle.setRegion(document.getRegion());
+        algoliaArticle.setSpeciality(document.getSpeciality());
+        algoliaArticle.setSubSpeciality(document.getSubspeciality());
+        Long updateTimestamp =
+                ((GregorianCalendar) document.getSingleProperty("hippostdpubwf:lastModificationDate"))
+                        .getTimeInMillis();
+        algoliaArticle.setLastUpdateAt(updateTimestamp);
+        algoliaArticle.setObjectID(document.getCanonicalUUID());
 
-        return baseHippoContent;
+        return algoliaArticle;
     }
 
     /**
