@@ -19,14 +19,20 @@ public class ArticleComponent extends CommonComponent {
     public void doBeforeRender(HstRequest request, HstResponse response) {
         super.doBeforeRender(request, response);
 
-        request.setModel(
-                "articleDocument",
-                ComponentHelper.getHippoBeanForPath(
-                        this,
-                        "articleDocument",
-                        getClass().getAnnotation(ParametersInfo.class),
-                        ((ArticleComponentInfo) getComponentParametersInfo(request)).getArticleDocument(),
-                        Article.class));
+        String articleRef = ((ArticleComponentInfo) getComponentParametersInfo(request)).getArticleDocument();
+
+        if (articleRef != null && !articleRef.isEmpty()) {
+            request.setModel(
+                    "document",
+                    ComponentHelper.getHippoBeanForPath(
+                            this,
+                            "document",
+                            getClass().getAnnotation(ParametersInfo.class),
+                            ((ArticleComponentInfo) getComponentParametersInfo(request)).getArticleDocument(),
+                            Article.class));
+        } else {
+            setContentBeanWith404(request, response);
+        }
     }
 
 }

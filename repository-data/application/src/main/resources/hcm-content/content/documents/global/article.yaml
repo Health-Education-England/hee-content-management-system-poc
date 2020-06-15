@@ -403,3 +403,217 @@
       /heeweb:relatedNews[3]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: e31e3a44-b8f5-4f44-8b81-1e099019fd43
+  /nursing-careers:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: f4aaa0e8-f7fe-4e92-bd7d-f2696d180ff6
+    hippo:name: Nursing careers
+    hippo:versionHistory: 843ae66a-51ec-4b37-acdb-849244fdec81
+    /nursing-careers[1]:
+      jcr:primaryType: heeweb:article
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: d52ea884-bf78-492f-84bf-d45b91fb5189
+      heeweb:category: [Health Careers]
+      heeweb:region: Greater London
+      heeweb:speciality: Paediatrics
+      heeweb:title: Nursing careers
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-06-15T16:56:01.215+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-15T17:00:48.912+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 11ee91a5-36a5-4d3e-b0a8-ed6e7844c08e
+      hippotranslation:locale: en
+      /heeweb:summary:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>We are the NHS and we are recruiting now. Your nursing career starts here, and you'll get an annual nursing payment while you train too. Get all the information you need to start your application.</p>
+
+          <h1>Annual nursing payments</h1>
+
+          <p>A new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
+
+          <h2>What is it?</h2>
+
+          <p>From September 2020, new annual payments of £5,000 - £8,000 will be available to help eligible undergraduate and postgraduate student nurses fund their studies. Best of all, they won’t need to be repaid.</p>
+
+          <p>&nbsp;</p>
+
+          <h2>Am I eligible?</h2>
+
+          <p>Every eligible* student nurse studying or starting their course in September 2020 (so this includes students in years 2 and 3) will receive at least £5,000.</p>
+
+          <p>Every eligible student nurse studying or starting their course in September 2020 will receive at least £5,000.</p>
+
+          <p>&nbsp;</p>
+
+          <p>Further support worth up to £3,000 will be available per academic year for certain students:</p>
+
+          <ul>
+           <li>£1,000 for those studying mental health or learning disability nursing</li>
+           <li>£1,000 for students in areas of the country with low take-up rates for nursing courses</li>
+           <li>£1,000 towards childcare costs.</li>
+          </ul>
+
+          <p>This means that some students may be eligible for up to £8,000 of financial support for each year of study.</p>
+
+          <p>*Eligibility criteria for the new funding will be the same as the wider&nbsp;<a href="https://www.nhsbsa.nhs.uk/learning-support-fund/check-your-eligibility-learning-support-fund" target="_blank">NHS Learning Support Fund&nbsp;</a>payable to students ordinarily resident in the UK and studying at a university in England.</p>
+
+          <h2>How do I find out more?</h2>
+
+          <p>Further information will be available on our&nbsp;<a href="https://www.healthcareers.nhs.uk/career-planning/study-and-training/considering-or-university/financial-support-university">financial support at university page</a>&nbsp;as it becomes available.</p>
+
+          <h2>Apply now!</h2>
+
+          <p>We can help you find undergraduate and postgraduate nursing courses quickly and easily with our&nbsp;<a href="https://www.healthcareers.nhs.uk/career-planning/course-finder">Course Finder</a>.</p>
+
+          <p><a id="tools"></a></p>
+
+          <ul>
+           <li><a rel="nofollow" href="https://www.healthcareers.nhs.uk/print/3687" title="Display a printer-friendly version of this page.">Printer-friendly version</a></li>
+           <li><a rel="nofollow" href="https://www.healthcareers.nhs.uk/printpdf/3687" title="Display a PDF version of this page.">PDF version</a></li>
+           <li><a href="https://www.healthcareers.nhs.uk/user/login?destination=/my-account/my-bookmarks/3687">Login to Bookmark</a></li>
+          </ul>
+      /heeweb:relatedNews:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /nursing-careers[2]:
+      jcr:primaryType: heeweb:article
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: c0202742-c0fa-445c-a715-840b429c54a4
+      heeweb:category: [Health Careers]
+      heeweb:region: Greater London
+      heeweb:speciality: Paediatrics
+      heeweb:title: Nursing careers
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-06-15T16:56:01.215+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-15T17:00:48.766+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 11ee91a5-36a5-4d3e-b0a8-ed6e7844c08e
+      hippotranslation:locale: en
+      /heeweb:summary:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>We are the NHS and we are recruiting now. Your nursing career starts here, and you'll get an annual nursing payment while you train too. Get all the information you need to start your application.</p>
+
+          <h1>Annual nursing payments</h1>
+
+          <p>A new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
+
+          <h2>What is it?</h2>
+
+          <p>From September 2020, new annual payments of £5,000 - £8,000 will be available to help eligible undergraduate and postgraduate student nurses fund their studies. Best of all, they won’t need to be repaid.</p>
+
+          <p>&nbsp;</p>
+
+          <h2>Am I eligible?</h2>
+
+          <p>Every eligible* student nurse studying or starting their course in September 2020 (so this includes students in years 2 and 3) will receive at least £5,000.</p>
+
+          <p>Every eligible student nurse studying or starting their course in September 2020 will receive at least £5,000.</p>
+
+          <p>&nbsp;</p>
+
+          <p>Further support worth up to £3,000 will be available per academic year for certain students:</p>
+
+          <ul>
+           <li>£1,000 for those studying mental health or learning disability nursing</li>
+           <li>£1,000 for students in areas of the country with low take-up rates for nursing courses</li>
+           <li>£1,000 towards childcare costs.</li>
+          </ul>
+
+          <p>This means that some students may be eligible for up to £8,000 of financial support for each year of study.</p>
+
+          <p>*Eligibility criteria for the new funding will be the same as the wider&nbsp;<a href="https://www.nhsbsa.nhs.uk/learning-support-fund/check-your-eligibility-learning-support-fund" target="_blank">NHS Learning Support Fund&nbsp;</a>payable to students ordinarily resident in the UK and studying at a university in England.</p>
+
+          <h2>How do I find out more?</h2>
+
+          <p>Further information will be available on our&nbsp;<a href="https://www.healthcareers.nhs.uk/career-planning/study-and-training/considering-or-university/financial-support-university">financial support at university page</a>&nbsp;as it becomes available.</p>
+
+          <h2>Apply now!</h2>
+
+          <p>We can help you find undergraduate and postgraduate nursing courses quickly and easily with our&nbsp;<a href="https://www.healthcareers.nhs.uk/career-planning/course-finder">Course Finder</a>.</p>
+
+          <p><a id="tools"></a></p>
+
+          <ul>
+           <li><a rel="nofollow" href="https://www.healthcareers.nhs.uk/print/3687" title="Display a printer-friendly version of this page.">Printer-friendly version</a></li>
+           <li><a rel="nofollow" href="https://www.healthcareers.nhs.uk/printpdf/3687" title="Display a PDF version of this page.">PDF version</a></li>
+           <li><a href="https://www.healthcareers.nhs.uk/user/login?destination=/my-account/my-bookmarks/3687">Login to Bookmark</a></li>
+          </ul>
+      /heeweb:relatedNews:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /nursing-careers[3]:
+      jcr:primaryType: heeweb:article
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 7e9628c4-6b6a-4726-a4c6-cf1246e2841f
+      heeweb:category: [Health Careers]
+      heeweb:region: Greater London
+      heeweb:speciality: Paediatrics
+      heeweb:title: Nursing careers
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-06-15T16:56:01.215+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-15T17:00:48.766+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-06-15T17:00:53.128+01:00
+      hippotranslation:id: 11ee91a5-36a5-4d3e-b0a8-ed6e7844c08e
+      hippotranslation:locale: en
+      /heeweb:summary:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>We are the NHS and we are recruiting now. Your nursing career starts here, and you'll get an annual nursing payment while you train too. Get all the information you need to start your application.</p>
+
+          <h1>Annual nursing payments</h1>
+
+          <p>A new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
+
+          <h2>What is it?</h2>
+
+          <p>From September 2020, new annual payments of £5,000 - £8,000 will be available to help eligible undergraduate and postgraduate student nurses fund their studies. Best of all, they won’t need to be repaid.</p>
+
+          <p>&nbsp;</p>
+
+          <h2>Am I eligible?</h2>
+
+          <p>Every eligible* student nurse studying or starting their course in September 2020 (so this includes students in years 2 and 3) will receive at least £5,000.</p>
+
+          <p>Every eligible student nurse studying or starting their course in September 2020 will receive at least £5,000.</p>
+
+          <p>&nbsp;</p>
+
+          <p>Further support worth up to £3,000 will be available per academic year for certain students:</p>
+
+          <ul>
+           <li>£1,000 for those studying mental health or learning disability nursing</li>
+           <li>£1,000 for students in areas of the country with low take-up rates for nursing courses</li>
+           <li>£1,000 towards childcare costs.</li>
+          </ul>
+
+          <p>This means that some students may be eligible for up to £8,000 of financial support for each year of study.</p>
+
+          <p>*Eligibility criteria for the new funding will be the same as the wider&nbsp;<a href="https://www.nhsbsa.nhs.uk/learning-support-fund/check-your-eligibility-learning-support-fund" target="_blank">NHS Learning Support Fund&nbsp;</a>payable to students ordinarily resident in the UK and studying at a university in England.</p>
+
+          <h2>How do I find out more?</h2>
+
+          <p>Further information will be available on our&nbsp;<a href="https://www.healthcareers.nhs.uk/career-planning/study-and-training/considering-or-university/financial-support-university">financial support at university page</a>&nbsp;as it becomes available.</p>
+
+          <h2>Apply now!</h2>
+
+          <p>We can help you find undergraduate and postgraduate nursing courses quickly and easily with our&nbsp;<a href="https://www.healthcareers.nhs.uk/career-planning/course-finder">Course Finder</a>.</p>
+
+          <p><a id="tools"></a></p>
+
+          <ul>
+           <li><a rel="nofollow" href="https://www.healthcareers.nhs.uk/print/3687" title="Display a printer-friendly version of this page.">Printer-friendly version</a></li>
+           <li><a rel="nofollow" href="https://www.healthcareers.nhs.uk/printpdf/3687" title="Display a PDF version of this page.">PDF version</a></li>
+           <li><a href="https://www.healthcareers.nhs.uk/user/login?destination=/my-account/my-bookmarks/3687">Login to Bookmark</a></li>
+          </ul>
+      /heeweb:relatedNews:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

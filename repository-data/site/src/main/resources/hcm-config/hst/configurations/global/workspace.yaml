@@ -37,6 +37,7 @@ definitions:
             jcr:primaryType: hst:containercomponent
             hst:label: Page-Not-Found Main
             hst:xtype: hst.vbox
+            hst:lastmodified: 2020-06-15T16:27:16.697+01:00
       /hst:sitemenus:
         jcr:primaryType: hst:sitemenus
         /main:

@@ -1,0 +1,10 @@
+/hst:hst/hst:configurations/global/hst:workspace/hst:sitemap/article:
+  jcr:primaryType: hst:sitemapitem
+  hst:componentconfigurationid: hst:pages/article-contentpage
+  hst:lastmodified: 2020-06-15T21:49:00.621+01:00
+  hst:pagetitle: article
+  hst:relativecontentpath: article
+  /_any_:
+    jcr:primaryType: hst:sitemapitem
+    hst:componentconfigurationid: hst:pages/article-contentpage
+    hst:relativecontentpath: ${parent}/${1}
