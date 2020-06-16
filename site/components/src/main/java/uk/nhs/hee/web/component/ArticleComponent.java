@@ -26,7 +26,7 @@ public class ArticleComponent extends CommonComponent {
                     "document",
                     ComponentHelper.getHippoBeanForPath(
                             this,
-                            "document",
+                            "articleDocument",
                             getClass().getAnnotation(ParametersInfo.class),
                             ((ArticleComponentInfo) getComponentParametersInfo(request)).getArticleDocument(),
                             Article.class));

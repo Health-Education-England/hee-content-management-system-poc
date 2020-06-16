@@ -15,10 +15,11 @@
     heeweb:speciality: Clinical oncology
     heeweb:title: Hi there title
     hippo:availability: []
+    hippostd:holder: admin
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2020-05-28T09:23:54.278+01:00
-    hippostdpubwf:lastModificationDate: 2020-06-14T23:00:19.890+01:00
+    hippostdpubwf:lastModificationDate: 2020-06-15T23:10:53.446+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: f91e7a35-c701-48c4-bea6-1896058e3549
     hippotranslation:locale: en

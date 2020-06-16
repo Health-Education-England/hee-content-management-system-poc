@@ -8,6 +8,7 @@ public class AlgoliaArticle {
     private String speciality;
     private String subSpeciality;
     private Long lastUpdateAt;
+    private String path;
     private String objectID;
 
     public AlgoliaArticle() {
@@ -75,5 +76,13 @@ public class AlgoliaArticle {
 
     public void setLastUpdateAt(Long lastUpdateAt) {
         this.lastUpdateAt = lastUpdateAt;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }

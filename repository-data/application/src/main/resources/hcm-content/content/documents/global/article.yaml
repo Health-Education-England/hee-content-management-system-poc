@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: cc4c1494-8adc-43b9-813c-f77510179d8e
     hippo:name: LTFT training policy (Global)
-    hippo:versionHistory: 0655e6d2-ba9e-4ffa-a3cf-a5fbe9787e91
+    hippo:versionHistory: c0725ca2-0019-4921-8dde-c5bb709c571c
     /ltft-training-policy[1]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
@@ -73,7 +73,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-15T11:51:32.198+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-16T00:18:49.645+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
@@ -84,7 +84,7 @@
 
           <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
-          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;</p>
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;&nbsp;</p>
 
           <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
 
@@ -139,9 +139,6 @@
       /heeweb:relatedNews[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 0598a29c-9fc6-4024-96a2-7880b7e65dc0
-      /heeweb:relatedNews[3]:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: e31e3a44-b8f5-4f44-8b81-1e099019fd43
     /ltft-training-policy[2]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -203,7 +200,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-15T11:46:51.960+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-16T00:18:49.480+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
@@ -214,7 +211,7 @@
 
           <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
-          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;</p>
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;&nbsp;</p>
 
           <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
 
@@ -269,9 +266,6 @@
       /heeweb:relatedNews[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 0598a29c-9fc6-4024-96a2-7880b7e65dc0
-      /heeweb:relatedNews[3]:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: e31e3a44-b8f5-4f44-8b81-1e099019fd43
     /ltft-training-policy[3]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
@@ -333,9 +327,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
-      hippostdpubwf:lastModificationDate: 2020-06-15T11:46:51.960+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-16T00:18:49.480+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2020-06-15T11:46:59.926+01:00
+      hippostdpubwf:publicationDate: 2020-06-16T00:18:54.371+01:00
       hippotranslation:id: 28cfa778-cc93-4300-a2df-13804e51d787
       hippotranslation:locale: en
       /heeweb:summary:
@@ -345,7 +339,7 @@
 
           <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
 
-          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;</p>
+          <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.&nbsp;&nbsp;</p>
 
           <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
 
@@ -400,15 +394,12 @@
       /heeweb:relatedNews[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 0598a29c-9fc6-4024-96a2-7880b7e65dc0
-      /heeweb:relatedNews[3]:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: e31e3a44-b8f5-4f44-8b81-1e099019fd43
   /nursing-careers:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: f4aaa0e8-f7fe-4e92-bd7d-f2696d180ff6
     hippo:name: Nursing careers
-    hippo:versionHistory: 843ae66a-51ec-4b37-acdb-849244fdec81
+    hippo:versionHistory: df9f6ad1-6af2-40c5-9b9e-1b309f57d2c0
     /nursing-careers[1]:
       jcr:primaryType: heeweb:article
       jcr:mixinTypes: ['mix:referenceable']
@@ -421,7 +412,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-06-15T16:56:01.215+01:00
-      hippostdpubwf:lastModificationDate: 2020-06-15T17:00:48.912+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-15T23:53:22.880+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 11ee91a5-36a5-4d3e-b0a8-ed6e7844c08e
       hippotranslation:locale: en
@@ -432,7 +423,7 @@
 
           <h1>Annual nursing payments</h1>
 
-          <p>A new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
+          <p>A ada new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
 
           <h2>What is it?</h2>
 
@@ -490,7 +481,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-06-15T16:56:01.215+01:00
-      hippostdpubwf:lastModificationDate: 2020-06-15T17:00:48.766+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-15T23:53:22.336+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 11ee91a5-36a5-4d3e-b0a8-ed6e7844c08e
       hippotranslation:locale: en
@@ -501,7 +492,7 @@
 
           <h1>Annual nursing payments</h1>
 
-          <p>A new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
+          <p>A ada new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
 
           <h2>What is it?</h2>
 
@@ -559,9 +550,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2020-06-15T16:56:01.215+01:00
-      hippostdpubwf:lastModificationDate: 2020-06-15T17:00:48.766+01:00
+      hippostdpubwf:lastModificationDate: 2020-06-15T23:53:22.336+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2020-06-15T17:00:53.128+01:00
+      hippostdpubwf:publicationDate: 2020-06-15T23:53:26.848+01:00
       hippotranslation:id: 11ee91a5-36a5-4d3e-b0a8-ed6e7844c08e
       hippotranslation:locale: en
       /heeweb:summary:
@@ -571,7 +562,7 @@
 
           <h1>Annual nursing payments</h1>
 
-          <p>A new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
+          <p>A ada new range of financial support has been announced for all eligible undergraduate and postgraduate student nurses.</p>
 
           <h2>What is it?</h2>
 
@@ -617,3 +608,78 @@
       /heeweb:relatedNews:
         jcr:primaryType: hippo:mirror
         hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /test:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippotranslation:translated']
+    hippostd:foldertype: [new-article-document, new-article-folder]
+    hippotranslation:id: d76f2eaf-323c-4f63-90e3-e37963922713
+    hippotranslation:locale: en
+    /test:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 7680403d-9be7-448d-b1b0-b6b9c2facc7c
+      hippo:versionHistory: 10453f0e-c7b3-48a5-95e9-3bc458ec06e2
+      /test[1]:
+        jcr:primaryType: heeweb:article
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 0dffb613-98f2-44ce-a4a6-d665d220b40e
+        heeweb:category: [General]
+        heeweb:region: Global
+        heeweb:title: Title Test
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2020-06-15T23:28:00.577+01:00
+        hippostdpubwf:lastModificationDate: 2020-06-16T00:02:15.963+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: e0712336-8416-4609-b573-49c4f99be0e4
+        hippotranslation:locale: en
+        /heeweb:summary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Summary test with parent dir</p>
+        /heeweb:relatedNews:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /test[2]:
+        jcr:primaryType: heeweb:article
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 437c2c0d-b825-45db-97cd-7395efd37069
+        heeweb:category: [General]
+        heeweb:region: Global
+        heeweb:title: Title Test
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2020-06-15T23:28:00.577+01:00
+        hippostdpubwf:lastModificationDate: 2020-06-16T00:02:15.923+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: e0712336-8416-4609-b573-49c4f99be0e4
+        hippotranslation:locale: en
+        /heeweb:summary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Summary test with parent dir</p>
+        /heeweb:relatedNews:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /test[3]:
+        jcr:primaryType: heeweb:article
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: f6f3b8ac-ab68-4cd9-99f4-9c226f7fa564
+        heeweb:category: [General]
+        heeweb:region: Global
+        heeweb:title: Title Test
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2020-06-15T23:28:00.577+01:00
+        hippostdpubwf:lastModificationDate: 2020-06-16T00:02:15.923+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2020-06-16T00:02:22.648+01:00
+        hippotranslation:id: e0712336-8416-4609-b573-49c4f99be0e4
+        hippotranslation:locale: en
+        /heeweb:summary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Summary test with parent dir</p>
+        /heeweb:relatedNews:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

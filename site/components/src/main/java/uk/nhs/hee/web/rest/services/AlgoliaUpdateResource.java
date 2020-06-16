@@ -8,13 +8,14 @@ import com.algolia.search.models.settings.IndexSettings;
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.jaxrs.services.AbstractResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.PropertySource;
 import uk.nhs.hee.web.beans.Article;
-import uk.nhs.hee.web.beans.BaseHippoDocument;
 import uk.nhs.hee.web.rest.services.entity.AlgoliaArticle;
 
 import javax.jcr.ItemNotFoundException;
@@ -124,19 +125,27 @@ public class AlgoliaUpdateResource extends AbstractResource {
         return Response.ok().build();
     }
 
-    private AlgoliaArticle createPayload(Article document) {
+    private String getPath(Article article) {
+        HstRequestContext requestContext = RequestContextProvider.get();
+        HstLinkCreator linkCreator = requestContext.getHstLinkCreator();
+        HstLink link = linkCreator.create(article, requestContext);
+        return link.getPath();
+    }
+
+    private AlgoliaArticle createPayload(Article article) {
         AlgoliaArticle algoliaArticle = new AlgoliaArticle();
-        algoliaArticle.setSummary(document.getSummary().getContent());
-        algoliaArticle.setTitle(document.getTitle());
-        algoliaArticle.setCategory(document.getCategory());
-        algoliaArticle.setRegion(document.getRegion());
-        algoliaArticle.setSpeciality(document.getSpeciality());
-        algoliaArticle.setSubSpeciality(document.getSubspeciality());
+        algoliaArticle.setSummary(article.getSummary().getContent());
+        algoliaArticle.setTitle(article.getTitle());
+        algoliaArticle.setCategory(article.getCategory());
+        algoliaArticle.setRegion(article.getRegion());
+        algoliaArticle.setSpeciality(article.getSpeciality());
+        algoliaArticle.setSubSpeciality(article.getSubspeciality());
         Long updateTimestamp =
-                ((GregorianCalendar) document.getSingleProperty("hippostdpubwf:lastModificationDate"))
+                ((GregorianCalendar) article.getSingleProperty("hippostdpubwf:lastModificationDate"))
                         .getTimeInMillis();
         algoliaArticle.setLastUpdateAt(updateTimestamp);
-        algoliaArticle.setObjectID(document.getCanonicalUUID());
+        algoliaArticle.setObjectID(article.getCanonicalUUID());
+        algoliaArticle.setPath(this.getPath(article));
 
         return algoliaArticle;
     }
