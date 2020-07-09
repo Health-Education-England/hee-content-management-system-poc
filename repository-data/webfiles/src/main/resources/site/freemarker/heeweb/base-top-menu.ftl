@@ -31,3 +31,16 @@
   <@hst.cmseditmenu menu=menu/>
 </div>
 </#if>
+
+<#-- Logout must be by POST (see http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#csrf-logout) -->
+<form name="logoutForm" method="post" action="<@hst.link path="/"/>logout">
+  <p>
+    <#if hstRequest.userPrincipal??>
+      Welcome <strong>${hstRequest.userPrincipal.name}</strong>!
+      <#if _csrf??>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+      </#if>
+      <input type="submit" name="logoutButton" value="Log out" />
+    </#if>
+  </p>
+</form>

@@ -21,6 +21,13 @@ definitions:
           jcr:primaryType: hst:containercomponent
           hst:label: Home Page Main
           hst:xtype: hst.vbox
+          hst:lastmodified: 2020-05-13T08:39:58.631+05:30
+        /hero:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:containercomponent
+          hst:label: Hero
+          hst:lastmodified: 2020-05-13T09:16:40.756+05:30
+          hst:xtype: hst.vbox
       /pagenotfound:
         jcr:primaryType: hst:containercomponentfolder
         /main:

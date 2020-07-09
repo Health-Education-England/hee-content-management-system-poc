@@ -75,3 +75,9 @@ storage
 ## Node
 ##############################
 node_modules
+
+##############################
+## HotswapAgent
+##############################
+hotswap-agent/**
+**/hotswap-agent.properties

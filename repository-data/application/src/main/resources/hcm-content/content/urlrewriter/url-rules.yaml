@@ -1,0 +1,6 @@
+/content/urlrewriter/url-rules:
+  jcr:primaryType: urlrewriter:ruleset
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 17119de1-0450-4b93-9abe-09587b7680c3
+  hippo:name: Url Rules
+  hippostd:foldertype: [new-urlrewriter-folder, new-urlrewriter-document]
