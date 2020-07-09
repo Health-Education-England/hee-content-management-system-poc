@@ -2,7 +2,9 @@ name: CI & CD [DEV]
 
 on:
   push:
-    branches: [master]
+    branches-ignore:
+      - '**'
+    # branches: [master]
     # branches: [develop] # can be enabled when ready
 
 jobs:
