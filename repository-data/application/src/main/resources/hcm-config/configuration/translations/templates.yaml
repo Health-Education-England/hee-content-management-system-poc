@@ -10,6 +10,8 @@ definitions:
       new-pageMetaData-folder: new PageMetaData folder
       new-heroBanner-document: new heroBanner document
       new-heroBanner-folder: new heroBanner folder
+      new-article-document: new article document
+      new-article-folder: new article folder
     /hippo:configuration/hippo:translations/hippo:templates/fr:
       new-resource-bundle: nouveau resource bundle
       new-untranslated-folder: nouveau dossier non traduit

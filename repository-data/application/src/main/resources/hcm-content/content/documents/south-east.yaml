@@ -1,0 +1,8 @@
+/content/documents/south-east:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 34f4789b-a772-4fde-93cb-3c1ddba574b0
+  hippo:name: South East
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 79098b42-a6bf-45bc-9985-630fbe0edbe6
+  hippotranslation:locale: en

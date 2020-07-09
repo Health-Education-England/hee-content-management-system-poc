@@ -1,0 +1,6 @@
+/hst:heeweb/hst:configurations/<regionId>/hst:workspace/hst:channel/@hst:name
+/hst:heeweb/hst:configurations/<regionId>/hst:workspace/hst:channel/hst:channelinfo/@orgSplit
+/hst:heeweb/hst:configurations/<regionId>/hst:workspace/hst:pages/ltft-training-policy-contentpage/main/article/@hst:parametervalues
+/content/documents/<regionId>/herobanner/home-hero-banner/@hippo:name
+/content/documents/<regionId>/herobanner/ltft-hero-banner/@hippo:name
+/content/documents/<regionId>/article/ltft-training-policy/@hippo:name

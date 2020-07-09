@@ -1,0 +1,3 @@
+/content/documents/<regionId>/herobanner/home-hero-banner/home-hero-banner/@heeweb:heading
+/content/documents/<regionId>/herobanner/ltft-hero-banner/ltft-hero-banner/@heeweb:heading
+/content/documents/<regionId>/article/ltft-training-policy/ltft-training-policy/@heeweb:title

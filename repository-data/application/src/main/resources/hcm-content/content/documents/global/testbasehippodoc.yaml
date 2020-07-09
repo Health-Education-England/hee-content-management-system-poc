@@ -1,0 +1,62 @@
+/content/documents/global/testbasehippodoc:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 6861e0b1-c8ae-4cb4-b17d-a96ea4d638a0
+  hippo:name: TestBaseHippoDoc
+  hippo:versionHistory: 22d6a16b-51cc-4341-b850-c8865adfb613
+  /testbasehippodoc[1]:
+    jcr:primaryType: heeweb:BaseHippoDocument
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 0f0dff49-72cb-40f5-a265-492f2a519a83
+    heeweb:category: [Applications]
+    heeweb:content: <p>Contnet block here ada</p>
+    heeweb:introduction: This is introduction
+    heeweb:region: Global
+    heeweb:speciality: Clinical oncology
+    heeweb:title: Hi there title
+    hippo:availability: []
+    hippostd:holder: admin
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-05-28T09:23:54.278+01:00
+    hippostdpubwf:lastModificationDate: 2020-06-15T23:10:53.446+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: f91e7a35-c701-48c4-bea6-1896058e3549
+    hippotranslation:locale: en
+  /testbasehippodoc[2]:
+    jcr:primaryType: heeweb:BaseHippoDocument
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 223cdbf3-018f-4bac-af79-038ae4665e5a
+    heeweb:category: [Applications]
+    heeweb:content: <p>Contnet block here ada</p>
+    heeweb:introduction: This is introduction
+    heeweb:region: Global
+    heeweb:speciality: Clinical oncology
+    heeweb:title: Hi there title
+    hippo:availability: [preview]
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-05-28T09:23:54.278+01:00
+    hippostdpubwf:lastModificationDate: 2020-06-14T23:00:19.816+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: f91e7a35-c701-48c4-bea6-1896058e3549
+    hippotranslation:locale: en
+  /testbasehippodoc[3]:
+    jcr:primaryType: heeweb:BaseHippoDocument
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: f325b557-ac46-4b9c-a214-ffd652817257
+    heeweb:category: [Applications]
+    heeweb:content: <p>Contnet block here ada</p>
+    heeweb:introduction: This is introduction
+    heeweb:region: Global
+    heeweb:speciality: Clinical oncology
+    heeweb:title: Hi there title
+    hippo:availability: [live]
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-05-28T09:23:54.278+01:00
+    hippostdpubwf:lastModificationDate: 2020-06-14T23:00:19.816+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2020-06-14T23:00:24.021+01:00
+    hippotranslation:id: f91e7a35-c701-48c4-bea6-1896058e3549
+    hippotranslation:locale: en

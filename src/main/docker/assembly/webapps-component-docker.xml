@@ -19,5 +19,14 @@
         <include>${project.groupId}:${project.artifactId}-webapp</include>
       </includes>
     </dependencySet>
+    <dependencySet>
+      <unpack>true</unpack>
+      <outputDirectory>webapps/hawtio</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <scope>provided</scope>
+      <includes>
+        <include>${project.groupId}:camel-hippoevt-demo-hawtio</include>
+      </includes>
+    </dependencySet>
   </dependencySets>
 </component>

@@ -210,6 +210,21 @@
       <groupId>com.onehippo.cms7</groupId>
       <artifactId>hippo-addon-urlrewriter-module-hst</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.algolia</groupId>
+      <artifactId>algoliasearch-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.algolia</groupId>
+      <artifactId>algoliasearch-apache</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.ws.rs</groupId>
+      <artifactId>javax.ws.rs-api</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>

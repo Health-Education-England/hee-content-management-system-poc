@@ -1,0 +1,4 @@
+definitions:
+  config:
+    /hst:hst/hst:blueprints/regional-blueprint/hst:site:
+      jcr:primaryType: hst:site

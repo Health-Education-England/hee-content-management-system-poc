@@ -1,0 +1,6 @@
+/hippo:configuration/hippo:users/{{ regionId }}-editor:
+  jcr:primaryType: hipposys:user
+  hipposys:active: true
+  hipposys:password: password1
+  hipposys:securityprovider: internal
+  hipposys:userroles: []

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: fdfc47ac-4a07-45e1-8c6c-bf7abde56b43
+          jcr:uuid: 54051ca2-5244-47e6-a4cc-e09ab91e346e
           hipposysedit:node: true
           hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
@@ -45,7 +45,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           heeweb:heading: ''
           heeweb:summaryText: ''
-          jcr:uuid: c2908b7c-8ae3-4a48-81e5-9448ad100592
+          jcr:uuid: 3ff57978-2bdd-4a68-b6c2-e15523fb5ee5
           hippostdpubwf:lastModificationDate: 2020-05-12T23:35:24.011+05:30
           hippostdpubwf:creationDate: 2020-05-12T23:35:24.011+05:30
       /editor:templates:

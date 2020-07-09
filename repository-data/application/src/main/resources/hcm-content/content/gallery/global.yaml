@@ -1,0 +1,8 @@
+/content/gallery/global:
+  .meta:order-before: channels
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: f58b1214-128c-4407-9e02-e1aabafe8c01
+  hippo:name: Global
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hippogallery:imageset']

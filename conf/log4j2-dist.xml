@@ -94,6 +94,9 @@
     <Logger name="org.apache.jackrabbit.core.query.lucene.SearchIndex" level="info"/>
     <Logger name="org.apache.jackrabbit.core.query.lucene.ConsistencyCheck" level="info"/>
 
+    <!-- apache camel logging -->
+    <Logger name="org.apache.camel" level="info"/>
+
     <!-- project logging -->
     <Logger name="uk.nhs.hee.web" level="info"/>
 

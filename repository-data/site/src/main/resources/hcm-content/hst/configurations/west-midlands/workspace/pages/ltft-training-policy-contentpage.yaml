@@ -1,0 +1,28 @@
+/hst:hst/hst:configurations/west-midlands/hst:workspace/hst:pages/ltft-training-policy-contentpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2020-05-31T16:56:54.069+05:30
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hst:label: Content Page Main
+    hst:lastmodified: 2020-06-02T00:20:42.140+05:30
+    hst:xtype: hst.vbox
+    /article:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.component.ArticleComponent
+      hst:iconpath: images/essentials/catalog-component-icons/article.svg
+      hst:label: Article
+      hst:parameternames: [articleDocument]
+      hst:parametervalues: [/content/documents/west-midlands/article/ltft-training-policy]
+  /hero:
+    jcr:primaryType: hst:containercomponent
+    hst:label: Hero
+    hst:lastmodified: 2020-06-03T18:06:33.511+05:30
+    hst:xtype: hst.vbox
+    /hero-banner:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+      hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+      hst:label: Hero Banner
+      hst:parameternames: [heroBannerDocument]
+      hst:parametervalues: [herobanner/ltft-hero-banner]

@@ -1,4 +1,0 @@
-/hst:hst/hst:configurations/heeweb/hst:workspace/hst:sitemenus/main/User Home Page:
-  jcr:primaryType: hst:sitemenuitem
-  hst:referencesitemapitem: user-home-page
-  hst:repobased: false

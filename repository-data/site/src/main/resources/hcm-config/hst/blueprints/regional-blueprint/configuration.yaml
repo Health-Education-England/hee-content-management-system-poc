@@ -1,0 +1,120 @@
+definitions:
+  config:
+    /hst:hst/hst:blueprints/regional-blueprint/hst:configuration:
+      jcr:primaryType: hst:configuration
+      hst:inheritsfrom: [../common]
+      /hst:sitemap:
+        jcr:primaryType: hst:sitemap
+      /hst:sitemenus:
+        jcr:primaryType: hst:sitemenus
+      /hst:workspace:
+        jcr:primaryType: hst:workspace
+        /hst:containers:
+          jcr:primaryType: hst:containercomponentfolder
+          /base:
+            jcr:primaryType: hst:containercomponentfolder
+            /top:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:containercomponent
+              hst:label: Top
+              hst:xtype: hst.vbox
+            /footer:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:containercomponent
+              hst:label: Footer
+              hst:xtype: hst.vbox
+          /homepage:
+            jcr:primaryType: hst:containercomponentfolder
+            /main:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:containercomponent
+              hst:label: Home Page Main
+              hst:lastmodified: 2020-05-31T16:56:21.749+05:30
+              hst:xtype: hst.vbox
+            /hero:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:containercomponent
+              hst:label: Hero
+              hst:lastmodified: 2020-05-31T23:36:37.002+05:30
+              hst:xtype: hst.vbox
+              /hero-banner:
+                jcr:primaryType: hst:containeritemcomponent
+                hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+                hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+                hst:label: Hero Banner
+                hst:parameternames: [heroBannerDocument]
+                hst:parametervalues: [herobanner/home-hero-banner]
+          /pagenotfound:
+            jcr:primaryType: hst:containercomponentfolder
+            /main:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:containercomponent
+              hst:label: Page-Not-Found Main
+              hst:xtype: hst.vbox
+        /hst:sitemenus:
+          jcr:primaryType: hst:sitemenus
+          /main:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:sitemenu
+            hst:lastmodified: 2020-05-31T17:28:00.024+05:30
+            /LTFT Policy:
+              jcr:primaryType: hst:sitemenuitem
+              hst:referencesitemapitem: ltft-training-policy
+              hst:repobased: false
+        /hst:pages:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:pages
+          /ltft-training-policy-contentpage:
+            jcr:primaryType: hst:component
+            hst:lastmodified: 2020-05-31T16:56:54.069+05:30
+            hst:referencecomponent: hst:abstractpages/base
+            /main:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:containercomponent
+              hst:label: Content Page Main
+              hst:lastmodified: 2020-05-31T16:57:13.708+05:30
+              hst:xtype: hst.vbox
+              /article:
+                jcr:primaryType: hst:containeritemcomponent
+                hst:componentclassname: uk.nhs.hee.web.component.ArticleComponent
+                hst:iconpath: images/essentials/catalog-component-icons/article.svg
+                hst:label: Article
+                hst:parameternames: [articleDocument]
+                hst:parametervalues: [/content/documents/<regionId>/article/ltft-training-policy]
+            /hero:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:containercomponent
+              hst:label: Hero
+              hst:lastmodified: 2020-05-31T23:36:37.002+05:30
+              hst:xtype: hst.vbox
+              /hero-banner:
+                jcr:primaryType: hst:containeritemcomponent
+                hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+                hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+                hst:label: Hero Banner
+                hst:parameternames: [heroBannerDocument]
+                hst:parametervalues: [herobanner/ltft-hero-banner]
+        /hst:sitemap:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:sitemap
+          /ltft-training-policy:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/ltft-training-policy-contentpage
+            hst:lastmodified: 2020-06-01T14:13:44.475+05:30
+            hst:pagetitle: LTFT Training Policy (SouthEast)
+      /hst:channel:
+        jcr:primaryType: hst:channel
+        hst:channelinfoclass: uk.nhs.hee.web.configuration.channel.WebsiteChannelInfo
+        hst:defaultdevice: default
+        hst:deletable: true
+        hst:devices: []
+        hst:lastmodified: 2020-05-28T16:04:52.545+05:30
+        hst:lastmodifiedby: admin
+        hst:type: website
+        hst:name: <regionName>
+        /hst:channelinfo:
+          jcr:primaryType: hst:channelinfo
+          orgDescriptor: ''
+          orgName: Health Education England
+          whiteHeaderBg: true
+          orgSplit: <regionName> Region

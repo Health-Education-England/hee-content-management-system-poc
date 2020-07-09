@@ -1,0 +1,41 @@
+/hippo:configuration/hippo:domains/content-{{ regionId }}:
+  jcr:primaryType: hipposys:domain
+  /content-domain:
+    jcr:primaryType: hipposys:domainrule
+    /{{ regionId }}-content-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: true
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/documents/{{ regionId }}
+  /author:
+    jcr:primaryType: hipposys:authrole
+    hipposys:groups: [{{ regionId }}-author]
+    hipposys:role: author
+    hipposys:users: []
+  /editor:
+    jcr:primaryType: hipposys:authrole
+    hipposys:groups: [{{ regionId }}-editor]
+    hipposys:role: editor
+    hipposys:users: []
+  /gallery-domain:
+    jcr:primaryType: hipposys:domainrule
+    /{{ regionId }}-gallery-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: true
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/gallery/{{ regionId }}
+  /assets-domain:
+    jcr:primaryType: hipposys:domainrule
+    /{{ regionId }}-assets-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: true
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/assets/{{ regionId }}
+  /readonly:
+    jcr:primaryType: hipposys:authrole
+    hipposys:groups: [regional-viewer]
+    hipposys:role: readonly
+    hipposys:users: []

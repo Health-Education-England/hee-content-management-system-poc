@@ -1,0 +1,5 @@
+definitions:
+  config:
+    /hst:hst/hst:blueprints/regional-blueprint/hst:mount:
+      jcr:primaryType: hst:mount
+      hst:pagemodelapi: resourceapi

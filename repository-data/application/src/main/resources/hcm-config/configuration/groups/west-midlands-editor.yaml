@@ -1,0 +1,16 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:groups/west-midlands-editor:
+      jcr:primaryType: hipposys:group
+      hipposys:members:
+        .meta:category: system
+        .meta:add-new-system-values: true
+        type: string
+        value: [west-midlands-editor]
+      hipposys:securityprovider: internal
+      hipposys:userroles:
+        .meta:category: system
+        .meta:add-new-system-values: true
+        type: string
+        value: [xm.cms.user, xm.content.user, xm.channel.user, xm.channel.webmaster,
+          xm.dashboard.user]

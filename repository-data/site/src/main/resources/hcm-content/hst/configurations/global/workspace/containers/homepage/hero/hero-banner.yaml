@@ -1,0 +1,7 @@
+/hst:hst/hst:configurations/global/hst:workspace/hst:containers/homepage/hero/hero-banner:
+  jcr:primaryType: hst:containeritemcomponent
+  hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+  hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+  hst:label: Hero Banner
+  hst:parameternames: [heroBannerDocument]
+  hst:parametervalues: [herobanner/home-hero-banner]

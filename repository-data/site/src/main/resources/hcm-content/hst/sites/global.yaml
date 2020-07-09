@@ -1,0 +1,3 @@
+/hst:hst/hst:sites/global:
+  jcr:primaryType: hst:site
+  hst:content: /content/documents/global

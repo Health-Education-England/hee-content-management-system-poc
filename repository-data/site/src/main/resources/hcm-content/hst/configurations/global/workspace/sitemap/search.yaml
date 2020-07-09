@@ -1,0 +1,5 @@
+/hst:hst/hst:configurations/global/hst:workspace/hst:sitemap/search:
+  jcr:primaryType: hst:sitemapitem
+  hst:componentconfigurationid: hst:pages/search-contentpage
+  hst:lastmodified: 2020-06-15T02:02:58.105+01:00
+  hst:pagetitle: search

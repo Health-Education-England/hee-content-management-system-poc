@@ -5,6 +5,20 @@ definitions:
         jcr:primaryType: hst:configuration
         /hst:sitemap:
           jcr:primaryType: hst:sitemap
+          /root:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/homepage
+            hst:pagetitle: Home Page
+            hst:refId: root
+            hst:relativecontentpath: pagemetadata/home
+          /_any_:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/pagenotfound
+          /pagenotfound:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/pagenotfound
+            hst:pagetitle: Not Found Page
+            hst:refId: pagenotfound
         /hst:abstractpages:
           jcr:primaryType: hst:pages
         /hst:pages:
@@ -13,12 +27,68 @@ definitions:
           jcr:primaryType: hst:components
         /hst:templates:
           jcr:primaryType: hst:templates
+          /base-layout:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/heeweb/base-layout.ftl
+          /base-top-menu:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/heeweb/base-top-menu.ftl
+          /base-footer:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/heeweb/base-footer.ftl
+          /homepage-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/heeweb/homepage-main.ftl
+          /pagenotfound-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/heeweb/pagenotfound-main.ftl
+          /sharepoint-files-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/heeweb/sharepoint/files/main.ftl
+          /azure-ad-profile-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/heeweb/azure/ad/profile/main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
           jcr:primaryType: hst:sitemapitemhandlers
         /hst:catalog:
           jcr:primaryType: hst:catalog
-      /heeweb:
+          /heeweb-catalog:
+            jcr:primaryType: hst:containeritempackage
+            /sharepoint-files:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.component.HEEWebSharepointFilesComponent
+              hst:iconpath: images/essentials/catalog-component-icons/generic-list.svg
+              hst:label: Sharepoint Files
+              hst:template: sharepoint-files-main
+            /azure-ad-profile:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.component.HEEWebAzureADProfileComponent
+              hst:iconpath: images/essentials/catalog-component-icons/simple-content.svg
+              hst:label: AzureAD Profile
+              hst:template: azure-ad-profile-main
+            /hero-banner:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+              hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+              hst:label: Hero Banner
+            /article:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.component.ArticleComponent
+              hst:iconpath: images/essentials/catalog-component-icons/article.svg
+              hst:label: Article
+            /search:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.component.SearchComponent
+              hst:iconpath: images/essentials/catalog-component-icons/search-24px.svg
+              hst:label: Search
+      /global:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
+      /south-east:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
+      /west-midlands:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

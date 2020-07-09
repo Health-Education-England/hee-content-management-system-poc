@@ -1,0 +1,374 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates/regional-blueprint:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 38efd7bf-321c-41cf-8f16-25c8e7a8ee9b
+      hippo:name: ''
+      hippostd:foldertype: [new-translated-folder, new-document]
+      hippotranslation:id: 3c463605-06d9-466d-9c24-a520a95651fb
+      hippotranslation:locale: en
+      /herobanner:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+        jcr:uuid: 622813f1-1d2c-4325-867f-fdf427424e07
+        hippo:name: HeroBanner
+        hippostd:foldertype: [new-heroBanner-folder, new-heroBanner-document]
+        hippotranslation:id: 17230ce1-6210-41c5-b3d4-b9b3f5bab383
+        hippotranslation:locale: en
+        /home-hero-banner:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+          jcr:uuid: cdcfc1c6-90f1-40ea-8a29-dc243b06e5d9
+          hippo:name: Home Hero Banner (<regionName>)
+          /home-hero-banner[1]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: cf088346-5dcb-47c7-909c-dbca87fa2287
+            heeweb:heading: '[<regionName>] We''re here for you!'
+            heeweb:summaryText: 'Health Education England (HEE) exists for one reason
+              only: to support the delivery of excellent healthcare and health improvement
+              to the patients and public of England by ensuring that the workforce
+              of today and tomorrow has the right numbers, skills, values and behaviours,
+              at the right time and in the right place.'
+            hippo:availability: []
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-02T00:14:42.389+05:30
+            hippostdpubwf:lastModifiedBy: south-east-editor
+            hippotranslation:id: 5012a638-5837-4b68-8d2b-d4d75e71e2fb
+            hippotranslation:locale: en
+          /home-hero-banner[2]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 9722e8af-e93f-4291-9c0e-9b8ad2671275
+            heeweb:heading: '[<regionName>] We''re here for you!'
+            heeweb:summaryText: 'Health Education England (HEE) exists for one reason
+              only: to support the delivery of excellent healthcare and health improvement
+              to the patients and public of England by ensuring that the workforce
+              of today and tomorrow has the right numbers, skills, values and behaviours,
+              at the right time and in the right place.'
+            hippo:availability: [preview]
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-02T00:14:53.783+05:30
+            hippostdpubwf:lastModifiedBy: south-east-editor
+            hippotranslation:id: 5012a638-5837-4b68-8d2b-d4d75e71e2fb
+            hippotranslation:locale: en
+          /home-hero-banner[3]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: db816208-b32b-403f-ab9e-90def522b7ee
+            heeweb:heading: '[<regionName>] We''re here for you!'
+            heeweb:summaryText: 'Health Education England (HEE) exists for one reason
+              only: to support the delivery of excellent healthcare and health improvement
+              to the patients and public of England by ensuring that the workforce
+              of today and tomorrow has the right numbers, skills, values and behaviours,
+              at the right time and in the right place.'
+            hippo:availability: [live]
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-02T00:14:53.783+05:30
+            hippostdpubwf:lastModifiedBy: south-east-editor
+            hippostdpubwf:publicationDate: 2020-06-03T13:20:25.166+05:30
+            hippotranslation:id: 5012a638-5837-4b68-8d2b-d4d75e71e2fb
+            hippotranslation:locale: en
+        /ltft-hero-banner:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+          jcr:uuid: 7533158f-531f-49f8-942f-7f9960a951ba
+          hippo:name: LTFT Hero Banner (<regionName>)
+          /ltft-hero-banner[1]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 327f759e-975f-4b67-8e58-2f8b8b46d207
+            heeweb:heading: '[<regionName>] Less than full-time training'
+            heeweb:summaryText: Less Than Full Time (LTFT) training is a scheme whereby
+              eligible trainee doctors and dentists of all grades are able to work
+              on a part time basis when full-time work is impossible or unreasonable
+              rather than having to give up work.
+            hippo:availability: [live]
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-03T17:57:46.062+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2020-06-03T17:57:47.722+05:30
+            hippotranslation:id: 0085e307-54b0-46a5-a1ae-6b4e3a9468a0
+            hippotranslation:locale: en
+          /ltft-hero-banner[2]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 11246dd0-8b01-40d9-a04a-fdbd72d92be6
+            heeweb:heading: '[<regionName>] Less than full-time training'
+            heeweb:summaryText: Less Than Full Time (LTFT) training is a scheme whereby
+              eligible trainee doctors and dentists of all grades are able to work
+              on a part time basis when full-time work is impossible or unreasonable
+              rather than having to give up work.
+            hippo:availability: [preview]
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-03T17:57:46.062+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 0085e307-54b0-46a5-a1ae-6b4e3a9468a0
+            hippotranslation:locale: en
+          /ltft-hero-banner[3]:
+            jcr:primaryType: heeweb:heroBanner
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: a95d62a2-a85c-4d87-87fa-67d5c5d32030
+            heeweb:heading: '[<regionName>] Less than full-time training'
+            heeweb:summaryText: Less Than Full Time (LTFT) training is a scheme whereby
+              eligible trainee doctors and dentists of all grades are able to work
+              on a part time basis when full-time work is impossible or unreasonable
+              rather than having to give up work.
+            hippo:availability: []
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-03T17:57:40.239+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 0085e307-54b0-46a5-a1ae-6b4e3a9468a0
+            hippotranslation:locale: en
+      /article:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+        jcr:uuid: ff705e55-5f0a-4187-9bea-3432a82dd388
+        hippo:name: Article
+        hippostd:foldertype: [new-article-folder, new-article-document]
+        hippotranslation:id: 4302bc72-7a36-48f0-be9a-bfc6122a7063
+        hippotranslation:locale: en
+        /ltft-training-policy:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+          jcr:uuid: 9c994364-2cb4-4324-8e7a-6a20ba741497
+          hippo:name: LTFT training policy (<regionName>)
+          /ltft-training-policy[1]:
+            jcr:primaryType: heeweb:article
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: a7dc150b-d7f3-4aee-82d9-0e2d3f390ef0
+            heeweb:title: '[<regionName>] Less than full-time training policy'
+            hippo:availability: []
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-03T17:57:52.513+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 53de8ccd-bfc2-40dd-9f1e-36cba74731c1
+            hippotranslation:locale: en
+            /heeweb:summary:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <p>[<strong>Credit:</strong> <a href="https://www.healthcareers.nhs.uk/explore-roles/doctors/career-opportunities-doctors/less-full-time-training-doctors">Less than full-time training for doctors</a>]</p>
+
+                <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+                <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+                <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+                <p>Consider:</p>
+
+                <ul>
+                 <li>the effect on your income – reduced hours means less take-home pay</li>
+                 <li>where you want to be both now and in the future. This may mean setting short-term and long- term goals</li>
+                </ul>
+
+                <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+                <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+                <ul>
+                 <li><a href="#eligibility">eligibility for less than full-time training (LTFT)</a></li>
+                 <li><a href="#applying">applying for LTFT</a></li>
+                </ul>
+
+                <h3 id="eligibility">Eligibility for less than full-time training (LTFT)</h3>
+
+                <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+                <h4>Category 1</h4>
+
+                <p>Those doctors in training with:</p>
+
+                <ul>
+                 <li>disability or ill health (this may include those on in vitro fertility programmes)</li>
+                 <li>responsibility for caring (men and women) for children</li>
+                 <li>responsibility for caring for an ill/disabled partner, relative or other dependent</li>
+                </ul>
+
+                <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+                <h4>Category 2</h4>
+
+                <p>Those doctors in training with:</p>
+
+                <ul>
+                 <li>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</li>
+                 <li>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</li>
+                 <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
+                </ul>
+
+                <h3 id="applying">Applying for LTFT</h3>
+
+                <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+            /heeweb:relatedNews[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cc4c1494-8adc-43b9-813c-f77510179d8e
+            /heeweb:relatedNews[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /ltft-training-policy[2]:
+            jcr:primaryType: heeweb:article
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 3a66510e-e9ea-478a-a31e-bbd8455392f0
+            heeweb:title: '[<regionName>] Less than full-time training policy'
+            hippo:availability: [preview]
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-03T17:57:58.300+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 53de8ccd-bfc2-40dd-9f1e-36cba74731c1
+            hippotranslation:locale: en
+            /heeweb:summary:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <p>[<strong>Credit:</strong> <a href="https://www.healthcareers.nhs.uk/explore-roles/doctors/career-opportunities-doctors/less-full-time-training-doctors">Less than full-time training for doctors</a>]</p>
+
+                <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+                <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+                <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+                <p>Consider:</p>
+
+                <ul>
+                 <li>the effect on your income – reduced hours means less take-home pay</li>
+                 <li>where you want to be both now and in the future. This may mean setting short-term and long- term goals</li>
+                </ul>
+
+                <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+                <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+                <ul>
+                 <li><a href="#eligibility">eligibility for less than full-time training (LTFT)</a></li>
+                 <li><a href="#applying">applying for LTFT</a></li>
+                </ul>
+
+                <h3 id="eligibility">Eligibility for less than full-time training (LTFT)</h3>
+
+                <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+                <h4>Category 1</h4>
+
+                <p>Those doctors in training with:</p>
+
+                <ul>
+                 <li>disability or ill health (this may include those on in vitro fertility programmes)</li>
+                 <li>responsibility for caring (men and women) for children</li>
+                 <li>responsibility for caring for an ill/disabled partner, relative or other dependent</li>
+                </ul>
+
+                <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+                <h4>Category 2</h4>
+
+                <p>Those doctors in training with:</p>
+
+                <ul>
+                 <li>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</li>
+                 <li>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</li>
+                 <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
+                </ul>
+
+                <h3 id="applying">Applying for LTFT</h3>
+
+                <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+            /heeweb:relatedNews[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cc4c1494-8adc-43b9-813c-f77510179d8e
+            /heeweb:relatedNews[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /ltft-training-policy[3]:
+            jcr:primaryType: heeweb:article
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: c89df432-2c23-4e98-8633-f6cba5e00dc3
+            heeweb:title: '[<regionName>] Less than full-time training policy'
+            hippo:availability: [live]
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2020-05-31T15:20:38.483+05:30
+            hippostdpubwf:lastModificationDate: 2020-06-03T17:57:58.300+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2020-06-03T17:58:00.199+05:30
+            hippotranslation:id: 53de8ccd-bfc2-40dd-9f1e-36cba74731c1
+            hippotranslation:locale: en
+            /heeweb:summary:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <p>[<strong>Credit:</strong> <a href="https://www.healthcareers.nhs.uk/explore-roles/doctors/career-opportunities-doctors/less-full-time-training-doctors">Less than full-time training for doctors</a>]</p>
+
+                <h3>This page has information on less than full-time training (LTFT). It includes information on eligibility, applying, tips and resources.</h3>
+
+                <p>There are a number of reasons why you may want to consider less than full-time training. Spending time with your baby or child is not the only reason. You might be caring for an ill or disabled partner, relative or other dependent, or have a disability or health problem yourself. If you are undertaking certain kinds of professional development it may also be possible to be accepted for LTFT. In order to be accepted for LTFT you need to fulfill certain criteria, which are explained here.</p>
+
+                <p>Although working LTFT has many benefits it can also be a challenge. It is important to plan your working arrangements and patterns very carefully.</p>
+
+                <p>Consider:</p>
+
+                <ul>
+                 <li>the effect on your income – reduced hours means less take-home pay</li>
+                 <li>where you want to be both now and in the future. This may mean setting short-term and long- term goals</li>
+                </ul>
+
+                <p>Although working LTFT has its many benefits, it can also be a challenge. Recent research carried out by the Medical Women’s Federation has shown that those working LTFT feel they are often taken less seriously than their full-time colleagues and it is often difficult to attend training and to demonstrate commitment through working longer hours.</p>
+
+                <p>The advice below may lessen this challenge and help you to maintain a balanced, manageable and professional career:</p>
+
+                <ul>
+                 <li><a href="#eligibility">eligibility for less than full-time training (LTFT)</a></li>
+                 <li><a href="#applying">applying for LTFT</a></li>
+                </ul>
+
+                <h3 id="eligibility">Eligibility for less than full-time training (LTFT)</h3>
+
+                <p>There are two different categories of applications to LTFT. These are used by HEE/ the deaneries to assess eligibility and prioritise applications. However these categories are not exhaustive:</p>
+
+                <h4>Category 1</h4>
+
+                <p>Those doctors in training with:</p>
+
+                <ul>
+                 <li>disability or ill health (this may include those on in vitro fertility programmes)</li>
+                 <li>responsibility for caring (men and women) for children</li>
+                 <li>responsibility for caring for an ill/disabled partner, relative or other dependent</li>
+                </ul>
+
+                <p>These result in the individual doctor or dentist being professionally disadvantaged by circumstances, and less able to fulfil their potential on a full-time rather than on a part-time basis.</p>
+
+                <h4>Category 2</h4>
+
+                <p>Those doctors in training with:</p>
+
+                <ul>
+                 <li>unique opportunities for their own personal/professional development, for example training for national/international sporting events, or short-term extraordinary responsibility, for example a national committee</li>
+                 <li>religious commitment – involving training for a particular religious role with requires a specific amount of time commitment</li>
+                 <li>non-medical professional development such as management courses, law courses, fine arts courses or diploma in complementary therapies</li>
+                </ul>
+
+                <h3 id="applying">Applying for LTFT</h3>
+
+                <p>Most HEE local offices/ deaneries ask for three months ’notice for those hoping to make a LTFT application. HEE/ the deaneries have a process for determining eligibility and then making arrangements for your training plan. The difficulty for the local offices is accommodating all requests whilst at the same time ensuring training programmes remain fully populated and making sure that there are sufficient trainees overall.</p>
+            /heeweb:relatedNews[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cc4c1494-8adc-43b9-813c-f77510179d8e
+            /heeweb:relatedNews[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

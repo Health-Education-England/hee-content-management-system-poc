@@ -1,0 +1,24 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:translations/hippo:hst/channelparameters:
+      jcr:primaryType: hipposys:resourcebundles
+      /uk:
+        jcr:primaryType: hipposys:resourcebundles
+        /nhs:
+          jcr:primaryType: hipposys:resourcebundles
+          /hee:
+            jcr:primaryType: hipposys:resourcebundles
+            /web:
+              jcr:primaryType: hipposys:resourcebundles
+              /configuration:
+                jcr:primaryType: hipposys:resourcebundles
+                /channel:
+                  jcr:primaryType: hipposys:resourcebundles
+                  /WebsiteChannelInfo:
+                    jcr:primaryType: hipposys:resourcebundles
+                    /en:
+                      jcr:primaryType: hipposys:resourcebundle
+                      orgDescriptor: Org. Descriptor
+                      orgName: Org. Name
+                      orgSplit: Org. Split
+                      whiteHeaderBg: Apply White Header Background ?

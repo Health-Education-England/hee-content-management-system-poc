@@ -1,0 +1,12 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/west-midlands/hst:workspace/hst:channel:
+      .meta:residual-child-node-category: content
+      jcr:primaryType: hst:channel
+      hst:channelinfoclass: uk.nhs.hee.web.configuration.channel.WebsiteChannelInfo
+      hst:defaultdevice: default
+      hst:devices: []
+      hst:lastmodified: 2020-06-02T00:22:01.553+05:30
+      hst:lastmodifiedby: west-midlands-editor
+      hst:name: West Midlands
+      hst:type: website

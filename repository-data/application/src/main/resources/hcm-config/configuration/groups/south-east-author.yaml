@@ -1,0 +1,16 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:groups/south-east-author:
+      jcr:primaryType: hipposys:group
+      hipposys:members:
+        .meta:category: system
+        .meta:add-new-system-values: true
+        type: string
+        value: [south-east-author]
+      hipposys:securityprovider: internal
+      hipposys:userroles:
+        .meta:category: system
+        .meta:add-new-system-values: true
+        type: string
+        value: [xm.cms.user, xm.content.user, xm.channel.user, xm.channel.viewer,
+          xm.dashboard.user]

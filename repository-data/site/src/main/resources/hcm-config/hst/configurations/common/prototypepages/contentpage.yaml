@@ -1,0 +1,13 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:prototypepages/contentpage:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:containercomponent
+        hst:label: Content Page Main
+        hst:xtype: hst.vbox
+      /hero:
+        jcr:primaryType: hst:containercomponent
+        hst:label: Hero
+        hst:xtype: hst.vbox

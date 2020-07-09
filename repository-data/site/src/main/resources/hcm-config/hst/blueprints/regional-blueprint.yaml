@@ -1,0 +1,7 @@
+definitions:
+  config:
+    /hst:hst/hst:blueprints/regional-blueprint:
+      jcr:primaryType: hst:blueprint
+      hst:contentRoot: /content/documents
+      hst:description: Creates a regional channel
+      hst:name: Regional channel

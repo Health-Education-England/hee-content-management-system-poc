@@ -1,0 +1,8 @@
+/content/documents/west-midlands:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: f945e187-b279-47a1-b1c5-ed858c83f5ae
+  hippo:name: West Midlands
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 03904bfc-a7d5-4d24-857e-a958e1daa157
+  hippotranslation:locale: en

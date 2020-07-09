@@ -11,9 +11,27 @@ definitions:
           .meta:residual-child-node-category: content
           jcr:primaryType: hst:mount
           hst:homepage: root
-          hst:mountpoint: /hst:heeweb/hst:sites/heeweb
+          hst:mountpoint: /hst:heeweb/hst:sites/global
           hst:locale: en_GB
           hst:pagemodelapi: resourceapi
-          hst:namedpipeline: SpaSitePipeline
           hst:responseheaders: ['Access-Control-Allow-Credentials: true', 'Access-Control-Allow-Origin:
               http://localhost:3000']
+          hst:namedpipeline: SpaSitePipeline
+          /south-east:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:mountpoint: /hst:heeweb/hst:sites/south-east
+            hst:pagemodelapi: resourceapi
+          /west-midlands:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:mountpoint: /hst:heeweb/hst:sites/west-midlands
+            hst:pagemodelapi: resourceapi
+          /restapi:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:alias: restapi
+            hst:isSite: 'false'
+            hst:namedpipeline: JaxrsRestPlainPipeline
+            hst:types: [rest]
+            hst:nochannelinfo: true

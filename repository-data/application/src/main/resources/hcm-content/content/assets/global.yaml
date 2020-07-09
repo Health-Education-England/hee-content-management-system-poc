@@ -1,0 +1,7 @@
+/content/assets/global:
+  jcr:primaryType: hippogallery:stdAssetGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: ed3188e2-152e-4462-954c-ee2a32858b74
+  hippo:name: Global
+  hippostd:foldertype: [new-file-folder]
+  hippostd:gallerytype: ['hippogallery:exampleAssetSet']
