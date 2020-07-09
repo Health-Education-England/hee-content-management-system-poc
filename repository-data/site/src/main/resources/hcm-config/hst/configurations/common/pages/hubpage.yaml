@@ -1,0 +1,15 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:pages/hubpage:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        /training-by-learning-stage:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.TrainingByLearningStageComponent
+          hst:label: TrainingByLearningStage
+        /training-by-local-teams:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.TrainingByLocalTeamsComponent
+          hst:label: TrainingByLocalTeams

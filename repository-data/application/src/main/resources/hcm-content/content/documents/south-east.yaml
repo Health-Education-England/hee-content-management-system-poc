@@ -1,4 +1,5 @@
 /content/documents/south-east:
+  .meta:order-before: medical-education-hub
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
   jcr:uuid: 34f4789b-a772-4fde-93cb-3c1ddba574b0

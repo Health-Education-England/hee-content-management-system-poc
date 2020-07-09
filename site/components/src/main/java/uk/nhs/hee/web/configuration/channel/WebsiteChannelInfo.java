@@ -2,9 +2,13 @@ package uk.nhs.hee.web.configuration.channel;
 
 
 import org.hippoecm.hst.configuration.channel.ChannelInfo;
+import org.hippoecm.hst.core.parameters.DropDownList;
 import org.hippoecm.hst.core.parameters.Parameter;
 
 public interface WebsiteChannelInfo extends ChannelInfo {
+    @Parameter(name = "channelType", displayName = "Channel Type", required = true)
+    @DropDownList({"global", "regional", "education-hub"})
+    String getChannelType();
 
     @Parameter(name = "whiteHeaderBg",
             displayName = "Apply White Header Background ?",

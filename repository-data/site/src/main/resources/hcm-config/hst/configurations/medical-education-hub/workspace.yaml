@@ -1,0 +1,8 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/medical-education-hub/hst:workspace:
+      jcr:primaryType: hst:workspace
+      /hst:containers:
+        jcr:primaryType: hst:containercomponentfolder
+      /hst:sitemenus:
+        jcr:primaryType: hst:sitemenus

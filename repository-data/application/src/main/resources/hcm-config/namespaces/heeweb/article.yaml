@@ -11,76 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 324e1c27-8f1c-40e0-ac7a-d9e9aad0f139
+          jcr:uuid: a281d2d1-bbc7-458d-aaf4-bace93c4c609
           hipposysedit:node: true
           hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
-          /title:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:title
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /html:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:summary
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
-          /relatedNews:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:relatedNews
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-          /category:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:category
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [required]
-          /region:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:region
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [required]
-          /speciality:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:speciality
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [optional]
-          /subspeciality:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:subspeciality
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [optional]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 9daf8c16-89b5-4e11-aff4-8a8715449c38
-          hipposysedit:node: true
-          hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -146,7 +80,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: heeweb:article
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 6d47cf6c-e009-4b55-9187-b5752876e3b0
+          jcr:uuid: 488df9b8-0a53-4300-8216-a09f728fa7ca
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -158,28 +92,6 @@ definitions:
           heeweb:title: ''
           heeweb:region: Global
           heeweb:category: [General]
-          /heeweb:summary:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
-          /heeweb:relatedNews:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
-            'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: f5476f37-bea1-4a80-bd62-42dcca13aa8c
-          heeweb:category: [General]
-          heeweb:region: Global
-          heeweb:title: ''
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2020-05-12T23:35:24.011+05:30
-          hippostdpubwf:lastModificationDate: 2020-05-12T23:35:24.011+05:30
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
           /heeweb:summary:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -220,6 +132,7 @@ definitions:
             field: relatedNews
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /category:

@@ -1,0 +1,7 @@
+/hst:hst/hst:configurations/medical-education-hub/hst:workspace/hst:channel/hst:channelinfo:
+  jcr:primaryType: hst:channelinfo
+  channelType: education-hub
+  orgDescriptor: NHS Foundation Trust
+  orgName: Health Education England
+  orgSplit: Medical Training Hub
+  whiteHeaderBg: false

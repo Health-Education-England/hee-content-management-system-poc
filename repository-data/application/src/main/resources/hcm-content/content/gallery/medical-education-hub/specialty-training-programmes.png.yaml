@@ -1,0 +1,29 @@
+/content/gallery/medical-education-hub/specialty-training-programmes.png:
+  .meta:order-before: gp-training-programmes.png
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: 9705d481-bd5c-40fe-8a01-acb25b4667d3
+  /specialty-training-programmes.png:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:description: ''
+    hippogallery:filename: specialty-training-programmes.png
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: specialty-training-programmes.png
+      hippogallery:height: 29
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/specialty-training-programmes.png/specialty-training-programmes_thumbnail.png
+      jcr:lastModified: 2020-07-01T11:45:01.317+05:30
+      jcr:mimeType: image/png
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 417
+      hippogallery:width: 850
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/specialty-training-programmes.png/specialty-training-programmes_original.png
+      jcr:lastModified: 2020-07-01T11:45:01.317+05:30
+      jcr:mimeType: image/png

@@ -1,0 +1,16 @@
+/content/documents/administration/value-lists/programme-educations:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: c5682808-fa65-423f-812f-dc2c901f34a4
+  hippo:name: Programme Educations
+  /programme-educations:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 31959b4f-23a3-4a71-82b8-a5c8351c65dd
+    hippo:availability: [live, preview]
+    hippotranslation:id: 0aac563f-b16e-4757-aac3-b897780e03f3
+    hippotranslation:locale: inherited - from query
+    /selection:listitem:
+      jcr:primaryType: selection:listitem
+      selection:key: higher
+      selection:label: Higher

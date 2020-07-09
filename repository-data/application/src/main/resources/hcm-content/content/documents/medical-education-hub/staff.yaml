@@ -1,0 +1,227 @@
+/content/documents/medical-education-hub/staff:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 224489ec-a0da-48fa-b5ac-85dbbe0650ca
+  hippo:name: Staff
+  hippostd:foldertype: [new-translated-folder, new-staff-document]
+  hippotranslation:id: 639b818a-e547-425a-a3d6-18f2e0451eed
+  hippotranslation:locale: en
+  /miss-fiona-mcandrew:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 8ac06eed-f034-4bf6-a988-8101e1772833
+    hippo:name: Miss Fiona McAndrew
+    hippo:versionHistory: bf838aa5-0aae-4050-a389-bad07777f862
+    /miss-fiona-mcandrew[1]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 5870ee29-f83a-44ab-8ba4-433028447ab4
+      heeweb:department: Paediatric Surgery Training
+      heeweb:name: Miss Fiona McAndrew
+      heeweb:region: south-east
+      heeweb:title: Programme Diretcor
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:06:15.414+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 4dbb17e1-6801-4cc8-a3e5-31773a9dd170
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: bae08ef7-4783-4176-9047-c5916a3e57e7
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /miss-fiona-mcandrew[2]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: e78e6a62-f88d-4347-8883-8e74a90ca9ec
+      heeweb:department: Paediatric Surgery Training
+      heeweb:name: Miss Fiona McAndrew
+      heeweb:region: south-east
+      heeweb:title: Programme Diretcor
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:06:24.070+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 4dbb17e1-6801-4cc8-a3e5-31773a9dd170
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: bae08ef7-4783-4176-9047-c5916a3e57e7
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /miss-fiona-mcandrew[3]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 4223e338-72cd-4595-8cca-9d1c042b9d90
+      heeweb:department: Paediatric Surgery Training
+      heeweb:name: Miss Fiona McAndrew
+      heeweb:region: south-east
+      heeweb:title: Programme Diretcor
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:06:24.070+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-04T21:06:29.338+05:30
+      hippotranslation:id: 4dbb17e1-6801-4cc8-a3e5-31773a9dd170
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: bae08ef7-4783-4176-9047-c5916a3e57e7
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /paediatric-surgery-staff-2:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: ff130243-e513-4ded-9d3f-2bbab0720cc9
+    hippo:name: Paediatric Surgery Staff 2
+    hippo:versionHistory: fe34242a-706a-401a-aaa7-ca26424f529d
+    /paediatric-surgery-staff-2[1]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 9df13d3d-ca40-438e-a26e-bb107454c67c
+      heeweb:department: <Staff department>
+      heeweb:name: <Staff name>
+      heeweb:region: south-east
+      heeweb:title: <Staff title>
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:08:55.834+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: abfd0e55-f786-4532-91cb-2c7c36689de3
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: dcfa84d9-cc6d-491d-b573-2d7cebc714ac
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /paediatric-surgery-staff-2[2]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 7636e149-f11d-413d-8dc6-dfd4450111ff
+      heeweb:department: <Staff department>
+      heeweb:name: <Staff name>
+      heeweb:region: south-east
+      heeweb:title: <Staff title>
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:08:12.094+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: abfd0e55-f786-4532-91cb-2c7c36689de3
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: dcfa84d9-cc6d-491d-b573-2d7cebc714ac
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /paediatric-surgery-staff-2[3]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: d49ec783-cd5b-42d3-8326-0b843feba974
+      heeweb:department: <Staff department>
+      heeweb:name: <Staff name>
+      heeweb:region: south-east
+      heeweb:title: <Staff title>
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:08:55.834+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-04T21:09:15.722+05:30
+      hippotranslation:id: abfd0e55-f786-4532-91cb-2c7c36689de3
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: dcfa84d9-cc6d-491d-b573-2d7cebc714ac
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /paediatric-surgery-staff-3:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: d4c5f2f2-6913-4743-a3b9-291a92be4646
+    hippo:name: Paediatric Surgery Staff 3
+    hippo:versionHistory: dfc54611-f610-41e9-8737-281306ca6b26
+    /paediatric-surgery-staff-3[1]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: fea74a37-4cec-48ac-8ece-3a5493ffab4a
+      heeweb:department: <Staff department>
+      heeweb:name: <Staff name>
+      heeweb:region: south-east
+      heeweb:title: <Staff title>
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:09:12.270+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: adc9310a-113c-4eed-8c9c-c1dc0919e2f2
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: bf689a3b-8dbc-403a-9119-7a73a533e954
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /paediatric-surgery-staff-3[2]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 5d13bbb9-76c9-4ee8-af9f-d5816024abf2
+      heeweb:department: <Staff department>
+      heeweb:name: <Staff name>
+      heeweb:region: south-east
+      heeweb:title: <Staff title>
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:09:07.176+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: adc9310a-113c-4eed-8c9c-c1dc0919e2f2
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: bf689a3b-8dbc-403a-9119-7a73a533e954
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /paediatric-surgery-staff-3[3]:
+      jcr:primaryType: heeweb:staff
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 8a21cb3b-dd42-4001-a60f-33215adae7b5
+      heeweb:department: <Staff department>
+      heeweb:name: <Staff name>
+      heeweb:region: south-east
+      heeweb:title: <Staff title>
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-04T19:15:37.968+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T21:09:12.270+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-04T21:09:15.820+05:30
+      hippotranslation:id: adc9310a-113c-4eed-8c9c-c1dc0919e2f2
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: bf689a3b-8dbc-403a-9119-7a73a533e954
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []

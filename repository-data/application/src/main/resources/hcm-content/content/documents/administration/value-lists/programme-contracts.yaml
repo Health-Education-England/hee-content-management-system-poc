@@ -1,0 +1,20 @@
+/content/documents/administration/value-lists/programme-contracts:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: fedbcabc-d989-4e53-8220-bc4c91bfee1b
+  hippo:name: Programme Contracts
+  /programme-contracts:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 807f3797-dbf2-41dd-9aee-fb5a415b02fe
+    hippo:availability: [live, preview]
+    hippotranslation:id: 2d0cda66-7295-43f6-a1b4-fd4a8e8b4c43
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: full-time
+      selection:label: Full-time
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: part-time
+      selection:label: Part-time

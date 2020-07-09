@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 54051ca2-5244-47e6-a4cc-e09ab91e346e
+          jcr:uuid: b58f1d9b-91c6-48bf-8c16-7734f4264877
           hipposysedit:node: true
           hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
@@ -32,6 +32,14 @@ definitions:
             hipposysedit:path: heeweb:summaryText
             hipposysedit:primary: false
             hipposysedit:type: Text
+          /image:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:image
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -45,9 +53,15 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           heeweb:heading: ''
           heeweb:summaryText: ''
-          jcr:uuid: 3ff57978-2bdd-4a68-b6c2-e15523fb5ee5
+          jcr:uuid: 6c913d33-88ba-47d9-bed3-4df7c2e9fd3b
           hippostdpubwf:lastModificationDate: 2020-05-12T23:35:24.011+05:30
           hippostdpubwf:creationDate: 2020-05-12T23:35:24.011+05:30
+          /heeweb:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -64,6 +78,15 @@ definitions:
             caption: Heading
             field: heading
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /image:
+            jcr:primaryType: frontend:plugin
+            caption: Image
+            field: image
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

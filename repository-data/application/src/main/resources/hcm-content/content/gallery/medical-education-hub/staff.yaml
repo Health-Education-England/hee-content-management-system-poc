@@ -1,0 +1,90 @@
+/content/gallery/medical-education-hub/staff:
+  .meta:order-before: paediatric-surgery-hero.svg
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: 2caddd7b-bd9d-4c5f-8ffc-2dd7f0142b8f
+  hippo:name: Staff
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hippogallery:imageset']
+  /paediatric-surgery-staff-3.svg:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: bf689a3b-8dbc-403a-9119-7a73a533e954
+    /paediatric-surgery-staff-3.svg:
+      jcr:primaryType: hippogallery:imageset
+      hippo:availability: [live, preview]
+      hippogallery:filename: paediatric-surgery-staff-3.svg
+      /hippogallery:thumbnail:
+        jcr:primaryType: hippogallery:image
+        hippo:filename: paediatric-surgery-staff-3.svg
+        hippogallery:height: 60
+        hippogallery:width: 60
+        jcr:data:
+          type: binary
+          resource: /content/gallery/medical-education-hub/staff/paediatric-surgery-staff-3.svg/paediatric-surgery-staff-3_thumbnail.svg
+        jcr:lastModified: 2020-07-04T21:06:07.721+05:30
+        jcr:mimeType: image/svg+xml
+      /hippogallery:original:
+        jcr:primaryType: hippogallery:image
+        hippogallery:height: 112
+        hippogallery:width: 112
+        jcr:data:
+          type: binary
+          resource: /content/gallery/medical-education-hub/staff/paediatric-surgery-staff-3.svg/paediatric-surgery-staff-3_original.svg
+        jcr:lastModified: 2020-07-04T21:06:07.721+05:30
+        jcr:mimeType: image/svg+xml
+  /paediatric-surgery-staff-2.svg:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: dcfa84d9-cc6d-491d-b573-2d7cebc714ac
+    /paediatric-surgery-staff-2.svg:
+      jcr:primaryType: hippogallery:imageset
+      hippo:availability: [live, preview]
+      hippogallery:filename: paediatric-surgery-staff-2.svg
+      /hippogallery:thumbnail:
+        jcr:primaryType: hippogallery:image
+        hippo:filename: paediatric-surgery-staff-2.svg
+        hippogallery:height: 60
+        hippogallery:width: 60
+        jcr:data:
+          type: binary
+          resource: /content/gallery/medical-education-hub/staff/paediatric-surgery-staff-2.svg/paediatric-surgery-staff-2_thumbnail.svg
+        jcr:lastModified: 2020-07-04T21:06:07.883+05:30
+        jcr:mimeType: image/svg+xml
+      /hippogallery:original:
+        jcr:primaryType: hippogallery:image
+        hippogallery:height: 112
+        hippogallery:width: 112
+        jcr:data:
+          type: binary
+          resource: /content/gallery/medical-education-hub/staff/paediatric-surgery-staff-2.svg/paediatric-surgery-staff-2_original.svg
+        jcr:lastModified: 2020-07-04T21:06:07.883+05:30
+        jcr:mimeType: image/svg+xml
+  /fiona-mc-andrew.svg:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: bae08ef7-4783-4176-9047-c5916a3e57e7
+    /fiona-mc-andrew.svg:
+      jcr:primaryType: hippogallery:imageset
+      hippo:availability: [live, preview]
+      hippogallery:description: ''
+      hippogallery:filename: fiona-mc-andrew.svg
+      /hippogallery:thumbnail:
+        jcr:primaryType: hippogallery:image
+        hippo:filename: fiona-mc-andrew.svg
+        hippogallery:height: 60
+        hippogallery:width: 60
+        jcr:data:
+          type: binary
+          resource: /content/gallery/medical-education-hub/staff/fiona-mc-andrew.svg/fiona-mc-andrew_thumbnail.svg
+        jcr:lastModified: 2020-07-04T21:06:07.958+05:30
+        jcr:mimeType: image/svg+xml
+      /hippogallery:original:
+        jcr:primaryType: hippogallery:image
+        hippogallery:height: 112
+        hippogallery:width: 112
+        jcr:data:
+          type: binary
+          resource: /content/gallery/medical-education-hub/staff/fiona-mc-andrew.svg/fiona-mc-andrew_original.svg
+        jcr:lastModified: 2020-07-04T21:06:07.958+05:30
+        jcr:mimeType: image/svg+xml

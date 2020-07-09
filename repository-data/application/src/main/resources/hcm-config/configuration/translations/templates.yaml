@@ -12,6 +12,9 @@ definitions:
       new-heroBanner-folder: new heroBanner folder
       new-article-document: new article document
       new-article-folder: new article folder
+      new-staff-document: new staff document
+      new-programmeDocument-document: new programmeDocument document
+      new-hubDocument-document: new hubDocument document
     /hippo:configuration/hippo:translations/hippo:templates/fr:
       new-resource-bundle: nouveau resource bundle
       new-untranslated-folder: nouveau dossier non traduit

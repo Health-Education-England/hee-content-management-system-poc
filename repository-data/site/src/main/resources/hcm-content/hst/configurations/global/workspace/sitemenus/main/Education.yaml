@@ -1,0 +1,4 @@
+/hst:hst/hst:configurations/global/hst:workspace/hst:sitemenus/main/Education:
+  jcr:primaryType: hst:sitemenuitem
+  hst:referencesitemapitem: education
+  hst:repobased: false

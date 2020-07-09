@@ -1,4 +1,5 @@
 /content/documents/west-midlands:
+  .meta:order-before: medical-education-hub
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
   jcr:uuid: f945e187-b279-47a1-b1c5-ed858c83f5ae

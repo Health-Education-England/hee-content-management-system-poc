@@ -8,7 +8,6 @@ import org.onehippo.cms7.essentials.components.EssentialsMenuComponent;
 import org.onehippo.cms7.essentials.components.info.EssentialsMenuComponentInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import uk.nhs.hee.web.beans.HeaderTheme;
 import uk.nhs.hee.web.configuration.channel.WebsiteChannelInfo;
 
@@ -29,8 +28,9 @@ public class HEEMenuComponent extends EssentialsMenuComponent {
 
         WebsiteChannelInfo channelInfo = mount.getChannelInfo();
 
-        final HeaderTheme headerTheme =
+        HeaderTheme headerTheme =
                 new HeaderTheme(
+                        channelInfo.getChannelType(),
                         channelInfo.getWhiteHeaderBg(),
                         channelInfo.getOrgName(),
                         channelInfo.getOrgSplit(),

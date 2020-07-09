@@ -1,0 +1,320 @@
+definitions:
+  config:
+    /hippo:namespaces/heeweb/programmeSection:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: d6f782cf-5a2b-4f7e-9d18-0a283c09d2bd
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d2925cf6-5e84-4048-80cb-e7c834153b3f
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 05d83330-5000-4692-8b03-1ec75a0138b4
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
+          /mainTitle:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:mainTitle
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /mainBody:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:mainBody
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
+          /mainCtaUrl:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:mainLinkUrl
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /mainLinkLabel:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:mainLinkLabel
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /cardType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:cardType
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+          /cardTitle:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:cardTitle
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /cardImage:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:cardImage
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+          /cardLinkLabel:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:cardLinkLabel
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /cardLinkURL:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:cardLinkUrl
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /cardDocument:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:cardDocument
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /mainLinkType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:mainLinkType
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+          /mainLinkEnabled:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:mainLinkDisabled
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /renderProgrammeDetails:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:renderProgrammeDetails
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /renderKeyStaffSectionBelowThisSection:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:renderKeyStaffSectionBelowThisSection
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /html:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:cardSummary
+            hipposysedit:primary: false
+            hipposysedit:type: Html
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: heeweb:programmeSection
+          heeweb:cardLinkLabel: ''
+          heeweb:cardLinkUrl: ''
+          heeweb:cardSummary: ''
+          heeweb:cardTitle: ''
+          heeweb:mainLinkDisabled: false
+          heeweb:mainLinkLabel: ''
+          heeweb:mainLinkUrl: ''
+          heeweb:mainTitle: ''
+          heeweb:renderProgrammeDetails: false
+          heeweb:renderKeyStaffSectionBelowThisSection: false
+          /heeweb:mainBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /heeweb:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /heeweb:cardDocument:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            extension.left: ${cluster.id}.left
+            extension.right: ${cluster.id}.right
+            plugin.class: org.hippoecm.frontend.editor.layout.TwoColumn
+            wicket.extensions: [extension.left, extension.right]
+          /left:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.left.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.left
+          /right:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.right.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.right
+          /mainTitle:
+            jcr:primaryType: frontend:plugin
+            caption: '[Main] Title'
+            field: mainTitle
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /mainBody:
+            jcr:primaryType: frontend:plugin
+            caption: '[Main] Body'
+            field: mainBody
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /mainLinkType:
+            jcr:primaryType: frontend:plugin
+            caption: '[Main] Link Type'
+            field: mainLinkType
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: actionLink=Action link,primaryButton=Primary button,secondaryButton=Secondary
+                button
+          /mainLinkLabel:
+            jcr:primaryType: frontend:plugin
+            caption: '[Main] Link Label'
+            field: mainLinkLabel
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /cardType:
+            jcr:primaryType: frontend:plugin
+            caption: '[Aside] Card Type'
+            field: cardType
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: care=Care,panel=Panel,promo=Promo
+          /cardDocument:
+            jcr:primaryType: frontend:plugin
+            caption: '[Aside] Document'
+            field: cardDocument
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['heeweb:hubDocument']
+          /cardTitle:
+            jcr:primaryType: frontend:plugin
+            caption: '[Aside] Card Title'
+            field: cardTitle
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /cardImage:
+            jcr:primaryType: frontend:plugin
+            caption: '[Aside] Card Image'
+            field: cardImage
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /cardSummary:
+            jcr:primaryType: frontend:plugin
+            caption: '[Aside] Card Summary'
+            field: html
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /cardLinkLabel:
+            jcr:primaryType: frontend:plugin
+            caption: '[Aside] Card Link Label'
+            field: cardLinkLabel
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /mainLinkUrl:
+            jcr:primaryType: frontend:plugin
+            caption: '[Main] Link URL'
+            field: mainCtaUrl
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /mainLinkDisabled:
+            jcr:primaryType: frontend:plugin
+            caption: '[Main] Link Disabled ?'
+            field: mainLinkEnabled
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /renderProgrammeDetails:
+            jcr:primaryType: frontend:plugin
+            caption: Render Programme Details ?
+            field: renderProgrammeDetails
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /renderKeyStaffSectionBelowThisSection:
+            jcr:primaryType: frontend:plugin
+            caption: Render Key Staff section below this section ?
+            field: renderKeyStaffSectionBelowThisSection
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /cardLinkUrl:
+            jcr:primaryType: frontend:plugin
+            caption: '[Aside] Card Link URL'
+            field: cardLinkURL
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

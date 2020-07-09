@@ -1,0 +1,20 @@
+/content/documents/administration/value-lists/programme-duration:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 94c18ceb-72ed-4056-af2f-e496201a98fe
+  hippo:name: Programme Duration
+  /programme-duration:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: d7e1bd8c-9f92-4da7-b393-5f5d99ba5fce
+    hippo:availability: [live, preview]
+    hippotranslation:id: 467df8f9-22ce-4855-b973-24000469e383
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: '2'
+      selection:label: '2'
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: '3'
+      selection:label: '3'

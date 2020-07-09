@@ -1,0 +1,49 @@
+/content/documents/administration/labels/subhub:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 216ce23f-6a4f-43ce-b303-8d017bba6b1b
+  hippo:name: SubHub
+  hippo:versionHistory: 37b2bac8-1405-4caf-877b-297e9a3982aa
+  /subhub[1]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 5a757eb2-2878-40f9-8822-02e67b82e164
+    hippo:availability: [preview]
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-07-01T16:34:59.253+05:30
+    hippostdpubwf:lastModificationDate: 2020-07-07T14:11:53.997+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: medical-education-hub.subhub
+    resourcebundle:keys: [specialty.subhub.listing.title, surgery.subhub.listing.title]
+    resourcebundle:messages: [Specialties A-Z, Sub Specialties A-Z]
+  /subhub[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 9f4d34a1-9c79-4633-bc7f-1c459dae370b
+    hippo:availability: []
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-07-01T16:34:59.253+05:30
+    hippostdpubwf:lastModificationDate: 2020-07-07T14:11:47.329+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: medical-education-hub.subhub
+    resourcebundle:keys: [specialty.subhub.listing.title, surgery.subhub.listing.title]
+    resourcebundle:messages: [Specialties A-Z, Sub Specialties A-Z]
+  /subhub[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 2fbdfc72-fffc-4d7c-a025-c1bc7f22b0c9
+    hippo:availability: [live]
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-07-01T16:34:59.253+05:30
+    hippostdpubwf:lastModificationDate: 2020-07-07T14:11:53.997+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2020-07-07T14:11:56.211+05:30
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: medical-education-hub.subhub
+    resourcebundle:keys: [specialty.subhub.listing.title, surgery.subhub.listing.title]
+    resourcebundle:messages: [Specialties A-Z, Sub Specialties A-Z]

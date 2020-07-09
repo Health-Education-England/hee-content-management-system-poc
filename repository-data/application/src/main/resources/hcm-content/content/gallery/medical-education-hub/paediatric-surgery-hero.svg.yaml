@@ -1,0 +1,27 @@
+/content/gallery/medical-education-hub/paediatric-surgery-hero.svg:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: 86c2a79d-dc03-4200-aebd-c8b24b81605e
+  /paediatric-surgery-hero.svg:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:filename: paediatric-surgery-hero.svg
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: paediatric-surgery-hero.svg
+      hippogallery:height: 10
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/paediatric-surgery-hero.svg/paediatric-surgery-hero_thumbnail.svg
+      jcr:lastModified: 2020-07-04T23:00:15.547+05:30
+      jcr:mimeType: image/svg+xml
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 267
+      hippogallery:width: 1600
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/paediatric-surgery-hero.svg/paediatric-surgery-hero_original.svg
+      jcr:lastModified: 2020-07-04T23:00:15.547+05:30
+      jcr:mimeType: image/svg+xml

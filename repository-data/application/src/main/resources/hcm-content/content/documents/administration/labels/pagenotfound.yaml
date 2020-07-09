@@ -1,4 +1,5 @@
 /content/documents/administration/labels/pagenotfound:
+  .meta:order-before: hub
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
   jcr:uuid: 1491031c-0b7a-4616-a64a-aea3a3180dcf

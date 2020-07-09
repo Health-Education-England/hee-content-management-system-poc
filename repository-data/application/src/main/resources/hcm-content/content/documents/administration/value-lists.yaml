@@ -1,0 +1,6 @@
+/content/documents/administration/value-lists:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: f1903929-497e-47f5-b68a-e4170ef5ca54
+  hippo:name: Value Lists
+  hippostd:foldertype: [new-untranslated-folder, new-document]

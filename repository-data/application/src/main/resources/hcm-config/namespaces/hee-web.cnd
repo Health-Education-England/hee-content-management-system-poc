@@ -7,15 +7,29 @@
 [heeweb:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
-[heeweb:article] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
+[heeweb:BaseHippoDocument] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[heeweb:BaseHippoDocument] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
+[heeweb:article] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [heeweb:heroBanner] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[heeweb:hubDocument] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [heeweb:pageMetaData] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[heeweb:programmeDocument] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[heeweb:programmeSection] > hippo:compound, hippostd:relaxed
+  orderable
+
+[heeweb:section] > hippo:compound, hippostd:relaxed
+  orderable
+
+[heeweb:staff] > heeweb:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
