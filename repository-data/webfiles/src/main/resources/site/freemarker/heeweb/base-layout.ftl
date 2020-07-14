@@ -30,8 +30,8 @@
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
 <script src="/site/static/js/runtime-main.b9284ede.js"></script>
-<script src="/site/static/js/2.d3c2ff3b.chunk.js"></script>
-<script src="/site/static/js/main.27104804.chunk.js"></script>
+<script src="/site/static/js/2.f1966b5e.chunk.js"></script>
+<script src="/site/static/js/main.bb1c9400.chunk.js"></script>
 </body>
 </html>
 

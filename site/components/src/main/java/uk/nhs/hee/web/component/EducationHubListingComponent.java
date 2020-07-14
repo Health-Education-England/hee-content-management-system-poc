@@ -31,9 +31,9 @@ public class EducationHubListingComponent extends CommonComponent {
                 .collect(Collectors.toList());
 
         EducationHubListingComponentInfo paramInfo = getComponentParametersInfo(request);
-        request.setModel("educationHubTitle", paramInfo.getTitle());
+        request.setModel("title", paramInfo.getTitle());
 
-        request.setModel("educationHubDocs", educationHubHomeBeans);
+        request.setModel("documents", educationHubHomeBeans);
     }
 
 }

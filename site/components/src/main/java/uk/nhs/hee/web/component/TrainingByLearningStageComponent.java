@@ -25,8 +25,8 @@ public class TrainingByLearningStageComponent extends CommonComponent {
                 request,
                 "medical-education-hub.hub",
                 "training-by-learning-stage.title",
-                "trainingByLearningStageTitle");
+                "title");
 
-        request.setModel("trainingByLearningStageDocs", subHubHippoBeans);
+        request.setModel("documents", subHubHippoBeans);
     }
 }

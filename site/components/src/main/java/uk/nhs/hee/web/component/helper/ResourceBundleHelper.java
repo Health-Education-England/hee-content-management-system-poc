@@ -21,7 +21,7 @@ public class ResourceBundleHelper {
                 request,
                 "medical-education-hub.subhub",
                 TrainingHubHelper.getHubDocumentBean(request).getSubHubType().toLowerCase() + ".subhub.listing.title",
-                "subHubListingTitle");
+                "title");
     }
 
     public static void addValueToModel(

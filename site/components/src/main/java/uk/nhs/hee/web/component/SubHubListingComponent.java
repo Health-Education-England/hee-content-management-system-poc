@@ -22,7 +22,7 @@ public class SubHubListingComponent extends CommonComponent {
         }
 
         ResourceBundleHelper.addSubHubListingTitleToModel(request);
-        request.setModel("subHubDocs", subHubHippoBeans);
+        request.setModel("documents", subHubHippoBeans);
     }
 
 }
