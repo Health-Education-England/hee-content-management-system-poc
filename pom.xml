@@ -71,6 +71,7 @@
     <forge.camel-hippoevt.version>2.0.2</forge.camel-hippoevt.version>
     <camel.version>2.23.1</camel.version>
     <hawtio.version>1.4.44</hawtio.version>
+    <mockserver.version>5.11.0</mockserver.version>
     <spring.version>5.1.1.RELEASE</spring.version>
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
     <!-- <httpcore4-version>4.4.10</httpcore4-version>
@@ -100,6 +101,7 @@
       <url>https://maven.onehippo.com/maven2-forge/</url>
     </repository>
   </repositories>
+
 
   <dependencyManagement>
     <dependencies>
@@ -154,6 +156,12 @@
         <groupId>io.hawt</groupId>
         <artifactId>hawtio-web</artifactId>
         <version>${hawtio.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>org.mock-server</groupId>
+        <artifactId>mockserver-war</artifactId>
+        <version>${mockserver.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
@@ -379,6 +387,7 @@
         <module>cms</module>
         <module>site</module>
         <module>hawtio</module>
+        <module>mockserver</module>
         <module>essentials</module>
       </modules>
     </profile>
@@ -518,6 +527,13 @@
                   <type>war</type>
                   <properties>
                     <context>/hawtio</context>
+                  </properties>
+                </deployable>
+                <deployable>
+                  <location>${project.basedir}/mockserver/target/mockserver.war</location>
+                  <type>war</type>
+                  <properties>
+                    <context>/mockserver</context>
                   </properties>
                 </deployable>
                 <deployable>

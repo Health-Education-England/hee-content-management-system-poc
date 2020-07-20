@@ -23,15 +23,15 @@
     <meta name="msapplication-wide310x150logo" content="/site/static/assets/favicons/widetile-310x150.png">
     <meta name="msapplication-square310x310logo" content="/site/static/assets/favicons/largetile-310x310.png">
 
-    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?html} | Health Education England</title>
+    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, hstRequestContext.contentBean.title)} | Health Education England</title>
     <#--  <meta name="description" content="${hstRequestContext.contentBean.description}">  -->
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
 <script src="/site/static/js/runtime-main.b9284ede.js"></script>
-<script src="/site/static/js/2.f1966b5e.chunk.js"></script>
-<script src="/site/static/js/main.bb1c9400.chunk.js"></script>
+<script src="/site/static/js/2.bf869a20.chunk.js"></script>
+<script src="/site/static/js/main.9fdaebfa.chunk.js"></script>
 </body>
 </html>
 

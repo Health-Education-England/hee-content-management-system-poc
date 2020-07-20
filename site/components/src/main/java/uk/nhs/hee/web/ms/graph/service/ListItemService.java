@@ -5,7 +5,7 @@ import org.onehippo.cms7.crisp.api.resource.ResourceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.opengraph.list.FileItem;
-import uk.nhs.hee.web.ms.graph.service.util.ResourceServiceBrokerUtil;
+import uk.nhs.hee.web.ms.graph.service.util.GraphServiceBrokerUtil;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -21,8 +21,8 @@ public class ListItemService extends AbstractGraphService {
 
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
-    protected ListItemService(ResourceServiceBrokerUtil resourceServiceBrokerUtil) {
-        super(resourceServiceBrokerUtil);
+    protected ListItemService(GraphServiceBrokerUtil graphServiceBrokerUtil) {
+        super(graphServiceBrokerUtil);
     }
 
     public Map<String, List<FileItem>> getSharedFileItemsBySites(Map<String, String> sites)
@@ -48,7 +48,7 @@ public class ListItemService extends AbstractGraphService {
                 Collections.singletonList("id"),
                 "displayName eq 'Documents'"); */
 
-        Resource listResource = getResourceServiceBrokerUtil().getResources(
+        Resource listResource = getGraphServiceBrokerUtil().getResources(
                 "/sites/{siteId}/lists",
                 Collections.<String, Object>singletonMap("siteId", siteId),
                 Arrays.asList("id", "displayName"));
@@ -74,7 +74,7 @@ public class ListItemService extends AbstractGraphService {
                 new AbstractMap.SimpleImmutableEntry<>("listId", documentListId))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-        Resource listItemResource = getResourceServiceBrokerUtil().getResources(
+        Resource listItemResource = getGraphServiceBrokerUtil().getResources(
                 "/sites/{siteId}/lists/{listId}/items?expand=fields",
                 pathVariables);
 

@@ -70,6 +70,40 @@ public class TrainingHubHelper {
         return hubDocuments;
     }
 
+    public static List<HubDocument> getParentHubDocuments(HippoBean subSpecialtyContentBean) {
+        HippoBean folderBean = subSpecialtyContentBean.getParentBean();
+        List<HubDocument> hubDocuments = new ArrayList<>();
+
+        HippoBean parentFolderBean = null;
+        String subHubType = null;
+        try {
+            while (!"hub".equalsIgnoreCase(folderBean.getNode().getName())) {
+                parentFolderBean = folderBean.getParentBean();
+                subHubType = folderBean.getNode().getName().replace("subhub", "");
+                HubDocument hubDocument = getHubDocument(parentFolderBean, subHubType);
+
+                if (hubDocument == null) {
+                    folderBean = parentFolderBean;
+                    continue;
+                }
+
+                hubDocuments.add(hubDocument);
+                folderBean = parentFolderBean;
+            }
+        } catch (RepositoryException e) {
+            LOGGER.error(
+                    "Caught error '{}' while getting HubDocument with subtype '{}' under '{}'",
+                    e.getMessage(),
+                    subHubType,
+                    parentFolderBean != null ? parentFolderBean.getPath() : "",
+                    e);
+        }
+
+        Collections.reverse(hubDocuments);
+
+        return hubDocuments;
+    }
+
     public static HubDocument getHubDocumentBean(HstRequest request) {
         return request.getRequestContext().getContentBean(HubDocument.class);
     }
@@ -88,7 +122,7 @@ public class TrainingHubHelper {
         return getHubDocument(greatGreatGrandParentFolderBean, greatGrandParentFolderBean.getName());
     }
 
-    private static HubDocument getHubDocument(HippoBean scopeBean, String subHubType) {
+    public static HubDocument getHubDocument(HippoBean scopeBean, String subHubType) {
         HstQuery hstQuery = HstQueryBuilder.create(scopeBean)
                 .ofTypes("heeweb:hubDocument")
                 .where(constraint("heeweb:subHubType")

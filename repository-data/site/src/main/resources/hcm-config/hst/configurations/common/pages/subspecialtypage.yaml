@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hst:hst/hst:configurations/common/hst:pages/specialtypage:
+    /hst:hst/hst:configurations/common/hst:pages/subspecialtypage:
       jcr:primaryType: hst:component
       hst:referencecomponent: hst:pages/subhubpage
       /main:
@@ -23,7 +23,7 @@ definitions:
           hst:parametervalues: []
         /programme-listing-by-api:
           jcr:primaryType: hst:containeritemcomponent
-          hst:componentclassname: uk.nhs.hee.web.component.SpecialtyProgrammeListingByAPIComponent
+          hst:componentclassname: uk.nhs.hee.web.component.SubSpecialtyProgrammeListingByAPIComponent
           hst:label: ProgrammeListingByAPI
           hst:parameternames: []
           hst:parametervalues: []

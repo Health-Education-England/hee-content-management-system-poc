@@ -29,7 +29,7 @@ public class ProgrammeListingComponent extends CommonComponent {
         HubDocument hubDocument =
                 request.getRequestContext().getContentBean(HubDocument.class);
 
-        request.setModel("programmeListingTitle", hubDocument.getTitle() + " programmes");
+        request.setModel("programmeListingTitle", hubDocument.getTitle() + " programmes [source: brXM CMS]");
 
         addSpecialtyDocsToModel(request, hubDocument.getSubHubType());
     }

@@ -1,20 +1,19 @@
 package uk.nhs.hee.web.ms.graph.service;
 
+import org.onehippo.cms7.crisp.api.resource.ResourceException;
+import uk.nhs.hee.web.ms.graph.service.util.GraphServiceBrokerUtil;
+
 import java.util.List;
 import java.util.Map;
 
-import org.onehippo.cms7.crisp.api.resource.ResourceException;
-
-import uk.nhs.hee.web.ms.graph.service.util.ResourceServiceBrokerUtil;
-
 public class UserService extends AbstractGraphService {
 
-    protected UserService(ResourceServiceBrokerUtil resourceServiceBrokerUtil) {
-        super(resourceServiceBrokerUtil);
+    protected UserService(GraphServiceBrokerUtil graphServiceBrokerUtil) {
+        super(graphServiceBrokerUtil);
     }
 
     public Map<String, String> getUserProperties(List<String> properties) throws ResourceException {
-        return getResourceServiceBrokerUtil().getResourcesAsMap("/me", properties);
+        return getGraphServiceBrokerUtil().getResourcesAsMap("/me", properties);
     }
 
 }

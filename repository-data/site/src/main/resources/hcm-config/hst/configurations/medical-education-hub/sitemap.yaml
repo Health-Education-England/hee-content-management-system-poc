@@ -23,9 +23,14 @@ definitions:
                 hst:relativecontentpath: ${parent}/${3}
                 /_default_:
                   jcr:primaryType: hst:sitemapitem
-                  hst:componentconfigurationid: hst:pages/specialtypage
+                  hst:componentconfigurationid: hst:pages/subspecialtypage
                   hst:relativecontentpath: ${parent}/${4}
                   /_default_:
                     jcr:primaryType: hst:sitemapitem
                     hst:componentconfigurationid: hst:pages/programmepage
                     hst:relativecontentpath: ${parent}/${5}
+                  /programmesubhub:
+                    jcr:primaryType: hst:sitemapitem
+                    /_default_:
+                      jcr:primaryType: hst:sitemapitem
+                      hst:componentconfigurationid: hst:pages/programmepagebyapi
