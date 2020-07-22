@@ -9,12 +9,6 @@ definitions:
           jcr:primaryType: hst:containeritemcomponent
           hst:componentclassname: uk.nhs.hee.web.component.PageContentComponent
           hst:label: PageContent
-        /subhub-listing:
-          jcr:primaryType: hst:containeritemcomponent
-          hst:componentclassname: uk.nhs.hee.web.component.SubHubListingComponent
-          hst:label: SubHubListing
-          hst:parameternames: []
-          hst:parametervalues: []
         /programme-listing:
           jcr:primaryType: hst:containeritemcomponent
           hst:componentclassname: uk.nhs.hee.web.component.ProgrammeListingComponent

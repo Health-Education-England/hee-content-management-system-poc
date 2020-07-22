@@ -15,12 +15,12 @@ public class ResourceBundleHelper {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ResourceBundleHelper.class);
 
-    public static void addSubHubListingTitleToModel(HstRequest request) {
+    public static void addSubHubListingTitleToModel(HstRequest request, String key) {
 
         addValueToModel(
                 request,
                 "medical-education-hub.subhub",
-                TrainingHubHelper.getHubDocumentBean(request).getSubHubType().toLowerCase() + ".subhub.listing.title",
+                key,
                 "title");
     }
 

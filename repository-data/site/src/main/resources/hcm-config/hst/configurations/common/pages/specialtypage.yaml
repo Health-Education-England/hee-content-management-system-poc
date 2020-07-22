@@ -2,25 +2,21 @@ definitions:
   config:
     /hst:hst/hst:configurations/common/hst:pages/specialtypage:
       jcr:primaryType: hst:component
-      hst:referencecomponent: hst:pages/subhubpage
+      hst:referencecomponent: hst:abstractpages/base
       /main:
         jcr:primaryType: hst:component
         /page-content:
           jcr:primaryType: hst:containeritemcomponent
           hst:componentclassname: uk.nhs.hee.web.component.PageContentComponent
           hst:label: PageContent
-        /subhub-listing:
+        /subspecialty-listing:
           jcr:primaryType: hst:containeritemcomponent
-          hst:componentclassname: uk.nhs.hee.web.component.SubHubListingComponent
+          hst:componentclassname: uk.nhs.hee.web.component.SubSpecialtyListingComponent
           hst:label: SubHubListing
-          hst:parameternames: []
-          hst:parametervalues: []
         /programme-listing:
           jcr:primaryType: hst:containeritemcomponent
           hst:componentclassname: uk.nhs.hee.web.component.ProgrammeListingComponent
           hst:label: ProgrammeListing
-          hst:parameternames: []
-          hst:parametervalues: []
         /programme-listing-by-api:
           jcr:primaryType: hst:containeritemcomponent
           hst:componentclassname: uk.nhs.hee.web.component.SpecialtyProgrammeListingByAPIComponent
