@@ -16,5 +16,10 @@
       <outputDirectory>webapps</outputDirectory>
       <destName>hawtio.war</destName>
     </file>
+    <file>
+      <source>mockserver/target/mockserver.war</source>
+      <outputDirectory>webapps</outputDirectory>
+      <destName>mockserver.war</destName>
+    </file>
   </files>
 </component>

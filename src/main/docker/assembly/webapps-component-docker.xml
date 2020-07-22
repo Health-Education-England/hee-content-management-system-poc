@@ -28,5 +28,14 @@
         <include>${project.groupId}:camel-hippoevt-demo-hawtio</include>
       </includes>
     </dependencySet>
+    <dependencySet>
+      <unpack>true</unpack>
+      <outputDirectory>webapps/mockserver</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <scope>provided</scope>
+      <includes>
+        <include>${project.groupId}:mockserver</include>
+      </includes>
+    </dependencySet>
   </dependencySets>
 </component>
