@@ -36,6 +36,7 @@ public class ProgrammeService extends AbstractMockServerService {
         Resource programmesResource = (Resource) resource.getValue("programmes");
 
         List<Programme> programmes = new ArrayList<>();
+        String baseUri = System.getProperty("base.uri");
         for (Resource programmeResource : programmesResource.getChildren()) {
             String programmeRef = programmeResource.getValue("$ref").toString();
 
@@ -45,6 +46,8 @@ public class ProgrammeService extends AbstractMockServerService {
                 continue;
             }
 
+            programme.setRegionPageUrl(baseUri + programme.getRegionPageUrl());
+            programme.getKeyStaffs().forEach(staff -> staff.setImageUrl(baseUri + staff.getImageUrl()));
             programmes.add(programme);
         }
 

@@ -95,7 +95,7 @@
         "trainingType": "Specialty training programmes",
         "regionName": "South East",
         "regionId": "south-east",
-        "regionPageUrl": "http://localhost:8080/site/south-east",
+        "regionPageUrl": "/site/south-east",
         "name": "paediatric-surgery-at-south-east",
         "displayName": "Paediatric Surgery at South East",
         "totalPosts": 18,
@@ -113,21 +113,21 @@
           {
             "name": "Miss Fiona McAndrew",
             "displayName": "Miss Fiona McAndrew",
-            "imageUrl": "http://localhost:8080/mockserver/staff/fiona-mc-andrew.svg",
+            "imageUrl": "/mockserver/staff/fiona-mc-andrew.svg",
             "department": "Paediatric Surgery Training",
             "title": "Programme Diretcor"
           },
           {
             "name": "<Staff name>",
             "displayName": "Paediatric Surgery Staff 2",
-            "imageUrl": "http://localhost:8080/mockserver/staff/paediatric-surgery-staff-2.svg",
+            "imageUrl": "/mockserver/staff/paediatric-surgery-staff-2.svg",
             "department": "<Staff department>",
             "title": "<Staff title>"
           },
           {
             "name": "<Staff name>",
             "displayName": "Paediatric Surgery Staff 3",
-            "imageUrl": "http://localhost:8080/mockserver/staff/paediatric-surgery-staff-3.svg",
+            "imageUrl": "/mockserver/staff/paediatric-surgery-staff-3.svg",
             "department": "<Staff department>",
             "title": "<Staff title>"
           }
@@ -206,7 +206,7 @@
         "trainingType": "Specialty training programmes",
         "regionName": "West Midlands",
         "regionId": "west-midlands",
-        "regionPageUrl": "http://localhost:8080/site/west-midlands",
+        "regionPageUrl": "/site/west-midlands",
         "name": "paediatric-surgery-at-west-midlands",
         "displayName": "Paediatric Surgery at West Midlands",
         "totalPosts": 18,
@@ -224,14 +224,14 @@
           {
             "name": "Miss Fiona McAndrew",
             "displayName": "Miss Fiona McAndrew",
-            "imageUrl": "http://localhost:8080/mockserver/staff/fiona-mc-andrew.svg",
+            "imageUrl": "/mockserver/staff/fiona-mc-andrew.svg",
             "department": "Paediatric Surgery Training",
             "title": "Programme Diretcor"
           },
           {
             "name": "<Staff name>",
             "displayName": "Paediatric Surgery Staff 2",
-            "imageUrl": "http://localhost:8080/mockserver/staff/paediatric-surgery-staff-2.svg",
+            "imageUrl": "/mockserver/staff/paediatric-surgery-staff-2.svg",
             "department": "<Staff department>",
             "title": "<Staff title>"
           }
@@ -310,7 +310,7 @@
         "trainingType": "Specialty training programmes",
         "regionName": "South East",
         "regionId": "south-east",
-        "regionPageUrl": "http://localhost:8080/site/south-east",
+        "regionPageUrl": "/site/south-east",
         "name": "neurosurgery-at-south-east",
         "displayName": "Neurosurgery at South East",
         "totalPosts": 18,
@@ -328,21 +328,21 @@
           {
             "name": "Miss Fiona McAndrew",
             "displayName": "Miss Fiona McAndrew",
-            "imageUrl": "http://localhost:8080/mockserver/staff/fiona-mc-andrew.svg",
+            "imageUrl": "/mockserver/staff/fiona-mc-andrew.svg",
             "department": "Paediatric Surgery Training",
             "title": "Programme Diretcor"
           },
           {
             "name": "<Staff name>",
             "displayName": "Paediatric Surgery Staff 2",
-            "imageUrl": "http://localhost:8080/mockserver/staff/paediatric-surgery-staff-2.svg",
+            "imageUrl": "/mockserver/staff/paediatric-surgery-staff-2.svg",
             "department": "<Staff department>",
             "title": "<Staff title>"
           },
           {
             "name": "<Staff name>",
             "displayName": "Paediatric Surgery Staff 3",
-            "imageUrl": "http://localhost:8080/mockserver/staff/paediatric-surgery-staff-3.svg",
+            "imageUrl": "/mockserver/staff/paediatric-surgery-staff-3.svg",
             "department": "<Staff department>",
             "title": "<Staff title>"
           }
@@ -421,7 +421,7 @@
         "trainingType": "Specialty training programmes",
         "regionName": "West Midlands",
         "regionId": "west-midlands",
-        "regionPageUrl": "http://localhost:8080/site/west-midlands",
+        "regionPageUrl": "/site/west-midlands",
         "name": "neurosurgery-at-west-midlands",
         "displayName": "Neurosurgery at West Midlands",
         "totalPosts": 18,
@@ -439,14 +439,14 @@
           {
             "name": "Miss Fiona McAndrew",
             "displayName": "Miss Fiona McAndrew",
-            "imageUrl": "http://localhost:8080/mockserver/staff/fiona-mc-andrew.svg",
+            "imageUrl": "/mockserver/staff/fiona-mc-andrew.svg",
             "department": "Paediatric Surgery Training",
             "title": "Programme Diretcor"
           },
           {
             "name": "<Staff name>",
             "displayName": "Paediatric Surgery Staff 2",
-            "imageUrl": "http://localhost:8080/mockserver/staff/paediatric-surgery-staff-2.svg",
+            "imageUrl": "/mockserver/staff/paediatric-surgery-staff-2.svg",
             "department": "<Staff department>",
             "title": "<Staff title>"
           }
