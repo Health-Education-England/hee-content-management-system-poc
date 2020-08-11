@@ -1,0 +1,28 @@
+/content/gallery/medical-education-hub/speciality-generic-image.png:
+  .meta:order-before: paediatric-surgery-hero.svg
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: f4fca25b-be2d-448f-bdb8-35e8032d7a71
+  /speciality-generic-image.png:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:filename: speciality-generic-image.png
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: speciality-generic-image.png
+      hippogallery:height: 32
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/speciality-generic-image.png/speciality-generic-image_thumbnail.png
+      jcr:lastModified: 2020-07-01T23:26:49.369+05:30
+      jcr:mimeType: image/png
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 222
+      hippogallery:width: 405
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/speciality-generic-image.png/speciality-generic-image_original.png
+      jcr:lastModified: 2020-07-01T23:26:49.369+05:30
+      jcr:mimeType: image/png

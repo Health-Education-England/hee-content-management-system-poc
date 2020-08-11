@@ -11,76 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 970b217f-1823-45e2-93cf-46884f8d863c
-          hipposysedit:node: true
-          hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
-          hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
-          /title:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:title
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /introduction:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:introduction
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /html:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:content
-            hipposysedit:primary: false
-            hipposysedit:type: Html
-          /category:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:category
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [required]
-          /region:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:region
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [required]
-          /speciality:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:speciality
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [optional]
-          /staticdropdown:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: heeweb:subspeciality
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [optional]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 5a305352-0b18-49c3-bbca-ca90bc044720
           hipposysedit:node: true
           hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -155,29 +89,11 @@ definitions:
           heeweb:title: ''
           heeweb:introduction: ''
           heeweb:content: ''
-          jcr:uuid: cb7b9bb8-447f-4051-939d-874a9de59415
+          jcr:uuid: df0701e7-3008-4c56-b7cc-4c12f66eec00
           hippostdpubwf:lastModificationDate: 2020-05-28T09:14:23.972+01:00
           hippostdpubwf:creationDate: 2020-05-28T09:14:23.972+01:00
           heeweb:region: Global
           heeweb:category: [Applications]
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
-            'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: e028fa43-8ece-4794-8a94-080479933cce
-          heeweb:category: [Applications]
-          heeweb:content: ''
-          heeweb:introduction: ''
-          heeweb:region: Global
-          heeweb:title: ''
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2020-05-28T09:14:23.972+01:00
-          hippostdpubwf:lastModificationDate: 2020-05-28T09:14:23.972+01:00
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:

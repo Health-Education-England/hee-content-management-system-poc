@@ -2,3 +2,7 @@ definitions:
   config:
     /hippo:configuration/hippo:frontend/cms/cms-services/localeProviderService/en:
       country: gb
+    /hippo:configuration/hippo:frontend/cms/cms-services/RegionalChannelValueListProvider:
+      jcr:primaryType: frontend:plugin
+      plugin.class: uk.nhs.hee.web.selection.frontend.provider.RegionalChannelValueListProvider
+      valuelist.provider: service.valuelist.channel.region

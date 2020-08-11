@@ -1,0 +1,17 @@
+/content/documents/administration/value-lists/programme-part-time-contracts:
+  .meta:order-before: programme-duration
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 5da4dd58-b8e6-4865-99f8-a4363269ae73
+  hippo:name: Programme Part Time Contracts
+  /programme-part-time-contracts:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 6bf511a3-7b62-44cc-9a5c-60bd9e3b65cb
+    hippo:availability: [live, preview]
+    hippotranslation:id: 8074d378-d2c9-4463-9af7-8788584dfea9
+    hippotranslation:locale: inherited - from query
+    /selection:listitem:
+      jcr:primaryType: selection:listitem
+      selection:key: ltft
+      selection:label: LTFT

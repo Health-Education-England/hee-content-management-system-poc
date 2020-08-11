@@ -1,0 +1,19 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:users/medical-education-hub-editor:
+      jcr:primaryType: hipposys:user
+      hipposys:active: true
+      hipposys:password:
+        .meta:category: system
+        type: string
+        value: password1
+      hipposys:passwordlastmodified:
+        .meta:category: system
+      hipposys:previouspasswords:
+        .meta:category: system
+      hipposys:securityprovider: internal
+      hipposys:userroles:
+        .meta:category: system
+        .meta:add-new-system-values: true
+        type: string
+        value: []

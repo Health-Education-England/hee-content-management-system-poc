@@ -1,0 +1,323 @@
+definitions:
+  config:
+    /hippo:namespaces/heeweb/programmeDocument:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: ed7e393c-3117-437b-b4c7-aa588bda1409
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 40e3cefc-e316-4d70-ae32-11fe81888fae
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: b5575bb2-4402-4fa2-88b0-03d1929fb4e7
+          hipposysedit:node: true
+          hipposysedit:supertype: ['heeweb:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heeweb.com/heeweb/nt/1.0
+          /numberOfVacancies:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:numberOfVacancies
+            hipposysedit:primary: false
+            hipposysedit:type: Long
+            hipposysedit:validators: [required]
+          /totalPosts:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:totalPosts
+            hipposysedit:primary: false
+            hipposysedit:type: Long
+          /competitionRatio:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:competitionRatio
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /gmcNTSScore:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:gmcNTSScore
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /entryRequirementsLinkUrl:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:entryRequirementsLinkUrl
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /contractType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:contractType
+            hipposysedit:primary: false
+            hipposysedit:type: selection:RadioGroup
+            hipposysedit:validators: [required]
+          /duration:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:durationInYears
+            hipposysedit:primary: false
+            hipposysedit:type: selection:RadioGroup
+            hipposysedit:validators: [required]
+          /partTimeContractType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:partTimeContractType
+            hipposysedit:primary: false
+            hipposysedit:type: selection:RadioGroup
+          /educationType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:educationType
+            hipposysedit:primary: false
+            hipposysedit:type: selection:RadioGroup
+          /qualification:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:qualification
+            hipposysedit:primary: false
+            hipposysedit:type: selection:RadioGroup
+            hipposysedit:validators: [required]
+          /keyStaffs:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:keyStaffs
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /programmeSections:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:programmeSections
+            hipposysedit:primary: false
+            hipposysedit:type: heeweb:programmeSection
+          /calendardate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:reopeningCalendar
+            hipposysedit:primary: false
+            hipposysedit:type: CalendarDate
+          /region:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: heeweb:region
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [required]
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: heeweb:programmeDocument
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          heeweb:numberOfVacancies: 0
+          heeweb:totalPosts: 0
+          heeweb:competitionRatio: ''
+          heeweb:gmcNTSScore: ''
+          heeweb:entryRequirementsLinkUrl: ''
+          heeweb:contractType: ''
+          heeweb:educationType: ''
+          heeweb:partTimeContractType: ''
+          heeweb:qualification: ''
+          jcr:uuid: ed19cefa-b0f1-420f-bd72-6641782a28e0
+          hippostdpubwf:creationDate: 2020-07-04T14:18:38.872+05:30
+          hippostdpubwf:lastModificationDate: 2020-07-04T14:18:38.872+05:30
+          heeweb:region: ''
+          heeweb:durationInYears: ''
+          heeweb:reopeningCalendar: 2020-07-04T00:00:00+05:30
+          /heeweb:keyStaffs:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /heeweb:programmeSections:
+            jcr:primaryType: heeweb:programmeSection
+            heeweb:cardLinkLabel: ''
+            heeweb:cardLinkUrl: ''
+            heeweb:cardSummary: ''
+            heeweb:cardTitle: ''
+            heeweb:mainLinkDisabled: false
+            heeweb:mainLinkLabel: ''
+            heeweb:mainLinkUrl: ''
+            heeweb:mainTitle: ''
+            heeweb:renderKeyStaffSectionBelowThisSection: false
+            heeweb:renderProgrammeDetails: false
+            /heeweb:mainBody:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
+            /heeweb:cardImage:
+              jcr:primaryType: hippogallerypicker:imagelink
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
+            /heeweb:cardDocument:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /region:
+            jcr:primaryType: frontend:plugin
+            caption: Region
+            field: region
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: regionalChannelValueList
+              valuelistProvider: service.valuelist.channel.region
+          /numberOfVacancies:
+            jcr:primaryType: frontend:plugin
+            caption: Number of Vacancies
+            field: numberOfVacancies
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /totalPosts:
+            jcr:primaryType: frontend:plugin
+            caption: Total Posts
+            field: totalPosts
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /reopeningCalendar:
+            jcr:primaryType: frontend:plugin
+            caption: Reopens in ?
+            field: calendardate
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /competitionRatio:
+            jcr:primaryType: frontend:plugin
+            caption: Competition Ratio
+            field: competitionRatio
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /gmcNTSScore:
+            jcr:primaryType: frontend:plugin
+            caption: GMC NTS Score
+            field: gmcNTSScore
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /entryRequirementsLinkUrl:
+            jcr:primaryType: frontend:plugin
+            caption: Entry Requirements Link URL
+            field: entryRequirementsLinkUrl
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /educationType:
+            jcr:primaryType: frontend:plugin
+            caption: Education Type
+            field: educationType
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/value-lists/programme-educations
+          /contractType:
+            jcr:primaryType: frontend:plugin
+            caption: Contract Type
+            field: contractType
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/value-lists/programme-contracts
+          /durationInYears:
+            jcr:primaryType: frontend:plugin
+            caption: Duration (in years)
+            field: duration
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/value-lists/programme-duration
+          /partTimeContractType:
+            jcr:primaryType: frontend:plugin
+            caption: Part-time Contract Type
+            field: partTimeContractType
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/value-lists/programme-part-time-contracts
+          /qualification:
+            jcr:primaryType: frontend:plugin
+            caption: Qualification
+            field: qualification
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/value-lists/programme-qualifications
+          /keyStaffs:
+            jcr:primaryType: frontend:plugin
+            caption: Key Staffs
+            field: keyStaffs
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['heeweb:staff']
+          /programmeSections:
+            jcr:primaryType: frontend:plugin
+            caption: Programme Sections
+            field: programmeSections
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

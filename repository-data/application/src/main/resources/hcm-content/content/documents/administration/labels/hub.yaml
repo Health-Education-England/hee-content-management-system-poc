@@ -1,0 +1,52 @@
+/content/documents/administration/labels/hub:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: ad6dc08c-314e-4262-8c6d-7199794af81b
+  hippo:name: Hub
+  hippo:versionHistory: 9fddb807-42b8-4223-9223-6d016bf1c764
+  /hub[1]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 2936a01d-96dc-4a7e-b600-a4e484d6c6e2
+    hippo:availability: []
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-07-01T16:34:59.253+05:30
+    hippostdpubwf:lastModificationDate: 2020-07-07T14:11:31.610+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: medical-education-hub.hub
+    resourcebundle:keys: [training-by-learning-stage.title, training-by-local-teams.title]
+    resourcebundle:messages: [Discover training by learning stage, Explore training
+        by Local Teams]
+  /hub[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 59bb7820-bfa2-4f53-ac67-428f7295c732
+    hippo:availability: [preview]
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-07-01T16:34:59.253+05:30
+    hippostdpubwf:lastModificationDate: 2020-07-07T14:11:38.418+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: medical-education-hub.hub
+    resourcebundle:keys: [training-by-learning-stage.title, training-by-local-teams.title]
+    resourcebundle:messages: [Discover training by learning stage, Explore training
+        by Local Teams]
+  /hub[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 0ca9d464-ce9d-4b68-849c-1a34a2dbdc9b
+    hippo:availability: [live]
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2020-07-01T16:34:59.253+05:30
+    hippostdpubwf:lastModificationDate: 2020-07-07T14:11:38.418+05:30
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2020-07-07T14:11:44.257+05:30
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: medical-education-hub.hub
+    resourcebundle:keys: [training-by-learning-stage.title, training-by-local-teams.title]
+    resourcebundle:messages: [Discover training by learning stage, Explore training
+        by Local Teams]

@@ -1,0 +1,8 @@
+/content/documents/medical-education-hub:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 2060a9ec-6031-42db-b208-77ec79bd63e6
+  hippo:name: Medical Education Hub
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 8ed88648-2bc2-442f-bb77-dce880f23177
+  hippotranslation:locale: en

@@ -1,0 +1,17 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:pages/programmepagebyapi:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        /programme-page-content-by-api:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.ProgrammePageContentByAPIComponent
+          hst:label: ProgrammePageContentByAPI
+      /breadcrumb:
+        jcr:primaryType: hst:component
+        /breadcrumb:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.BreadcrumbForAPIBasedProgrammeComponent
+          hst:label: Breadcrumb

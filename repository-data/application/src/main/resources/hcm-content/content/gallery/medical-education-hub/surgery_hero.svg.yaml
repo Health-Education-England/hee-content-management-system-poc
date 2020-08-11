@@ -1,0 +1,28 @@
+/content/gallery/medical-education-hub/surgery_hero.svg:
+  .meta:order-before: staff
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: 6554bdf5-786e-4e8f-b972-32e302d3b639
+  /surgery_hero.svg:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:filename: surgery_hero.svg
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: surgery_hero.svg
+      hippogallery:height: 10
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/surgery_hero.svg/surgery_hero_thumbnail.svg
+      jcr:lastModified: 2020-07-02T15:53:56.274+05:30
+      jcr:mimeType: image/svg+xml
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 267
+      hippogallery:width: 1600
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/surgery_hero.svg/surgery_hero_original.svg
+      jcr:lastModified: 2020-07-02T15:53:56.274+05:30
+      jcr:mimeType: image/svg+xml

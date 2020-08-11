@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>uk.nhs.hee.web</groupId>
+    <artifactId>hee-web</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>mockserver</artifactId>
+  <packaging>war</packaging>
+
+  <name>MockServer Web Archive</name>
+  <description>A MockServer that can be deployed as a WAR to any JEE web server</description>
+  <url>http://www.mock-server.com</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.mock-server</groupId>
+      <artifactId>mockserver-war</artifactId>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>mockserver</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <overlays>
+            <overlay>
+              <groupId>org.mock-server</groupId>
+              <artifactId>mockserver-war</artifactId>
+              <excludes>
+                <exclude>WEB-INF/lib/commons-logging-*.jar</exclude>
+                <exclude>WEB-INF/lib/slf4j-*.jar</exclude>
+              </excludes>
+            </overlay>
+          </overlays>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

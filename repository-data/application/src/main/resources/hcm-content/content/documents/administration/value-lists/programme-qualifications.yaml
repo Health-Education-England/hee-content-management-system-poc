@@ -1,0 +1,16 @@
+/content/documents/administration/value-lists/programme-qualifications:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: c210526d-ca36-4086-aa5c-a7b624843111
+  hippo:name: Programme Qualifications
+  /programme-qualifications:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: e1a621ec-0f38-41c5-8e43-dd2787dd8f61
+    hippo:availability: [live, preview]
+    hippotranslation:id: 31c6647e-8105-4c40-9de3-eab7211ac6ec
+    hippotranslation:locale: inherited - from query
+    /selection:listitem:
+      jcr:primaryType: selection:listitem
+      selection:key: cct
+      selection:label: Certificate of Completion

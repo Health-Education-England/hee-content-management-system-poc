@@ -1,0 +1,27 @@
+/content/gallery/medical-education-hub/foundation-training-programmes.png:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: d375663a-6f49-4ea9-bf02-0864f39cdb48
+  /foundation-training-programmes.png:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:filename: foundation-training-programmes.png
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: foundation-training-programmes.png
+      hippogallery:height: 35
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/foundation-training-programmes.png/foundation-training-programmes_thumbnail.png
+      jcr:lastModified: 2020-07-01T11:45:05.007+05:30
+      jcr:mimeType: image/png
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 550
+      hippogallery:width: 934
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/foundation-training-programmes.png/foundation-training-programmes_original.png
+      jcr:lastModified: 2020-07-01T11:45:05.007+05:30
+      jcr:mimeType: image/png

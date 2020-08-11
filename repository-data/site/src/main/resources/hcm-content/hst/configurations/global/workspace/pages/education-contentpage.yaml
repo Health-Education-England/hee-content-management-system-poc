@@ -1,0 +1,28 @@
+/hst:hst/hst:configurations/global/hst:workspace/hst:pages/education-contentpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2020-06-30T18:20:43.780+05:30
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hst:label: Content Page Main
+    hst:lastmodified: 2020-07-08T11:38:02.922+05:30
+    hst:xtype: hst.vbox
+    /education-hub-listing:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.component.EducationHubListingComponent
+      hst:iconpath: images/essentials/catalog-component-icons/generic-list.svg
+      hst:label: EducationHubListing
+      hst:parameternames: [title]
+      hst:parametervalues: [Education Hubs]
+  /hero:
+    jcr:primaryType: hst:containercomponent
+    hst:label: Hero
+    hst:lastmodified: 2020-07-07T22:25:46.920+05:30
+    hst:xtype: hst.vbox
+    /hero-banner:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.component.HeroBannerComponent
+      hst:iconpath: images/essentials/catalog-component-icons/banner.svg
+      hst:label: Hero Banner
+      hst:parameternames: [heroBannerDocument]
+      hst:parametervalues: [herobanner/education-hub-hero-banner]

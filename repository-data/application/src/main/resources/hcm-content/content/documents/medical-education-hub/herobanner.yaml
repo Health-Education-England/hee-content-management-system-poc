@@ -1,0 +1,209 @@
+/content/documents/medical-education-hub/herobanner:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: ee3b3770-9c3c-4840-8139-1394510b44ef
+  hippo:name: HeroBanner
+  hippostd:foldertype: [new-translated-folder, new-heroBanner-document]
+  hippotranslation:id: 4e805d34-db62-49fd-bc9b-c91d7cc6cd61
+  hippotranslation:locale: en
+  /specialty-training:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 2be942da-0383-415d-b84d-bcb0f568790c
+    hippo:name: Specialty training
+    hippo:versionHistory: 4e95a7c6-49e1-4be3-b841-8275c9f39210
+    /specialty-training[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 29ef58d3-238f-49ed-8342-bfa98a82ee11
+      heeweb:heading: Specialty Training
+      heeweb:summaryText: ''
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-02T15:33:27.455+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 0d4872d9-df5f-4e7b-b2f8-69af7a8e0efe
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 36a28077-ae71-40f0-a253-d1dcb908d83c
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /specialty-training[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: cd3ebf1a-7574-47c9-be55-b3effcc9546b
+      heeweb:heading: Specialty Training
+      heeweb:summaryText: ''
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-02T15:33:54.810+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 0d4872d9-df5f-4e7b-b2f8-69af7a8e0efe
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 36a28077-ae71-40f0-a253-d1dcb908d83c
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /specialty-training[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 66bbc14d-9294-44ca-82a1-a5bf7a56dd67
+      heeweb:heading: Specialty Training
+      heeweb:summaryText: ''
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-02T15:33:54.810+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-02T15:33:57.710+05:30
+      hippotranslation:id: 0d4872d9-df5f-4e7b-b2f8-69af7a8e0efe
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 36a28077-ae71-40f0-a253-d1dcb908d83c
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /surgery:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 95993c7a-d0db-4b27-b5bc-2f0cdc9a63e6
+    hippo:name: Surgery
+    hippo:versionHistory: 84f40e39-ec48-40b9-8402-389483becd89
+    /surgery[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 890a21e8-16e3-41c9-943e-de1c288099b4
+      heeweb:heading: Surgery
+      heeweb:summaryText: Specialty Training
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-02T15:54:40.077+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: c02c60ad-ba0c-4789-98d6-1cc477f37529
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 6554bdf5-786e-4e8f-b972-32e302d3b639
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /surgery[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f24e589e-d909-4f51-943b-5087cfee12f4
+      heeweb:heading: Surgery
+      heeweb:summaryText: Specialty Training
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-02T15:34:16.872+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: c02c60ad-ba0c-4789-98d6-1cc477f37529
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 6554bdf5-786e-4e8f-b972-32e302d3b639
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /surgery[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c6cf7f36-ae2e-4520-bb70-c2d286dae967
+      heeweb:heading: Surgery
+      heeweb:summaryText: Specialty Training
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-02T15:54:40.077+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-02T15:54:42.276+05:30
+      hippotranslation:id: c02c60ad-ba0c-4789-98d6-1cc477f37529
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 6554bdf5-786e-4e8f-b972-32e302d3b639
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /paediatric-surgery:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 89a2f905-5e5b-4b19-8e89-1d870ec79895
+    hippo:name: Paediatric Surgery
+    hippo:versionHistory: 1703b50f-d264-4227-ad7f-fd89f0d55912
+    /paediatric-surgery[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 181180dc-bfd7-4876-b931-c2fd8ccd9b09
+      heeweb:heading: Paediatric Surgery
+      heeweb:summaryText: Sub-specialty Training
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T23:01:16.807+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: b9ba692f-a6a0-4ee6-9897-385f2af7cd0c
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 86c2a79d-dc03-4200-aebd-c8b24b81605e
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /paediatric-surgery[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 42b9cfd7-1dd3-4bd2-921c-a0f9805090fa
+      heeweb:heading: Paediatric Surgery
+      heeweb:summaryText: Sub-specialty Training
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T23:01:00.636+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: b9ba692f-a6a0-4ee6-9897-385f2af7cd0c
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 86c2a79d-dc03-4200-aebd-c8b24b81605e
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /paediatric-surgery[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f6829ca4-1ed6-4abf-b9c0-c3cf1742853d
+      heeweb:heading: Paediatric Surgery
+      heeweb:summaryText: Sub-specialty Training
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-07-02T09:54:35.480+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-04T23:01:16.807+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-04T23:01:19.357+05:30
+      hippotranslation:id: b9ba692f-a6a0-4ee6-9897-385f2af7cd0c
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 86c2a79d-dc03-4200-aebd-c8b24b81605e
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []

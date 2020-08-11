@@ -140,7 +140,16 @@ When a commit (essentially merge commits) had been made to `master`, then Contin
 #### Test Environment (disabled temporarily) [TODO: yet to be tested & verified]
 When a commit (essentially merge commits) had been made to `release/**`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-tst.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `test` environment. This would also deploy the release package onto Github Packages artefact repo.
 
-TODO:
+The above workflow(s) requires the following secrets to be setup on Github:
+    - Secrets for `hippo-maven2-enterprise` maven repository (https://maven.onehippo.com/maven2-enterprise)
+        - BLOOMREACH_MVN_USERNAME - brXM Maven Repository username
+        - BLOOMREACH_MVN_PASSWORD - brXM Maven Repository password
+    Contact Bloomreach ([Get Bloomreach Experience Manager Developer Accounts](https://documentation.bloomreach.com/14/about/get-bloomreach-experience-developer-accounts.html)) in order to setup a developer account.
+    - Secrets to upload and deploy the distribution onto a brCloud environment
+        - BRC_USERNAME - brCloud username
+        - BRC_PASSWORD - brCloud password
+
+TODO: Update above Github Workflows in incorporate changes required to update the configurations indicated in `Update the following` section under `Deployment` so as to automate deployment to brCloud.
 
 Add notes describing:
 
@@ -152,10 +161,48 @@ Add notes describing:
 
 To build Tomcat distribution tarballs:
 
-    mvn clean verify
-    mvn -P dist
-      or
-    mvn -P dist-with-development-data
+### Update the following
+
+- Microsoft Graph Crisp Resource Resolver Config.: Update the following Microsoft Graph/Azure API OAuth2 Security property placeholders on `repository-data/application/src/main/resources/hcm-config/configuration/modules/crispregistry.yaml [hippo:configuration/hippo:modules/crispregistry/hippo:moduleconfig/crisp:resourceresolvercontainer/demoProductCatalogs/@crisp:beandefinition]` propvalues:
+    - `<client_id>` - Graph/Azure API Client Id
+    - `<client_secret>` - Graph/Azure API Client Secret
+    - `<tenant_id>` - Graph/Azure API Tenant Id
+- [brCloud Deployments ONLY] MockServer based NHS Programmes API Crisp Resource Resolver Config.: Uncomment and update `brCloud` environment specific credentials on `repository-data/application/src/main/resources/hcm-config/configuration/modules/crispregistry.yaml [/hippo:configuration/hippo:modules/crispregistry/hippo:moduleconfig/crisp:resourceresolvercontainer/mockServerResources]`
+
+    ```
+    <!-- Uncomment the following interceptors ONLY on brCloud in order to enable Basic Authentcation -->
+    <!-- <property name="interceptors">
+        <list>
+        <bean class="org.springframework.http.client.support.BasicAuthorizationInterceptor">
+            <constructor-arg value="<brCloud_env_username>" />
+            <constructor-arg value="<brCloud_env_password>" />
+        </bean>
+        </list>
+    </property> -->
+    ```
+    Where,
+    - `<brCloud_env_username>` - `brCloud` environment (to which the distribution will be depoyed) specific username.
+    - `<brCloud_env_password>` - `brCloud` environment (to which the distribution will be depoyed) specific password.
+
+**Note** that the above `BasicAuthorizationInterceptor` is required for password enabled `brCloud` environments ONLY.
+- Spring Security OAuth2 Client Registration Setup for Azure API: Update Microsoft Azure API OAuth2 Security property placeholders on `site/components/src/main/resources/azure-oauth2.properties`
+    - ms.azure.ad.oauth2.clientId = <client_id> # Graph/Azure API Client Id
+    - ms.azure.ad.oauth2.clientSecret = <client_secret> # Graph/Azure API Client Secret
+    - ms.azure.ad.oauth2.tenantId = <tenant_id> # Graph/Azure API Tenant Id
+- Algolia Search Security Setup: Update Algolia Search property placeholders on `site/components/src/main/resources/algolia.properties`
+    - algolia.application.id=<application_id> # Algolia Application Id
+    - algolia.api.key=<api_key> # Algolia Application Key
+- Deploy Front End artefacts from [hee-react-csr](https://github.com/Manifesto-Digital/hee-react-csr) project:
+    - Update `hee-react-csr/.env` properties based on the environment for which the Front End artefacts are being built.
+    - Build (ref. `hee-react-csr` README.md for more details on building the project) and copy over artefacts (`hee-react-csr/build/static/`) built from `hee-react-csr` project onto bloomreach site webapp (`hee-content-management-system/site/webapp/src/main/webapp/static/`)
+    - Update `repository-data/webfiles/src/main/resources/site/freemarker/heeweb/base-layout.ftl` freemarker template to include latest Front End artefacts copied over in the previous step.
+
+### Build the distribution
+
+mvn clean verify
+mvn -P dist
+    or
+mvn -P dist-with-development-data
 
 The `dist` profile will produce in the /target directory a distribution tarball, containing the main deployable wars and shared libraries.
 
@@ -163,8 +210,16 @@ The `dist-with-development-data` profile will produce a distribution-with-develo
 
 See also src/main/assembly/*.xml if you need to customize the distributions.
 
-TODO: Add additional notes about how to deploy this on a live system
+### Deploy on brCloud
 
+#### Manual deployment
+Deploy the distribution built from the previous section along with a property file containing the following property
+```
+base.uri=<brCloud_env_base_uri> # brCloud environment (to which deployment is being made) base URI
+# e.g. base.uri=https://development-hee.onehippo.io
+```
+#### Deployment via Github Actions
+TODO: Update Github Workflows indicated in `Development Workflow` section to incorporate changes required to update the configurations mentioned in `Update the following` section in order to automate brCloud deployment.
 
 ## Releases and Versioning
 
@@ -173,3 +228,5 @@ We use [SemVer](http://semver.org/) for versioning. For the releases available, 
 ## Authors
 
 * **Pat Shone** - *Initial work* - [pat.shone@manifesto.co.uk](mailto:pat.shone@manifesto.co.uk)
+* **Adriana Miclos** - *Sprint work* - [adriana.miclos@manifesto.co.uk](mailto:adriana.miclos@manifesto.co.uk)
+* **Selvandhan Manivasagam** - *Sprint work* - [selvandhan.manivasagam@manifesto.co.uk](mailto:selvandhan.manivasagam@manifesto.co.uk)

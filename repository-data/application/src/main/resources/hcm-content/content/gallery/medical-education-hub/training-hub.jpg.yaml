@@ -1,0 +1,28 @@
+/content/gallery/medical-education-hub/training-hub.jpg:
+  .meta:order-before: specialty-training-programmes.png
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: 27ccc386-34a2-4304-959c-34f132ba37bb
+  /training-hub.jpg:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:filename: training-hub.jpg
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: training-hub.jpg
+      hippogallery:height: 15
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/training-hub.jpg/training-hub_thumbnail.jpg
+      jcr:lastModified: 2020-06-30T23:47:49.954+05:30
+      jcr:mimeType: image/jpeg
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 498
+      hippogallery:width: 1900
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/training-hub.jpg/training-hub_original.jpg
+      jcr:lastModified: 2020-06-30T23:47:49.954+05:30
+      jcr:mimeType: image/jpeg

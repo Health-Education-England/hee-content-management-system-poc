@@ -1,4 +1,5 @@
 /content/documents/administration/labels/pagination:
+  .meta:order-before: hub
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
   jcr:uuid: 594bb597-c018-47d2-9351-5c992e6f4f62

@@ -1,0 +1,12 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/medical-education-hub/hst:workspace/hst:channel:
+      .meta:residual-child-node-category: content
+      jcr:primaryType: hst:channel
+      hst:channelinfoclass: uk.nhs.hee.web.configuration.channel.WebsiteChannelInfo
+      hst:defaultdevice: default
+      hst:devices: []
+      hst:lastmodified: 2020-07-07T20:45:13.268+05:30
+      hst:lastmodifiedby: admin
+      hst:name: Medical Training Hub
+      hst:type: website

@@ -68,3 +68,76 @@
       hippostdpubwf:publicationDate: 2020-06-03T17:57:05.619+05:30
       hippotranslation:id: d719bdbb-fc2c-4383-9f22-de0746edfed4
       hippotranslation:locale: en
+  /education-hub-hero-banner:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: dc2b4240-72cc-4115-9dfb-49a28e8b29a7
+    hippo:name: Education Hub Hero Banner
+    hippo:versionHistory: 8aa97698-bbd2-4144-b0f2-f2f3d183841f
+    /education-hub-hero-banner[1]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: e34d0963-99f1-4665-926c-0ac1180273fc
+      heeweb:heading: Education hubs
+      heeweb:summaryText: Training hubs are designed to meet the educational needs
+        of the multi-disciplinary primary care team, and bring together NHS organisations,
+        community providers and local authorities.
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-07T22:24:49.013+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: f3a3f073-0fd2-4d04-a0fa-2e98df4e964a
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /education-hub-hero-banner[2]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f3cc6226-7228-478d-a3b3-7489be64926a
+      heeweb:heading: Education hubs
+      heeweb:summaryText: Training hubs are designed to meet the educational needs
+        of the multi-disciplinary primary care team, and bring together NHS organisations,
+        community providers and local authorities.
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-07T22:24:39.613+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: f3a3f073-0fd2-4d04-a0fa-2e98df4e964a
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /education-hub-hero-banner[3]:
+      jcr:primaryType: heeweb:heroBanner
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 31f1c566-fab1-44b0-81d7-637752773cd1
+      heeweb:heading: Education hubs
+      heeweb:summaryText: Training hubs are designed to meet the educational needs
+        of the multi-disciplinary primary care team, and bring together NHS organisations,
+        community providers and local authorities.
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2020-05-12T23:37:47.703+05:30
+      hippostdpubwf:lastModificationDate: 2020-07-07T22:24:49.013+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2020-07-07T22:25:17.656+05:30
+      hippotranslation:id: f3a3f073-0fd2-4d04-a0fa-2e98df4e964a
+      hippotranslation:locale: en
+      /heeweb:image:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []

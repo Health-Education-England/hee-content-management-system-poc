@@ -5,18 +5,29 @@ import org.apache.commons.lang.builder.ToStringStyle;
 
 public class HeaderTheme {
 
-    private boolean whiteHeaderBg;
-    private String orgName;
-    private String orgSplit;
-    private String orgDescriptor;
+    private final boolean whiteHeaderBg;
+    private final String orgName;
+    private final String orgSplit;
+    private final String orgDescriptor;
+    private final String channelType;
 
 
-    public HeaderTheme(boolean whiteHeaderBg, String orgName, String orgSplit, String orgDescriptor) {
+    public HeaderTheme(
+            String channelType,
+            boolean whiteHeaderBg,
+            String orgName,
+            String orgSplit,
+            String orgDescriptor) {
         super();
+        this.channelType = channelType;
         this.whiteHeaderBg = whiteHeaderBg;
         this.orgName = orgName;
         this.orgSplit = orgSplit;
         this.orgDescriptor = orgDescriptor;
+    }
+
+    public String getChannelType() {
+        return channelType;
     }
 
     public boolean getWhiteHeaderBg() {
@@ -38,6 +49,7 @@ public class HeaderTheme {
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
+                .append("channelType", channelType)
                 .append("whiteHeaderBg", whiteHeaderBg)
                 .append("orgName", orgName)
                 .append("orgSplit", orgSplit)

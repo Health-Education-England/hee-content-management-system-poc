@@ -1,10 +1,6 @@
 package uk.nhs.hee.web.ms.graph.service.util;
 
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.commons.lang3.StringUtils;
 import org.onehippo.cms7.crisp.api.broker.ResourceServiceBroker;
 import org.onehippo.cms7.crisp.api.exchange.ExchangeHint;
@@ -13,35 +9,39 @@ import org.onehippo.cms7.crisp.api.resource.ResourceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ResourceServiceBrokerUtil {
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ResourceServiceBrokerUtil.class);
+public class GraphServiceBrokerUtil {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GraphServiceBrokerUtil.class);
 
 
     private final ResourceServiceBroker resourceServiceBroker;
     private final String resourceSpace;
     private final ExchangeHint exchangeHint;
 
-    public ResourceServiceBrokerUtil(ResourceServiceBroker resourceServiceBroker,
-                                     String resourceSpace, ExchangeHint exchangeHint) {
+    public GraphServiceBrokerUtil(ResourceServiceBroker resourceServiceBroker,
+                                  String resourceSpace, ExchangeHint exchangeHint) {
         this.resourceServiceBroker = resourceServiceBroker;
         this.resourceSpace = resourceSpace;
         this.exchangeHint = exchangeHint;
     }
 
     public Resource getResources(
-            final String baseAbsPath,
-            final Map<String, Object> pathVariables,
-            final List<String> selectProperties) throws ResourceException {
+            String baseAbsPath,
+            Map<String, Object> pathVariables,
+            List<String> selectProperties) throws ResourceException {
 
         return getResources(baseAbsPath + "?" + buildSelectParameter(selectProperties), pathVariables);
     }
 
     public Resource getResources(
-            final String baseAbsPath,
-            final Map<String, Object> pathVariables,
-            final List<String> selectProperties,
-            final String filterCondition) throws ResourceException {
+            String baseAbsPath,
+            Map<String, Object> pathVariables,
+            List<String> selectProperties,
+            String filterCondition) throws ResourceException {
 
         return getResources(
                 baseAbsPath + "?" + buildSelectParameter(selectProperties) + "&$filter=" + filterCondition,
@@ -49,10 +49,10 @@ public class ResourceServiceBrokerUtil {
     }
 
     public Resource getResources(
-            final String baseAbsPath,
-            final Map<String, Object> pathVariables) throws ResourceException {
+            String baseAbsPath,
+            Map<String, Object> pathVariables) throws ResourceException {
 
-        final Resource resource = resourceServiceBroker.findResources(
+        Resource resource = resourceServiceBroker.findResources(
                 resourceSpace,
                 baseAbsPath,
                 pathVariables,
@@ -65,8 +65,8 @@ public class ResourceServiceBrokerUtil {
     }
 
     public Map<String, String> getResourcesAsMap(
-            final String baseAbsPath,
-            final List<String> selectProperties) throws ResourceException {
+            String baseAbsPath,
+            List<String> selectProperties) throws ResourceException {
 
         Map<String, String> resourceMap = new HashMap<>();
         Resource resource = getResources(baseAbsPath, selectProperties);
@@ -79,12 +79,12 @@ public class ResourceServiceBrokerUtil {
     }
 
     public Resource getResources(
-            final String baseAbsPath,
-            final List<String> selectProperties) throws ResourceException {
+            String baseAbsPath,
+            List<String> selectProperties) throws ResourceException {
 
-        final String baseAbsPathWithSelectProperties = baseAbsPath + "?" + buildSelectParameter(selectProperties);
+        String baseAbsPathWithSelectProperties = baseAbsPath + "?" + buildSelectParameter(selectProperties);
 
-        final Resource resource = resourceServiceBroker.findResources(
+        Resource resource = resourceServiceBroker.findResources(
                 resourceSpace,
                 baseAbsPathWithSelectProperties,
                 exchangeHint);
@@ -94,7 +94,7 @@ public class ResourceServiceBrokerUtil {
         return resource;
     }
 
-    private String buildSelectParameter(final List<String> selectProperties) {
+    private String buildSelectParameter(List<String> selectProperties) {
         return "$select=" + StringUtils.join(selectProperties, ',');
     }
 }

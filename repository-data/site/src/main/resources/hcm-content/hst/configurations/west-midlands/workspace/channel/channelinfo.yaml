@@ -1,5 +1,6 @@
 /hst:hst/hst:configurations/west-midlands/hst:workspace/hst:channel/hst:channelinfo:
   jcr:primaryType: hst:channelinfo
+  channelType: regional
   orgDescriptor: ''
   orgName: Health Education England
   orgSplit: West Midlands Region

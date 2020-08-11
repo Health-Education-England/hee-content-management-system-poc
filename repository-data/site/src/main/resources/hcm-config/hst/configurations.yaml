@@ -83,6 +83,11 @@ definitions:
               hst:componentclassname: uk.nhs.hee.web.component.SearchComponent
               hst:iconpath: images/essentials/catalog-component-icons/search-24px.svg
               hst:label: Search
+            /education-hub-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.component.EducationHubListingComponent
+              hst:iconpath: images/essentials/catalog-component-icons/generic-list.svg
+              hst:label: EducationHubListing
       /global:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
@@ -92,3 +97,6 @@ definitions:
       /west-midlands:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
+      /medical-education-hub:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common, '../global/hst:workspace/hst:sitemenus']

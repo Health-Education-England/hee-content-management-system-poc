@@ -10,24 +10,23 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.client.http.AccessTokenRequiredException;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
-
-import uk.nhs.hee.web.ms.graph.service.util.ResourceServiceBrokerUtil;
+import uk.nhs.hee.web.ms.graph.service.util.GraphServiceBrokerUtil;
 
 public class GraphServiceFactory {
     private static final Logger LOGGER = LoggerFactory.getLogger(GraphServiceFactory.class);
 
-    private final ResourceServiceBrokerUtil resourceServiceBrokerUtil;
+    private final GraphServiceBrokerUtil graphServiceBrokerUtil;
 
     private UserService userService;
     private GroupService groupService;
     private SiteService siteService;
     private ListItemService listItemService;
 
-    public GraphServiceFactory(final HstRequest request) throws AccessTokenRequiredException {
-        final String accessToken = getAccessToken(request);
+    public GraphServiceFactory(HstRequest request) throws AccessTokenRequiredException {
+        String accessToken = getAccessToken(request);
 
-        resourceServiceBrokerUtil =
-                new ResourceServiceBrokerUtil(
+        graphServiceBrokerUtil =
+                new GraphServiceBrokerUtil(
                         CrispHstServices.getDefaultResourceServiceBroker(HstServices.getComponentManager()),
                         "openGraphResources",
                         ExchangeHintBuilder
@@ -38,7 +37,7 @@ public class GraphServiceFactory {
 
     public UserService getUserService() {
         if (userService == null) {
-            userService = new UserService(resourceServiceBrokerUtil);
+            userService = new UserService(graphServiceBrokerUtil);
         }
 
         return userService;
@@ -46,7 +45,7 @@ public class GraphServiceFactory {
 
     public GroupService getGroupService() {
         if (groupService == null) {
-            groupService = new GroupService(resourceServiceBrokerUtil);
+            groupService = new GroupService(graphServiceBrokerUtil);
         }
 
         return groupService;
@@ -54,7 +53,7 @@ public class GraphServiceFactory {
 
     public SiteService getSiteService() {
         if (siteService == null) {
-            siteService = new SiteService(resourceServiceBrokerUtil);
+            siteService = new SiteService(graphServiceBrokerUtil);
         }
 
         return siteService;
@@ -62,7 +61,7 @@ public class GraphServiceFactory {
 
     public ListItemService getListItemService() {
         if (listItemService == null) {
-            listItemService = new ListItemService(resourceServiceBrokerUtil);
+            listItemService = new ListItemService(graphServiceBrokerUtil);
         }
 
         return listItemService;

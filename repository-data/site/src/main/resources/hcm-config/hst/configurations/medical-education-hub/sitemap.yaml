@@ -1,0 +1,36 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/medical-education-hub/hst:sitemap:
+      jcr:primaryType: hst:sitemap
+      /root:
+        jcr:primaryType: hst:sitemapitem
+        hst:componentconfigurationid: hst:pages/hubpage
+        hst:excludedforlinkrewriting: false
+        hst:relativecontentpath: hub/home
+        /hub:
+          jcr:primaryType: hst:sitemapitem
+          /_default_:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/subhubpage
+            hst:relativecontentpath: hub/${1}
+            /_default_:
+              jcr:primaryType: hst:sitemapitem
+              hst:componentconfigurationid: hst:pages/subhubpage
+              hst:relativecontentpath: ${parent}/${2}
+              /_default_:
+                jcr:primaryType: hst:sitemapitem
+                hst:componentconfigurationid: hst:pages/specialtypage
+                hst:relativecontentpath: ${parent}/${3}
+                /_default_:
+                  jcr:primaryType: hst:sitemapitem
+                  hst:componentconfigurationid: hst:pages/subspecialtypage
+                  hst:relativecontentpath: ${parent}/${4}
+                  /_default_:
+                    jcr:primaryType: hst:sitemapitem
+                    hst:componentconfigurationid: hst:pages/programmepage
+                    hst:relativecontentpath: ${parent}/${5}
+                  /programmesubhub:
+                    jcr:primaryType: hst:sitemapitem
+                    /_default_:
+                      jcr:primaryType: hst:sitemapitem
+                      hst:componentconfigurationid: hst:pages/programmepagebyapi

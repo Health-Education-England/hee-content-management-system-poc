@@ -1,0 +1,28 @@
+/content/gallery/medical-education-hub/gp-training-programmes.png:
+  .meta:order-before: foundation-training-programmes.png
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: 6174f3c7-a3b1-422c-a0b7-5281e812a341
+  /gp-training-programmes.png:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:filename: gp-training-programmes.png
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: gp-training-programmes.png
+      hippogallery:height: 34
+      hippogallery:width: 60
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/gp-training-programmes.png/gp-training-programmes_thumbnail.png
+      jcr:lastModified: 2020-07-01T11:45:04.813+05:30
+      jcr:mimeType: image/png
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 340
+      hippogallery:width: 600
+      jcr:data:
+        type: binary
+        resource: /content/gallery/medical-education-hub/gp-training-programmes.png/gp-training-programmes_original.png
+      jcr:lastModified: 2020-07-01T11:45:04.813+05:30
+      jcr:mimeType: image/png

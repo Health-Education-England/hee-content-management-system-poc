@@ -1,7 +1,5 @@
 package uk.nhs.hee.web.component.helper;
 
-import java.lang.reflect.Method;
-
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -11,6 +9,8 @@ import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.CommonComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.Method;
 
 /**
  * Class containing component helper methods
@@ -75,7 +75,7 @@ public class ComponentHelper {
     /**
      * Returns {@link JcrPath} for the given {@code paramName}.
      *
-     * @param paramName the name of the {@link Parameter} whose {@link JcrPath} needs to be returned.
+     * @param paramName      the name of the {@link Parameter} whose {@link JcrPath} needs to be returned.
      * @param paramInfoClass the component info class.
      * @return the {@link JcrPath} for the given {@code paramName}
      */

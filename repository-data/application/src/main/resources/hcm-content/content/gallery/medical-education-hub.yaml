@@ -1,0 +1,7 @@
+/content/gallery/medical-education-hub:
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: f9bc3333-728a-4919-a709-c6f811f27d5f
+  hippo:name: Medical Education Hub
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hippogallery:imageset']

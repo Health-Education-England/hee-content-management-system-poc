@@ -1,0 +1,35 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:pages/subspecialtypage:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:pages/subhubpage
+      /main:
+        jcr:primaryType: hst:component
+        /page-content:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.PageContentComponent
+          hst:label: PageContent
+        /programme-listing:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.ProgrammeListingComponent
+          hst:label: ProgrammeListing
+          hst:parameternames: []
+          hst:parametervalues: []
+        /programme-listing-by-api:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.SubSpecialtyProgrammeListingByAPIComponent
+          hst:label: ProgrammeListingByAPI
+          hst:parameternames: []
+          hst:parametervalues: []
+      /hero:
+        jcr:primaryType: hst:component
+        /hero-banner:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.PageContentHeroBannerComponent
+          hst:label: Hero Banner
+      /breadcrumb:
+        jcr:primaryType: hst:component
+        /breadcrumb:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.component.BreadcrumbComponent
+          hst:label: Breadcrumb
