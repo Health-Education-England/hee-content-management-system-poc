@@ -436,6 +436,9 @@
           <scope>provided</scope>
         </dependency>
       </dependencies>
+      <properties>
+        <docker.brxm.envRun.BASE_URI>http://localhost:8080</docker.brxm.envRun.BASE_URI>
+      </properties>
     </profile>
 
     <profile>
