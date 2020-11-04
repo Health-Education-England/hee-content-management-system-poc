@@ -21,5 +21,5 @@
                       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                       http://camel.apache.org/schema/spring
                       http://camel.apache.org/schema/spring/camel-spring.xsd">
-  <import resource="/camel/routes.xml" />
+  <!-- <import resource="/camel/routes.xml" /> -->
 </beans>

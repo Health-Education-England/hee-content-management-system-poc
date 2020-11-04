@@ -19,7 +19,7 @@
 
     <!-- Your custom JAX-RS REST Plain Resource Providers will be added into
          the following list !!! -->
-    <bean id="customRestPlainResourceProviders"
+    <!-- <bean id="customRestPlainResourceProviders"
           class="org.springframework.beans.factory.config.ListFactoryBean">
         <property name="sourceList">
             <list>
@@ -34,7 +34,7 @@
                 </bean>
             </list>
         </property>
-    </bean>
+    </bean> -->
 
     <!-- Your custom JAX-RS REST Content/Context Aware Resource Providers
          will be added into the following list !!! -->
