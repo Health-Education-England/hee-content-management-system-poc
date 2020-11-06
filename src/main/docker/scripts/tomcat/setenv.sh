@@ -27,6 +27,9 @@ REP_OPTS="-Drepo.path=${REPO_PATH} -Drepo.bootstrap=${REPO_BOOTSTRAP} -Drepo.con
 # Logging configurations
 L4J_OPTS="-Dlog4j.configurationFile=file://${CATALINA_HOME}/conf/log4j2.xml -DLog4jContextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector"
 
+# Application configurations
+APP_OPTS="-Dbase.uri=${BASE_URI}"
+
 # JVM heap size options
 JVM_OPTS="-server -Xms${JAVA_MINHEAP} -Xmx${JAVA_MAXHEAP} -XX:+UseG1GC -Djava.util.Arrays.useLegacyMergeSort=true"
 
@@ -36,4 +39,4 @@ VGC_OPTS="-verbosegc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:${CATALI
 # JVM heapdump options
 DMP_OPTS="-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${CATALINA_HOME}/temp"
 
-CATALINA_OPTS="${JVM_OPTS} ${VGC_OPTS} ${REP_OPTS} ${DMP_OPTS} ${L4J_OPTS}"
+CATALINA_OPTS="${JVM_OPTS} ${VGC_OPTS} ${REP_OPTS} ${DMP_OPTS} ${L4J_OPTS} ${APP_OPTS}"
